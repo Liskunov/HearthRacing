@@ -72,3 +72,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 *.vsconfig
 HearthRacing/UserSettings
+HearthRacing/Logs
+HearthRacing/Library
+HearthRacing/obj
+HearthRacing/Temp

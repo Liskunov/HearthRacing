@@ -1,12 +1,21 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+[System.Serializable]
+public class AxleInfo
+{
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor;
+    public bool steering;
+}
 
 public class SimpleCarController : MonoBehaviour
 {
-    public List<AxleInfo> axleInfos; // информация о каждой оси
-    public float maxMotorTorque; // максимальный крутящий момент
-    public float maxSteeringAngle; // максимальный угол поворота колес
+    public List<AxleInfo> axleInfos;
+    public float maxMotorTorque;
+    public float maxSteeringAngle;
+
 
     public void ApplyLocalPositionToVisuals(WheelCollider collider)
     {
@@ -28,6 +37,7 @@ public class SimpleCarController : MonoBehaviour
     public void FixedUpdate()
     {
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
+        Debug.Log(Input.GetAxis("Vertical"));
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 
         foreach (AxleInfo axleInfo in axleInfos)
@@ -42,14 +52,8 @@ public class SimpleCarController : MonoBehaviour
                 axleInfo.leftWheel.motorTorque = motor;
                 axleInfo.rightWheel.motorTorque = motor;
             }
+            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
+            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
         }
     }
-}
-[System.Serializable]
-public class AxleInfo
-{
-    public WheelCollider leftWheel;
-    public WheelCollider rightWheel;
-    public bool motor; // присоединено ли колесо к мотору?
-    public bool steering; // поворачивает ли это колесо?
 }

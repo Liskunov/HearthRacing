@@ -5,9 +5,32 @@ using System.Collections.Generic;
 public class AxleInfo
 {
     public WheelCollider leftWheel;
+    public GameObject leftWheelVisual;
     public WheelCollider rightWheel;
+    public GameObject rightWheelVisual;
     public bool motor;
     public bool steering;
+
+    public void ApplyLocalPositionToVisuals()
+    {
+        if (leftWheelVisual == null)
+        {
+            return;
+        }
+
+        leftWheel.GetWorldPose(out Vector3 position, out Quaternion rotation);
+        leftWheelVisual.transform.position = position;
+        leftWheelVisual.transform.rotation = rotation;
+
+        if (rightWheelVisual == null)
+        {
+            return;
+        }
+
+        rightWheel.GetWorldPose(out position, out rotation);
+        rightWheelVisual.transform.position = position;
+        rightWheelVisual.transform.rotation = rotation;
+    }
 }
 
 public class SimpleCarController : MonoBehaviour
@@ -15,29 +38,11 @@ public class SimpleCarController : MonoBehaviour
     public List<AxleInfo> axleInfos;
     public float maxMotorTorque;
     public float maxSteeringAngle;
-
-
-    public void ApplyLocalPositionToVisuals(WheelCollider collider)
-    {
-        if (collider.transform.childCount == 0)
-        {
-            return;
-        }
-
-        Transform visualWheel = collider.transform.GetChild(0);
-
-        Vector3 position;
-        Quaternion rotation;
-        collider.GetWorldPose(out position, out rotation);
-
-        visualWheel.transform.position = position;
-        visualWheel.transform.rotation = rotation;
-    }
+ 
 
     public void FixedUpdate()
     {
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        Debug.Log(Input.GetAxis("Vertical"));
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 
         foreach (AxleInfo axleInfo in axleInfos)
@@ -52,8 +57,7 @@ public class SimpleCarController : MonoBehaviour
                 axleInfo.leftWheel.motorTorque = motor;
                 axleInfo.rightWheel.motorTorque = motor;
             }
-            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
-            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
+            axleInfo.ApplyLocalPositionToVisuals();
         }
     }
 }

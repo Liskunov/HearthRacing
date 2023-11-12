@@ -23,28 +23,14 @@ namespace CarController.AdvancedCarController
 		[SerializeField] private int m_handbrakeDriftMultiplier = 5; 
 		[SerializeField] private Vector3 m_bodyMassCenter; 
 		
-		[SerializeField] private GameObject[] m_wheelMeshes;
+		[SerializeField] private GameObject[] m_tireMeshes;
+		[SerializeField] private GameObject[] m_rimMeshes;
 		[SerializeField] private WheelCollider[] m_wheelColliders;
 
-		// [SerializeField] private GameObject m_frontLeftMesh;
-		// [SerializeField] private WheelCollider m_frontLeftCollider;
-		// [SerializeField] private GameObject m_frontRightMesh;
-		// [SerializeField] private WheelCollider m_frontRightCollider;
-		// [SerializeField] private GameObject m_rearLeftMesh;
-		// [SerializeField] private WheelCollider m_rearLeftCollider;
-		// [SerializeField] private GameObject m_rearRightMesh;
-		// [SerializeField] private WheelCollider m_rearRightCollider;
-		
 		[SerializeField] private bool m_useEffects;
-		
-		// [SerializeField] private ParticleSystem m_RLWParticleSystem;
-		// [SerializeField] private ParticleSystem m_RRWParticleSystem;
 
 		[SerializeField] private ParticleSystem[] m_particleSystems;
 		[SerializeField] private TrailRenderer[] m_tireSkids;
-		
-		// [SerializeField] private TrailRenderer m_RLWTireSkid;
-		// [SerializeField] private TrailRenderer m_RRWTireSkid;
 
 		private int m_wheelsCount;
 		private int m_particlesCount;
@@ -61,21 +47,12 @@ namespace CarController.AdvancedCarController
 		private float m_localVelocityX;
 		private bool m_deceleratingCar;
 
-		// private WheelFrictionCurve m_FLwheelFriction;
-		// private float m_FLWextremumSlip;
-		// private WheelFrictionCurve m_FRwheelFriction;
-		// private float m_FRWextremumSlip;
-		// private WheelFrictionCurve m_RLwheelFriction;
-		// private float m_RLWextremumSlip;
-		// private WheelFrictionCurve m_RRwheelFriction;
-		// private float m_RRWextremumSlip;
-
 		private WheelFrictionCurve[] m_wheelFrictionCurves;
 		private float[] m_extremumSlips;
 		
 		void Start()
 		{
-			m_wheelsCount = m_wheelMeshes.Length;
+			m_wheelsCount = m_tireMeshes.Length;
 			m_particlesCount = m_particleSystems.Length;
 			m_tireSkidsCount = m_tireSkids.Length;
 			m_extremumSlips = new float[m_wheelsCount];
@@ -231,7 +208,8 @@ namespace CarController.AdvancedCarController
 			for (int i = 0; i < m_wheelsCount; i++)
 			{
 				m_wheelColliders[i].GetWorldPose(out position, out rotation);
-				m_wheelMeshes[i].transform.SetPositionAndRotation(position, rotation);
+				m_tireMeshes[i].transform.SetPositionAndRotation(position, rotation);
+				m_rimMeshes[i].transform.SetPositionAndRotation(position, rotation);
 			}
 		}
 		

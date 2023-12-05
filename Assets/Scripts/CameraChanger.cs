@@ -6,7 +6,8 @@ using Cinemachine;
 public class CameraChanger : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera[] virtualCameras;
-    private int currentCameraIndex;
+    [SerializeField] private GameObject[] panels;
+    
 
     public void MoveToSettings()
     {
@@ -15,17 +16,22 @@ public class CameraChanger : MonoBehaviour
             virtualCameras[i].gameObject.SetActive(false);
         }
         virtualCameras[1].gameObject.SetActive(true);
+        panels[0].gameObject.SetActive(false);
+        panels[1].gameObject.SetActive(true);
+        
     }
     
 
-    private void SwitchCamera()
+   
+ 
+    public void MoveToMenu()
     {
-        virtualCameras[currentCameraIndex].gameObject.SetActive(false);
-        currentCameraIndex++;
-
-        if (currentCameraIndex >= virtualCameras.Length)
-            currentCameraIndex = 0;
-        
-        virtualCameras[currentCameraIndex].gameObject.SetActive(true);
+        for (int i = 0; i < virtualCameras.Length; i++)
+        {
+            virtualCameras[i].gameObject.SetActive(false);
+        }
+        virtualCameras[0].gameObject.SetActive(true);
+        panels[1].gameObject.SetActive(false);
+        panels[0].gameObject.SetActive(true);
     }
 }

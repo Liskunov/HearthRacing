@@ -7,7 +7,7 @@ public class Play : MonoBehaviour
 
     public void MySwitchScenes ()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("FirstTrack");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
         
 }

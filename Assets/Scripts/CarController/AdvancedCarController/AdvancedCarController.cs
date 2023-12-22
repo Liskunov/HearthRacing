@@ -167,7 +167,7 @@ namespace Cars
 			TurnSide(1);
 		}
 		
-		private void TurnSide(int multiplier)
+		public void TurnSide(float multiplier)
 		{
 			m_steeringAxis += Time.deltaTime * 10f * m_steeringSpeed * multiplier;
 			if(math.abs(m_steeringAxis) > 1f)
@@ -176,8 +176,8 @@ namespace Cars
 			}
 			
 			var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
-			m_wheelColliders[0].steerAngle = math.lerp(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
-			m_wheelColliders[1].steerAngle = math.lerp(m_wheelColliders[1].steerAngle, steeringAngle, m_steeringSpeed);
+			m_wheelColliders[0].steerAngle = Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
+			m_wheelColliders[1].steerAngle = Mathf.MoveTowards(m_wheelColliders[1].steerAngle, steeringAngle, m_steeringSpeed);
 		}
 
 		private void ResetSteeringAngle()

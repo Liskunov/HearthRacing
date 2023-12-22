@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Cars
@@ -35,7 +34,7 @@ namespace Cars
 			float dot = Vector3.Dot(transform.forward, DirPoint);
 			float disToPos = Vector3.Distance(transform.position, Target);
 			float angleDir = Vector3.SignedAngle(transform.forward, DirPoint, Vector3.up);
-			Debug.Log($"Улог до цели " + angleDir);
+
 			if (disToPos > 5f)
 			{
 				m_carController.GoForward();
@@ -44,21 +43,21 @@ namespace Cars
 			{
 				SwapTarget();
 			}
-			
-			if (angleDir > 1f)
-			{
-				m_carController.TurnRight();
-			}
-			if (angleDir < -1f)
-			{
-				m_carController.TurnLeft();
-			}
-
-			if (1f > angleDir && angleDir > -1f)
-			{
-				m_carController.GoForward();
-			}
-			m_carController.AnimateWheelMeshes();
+			//	
+			//	if (angleDir > 1f)
+			//	{
+			//		m_carController.TurnRight();
+			//	}
+			//	if (angleDir < -1f)
+			//	{
+			//		m_carController.TurnLeft();
+			//	}
+			//
+			//	if (1f > angleDir && angleDir > -1f)
+			//	{
+			//		m_carController.GoForward();
+			//	}
+			//m_carController.AnimateWheelMeshes();
 		}
 		void FixedUpdate()
 		{
@@ -71,11 +70,10 @@ namespace Cars
 			var targetAngle = Vector3.SignedAngle(Vector3.forward, targetDir, Vector3.up);
 
 			float input = m_pidController.UpdateAngle(Time.fixedDeltaTime, currentAngle, targetAngle);
-			//rigidbody.AddTorque(new Vector3(0, input * power, 0));
-			Debug.Log($"ПИД контроллер выдаёт " + input);
-		}
+				m_carController.TurnSide(input);
+        }
 
-		private void SwapTarget()
+            public void SwapTarget()
 		{
 			if (I == CountTarget)
 			{

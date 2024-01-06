@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Materials/Car.mat.meta
 guid: 40d1449c2d4a2a344b5ff93717f8c18a
+========
+guid: 9c8417c06d4ea4946be195e25a442a03
+>>>>>>>> master:Assets/Art/Materials/CarMaterials/CarPaint_Backlight.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

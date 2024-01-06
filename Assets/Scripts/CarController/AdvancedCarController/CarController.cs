@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Cars
 {
-	public class AdvancedCarController : MonoBehaviour
+	public class CarController : MonoBehaviour
 	{
 		[Range(20, 190)]
 		[SerializeField] private int m_maxSpeed = 90; 
@@ -94,51 +94,51 @@ namespace Cars
 			m_localVelocityX = transformDirection.x;
 			m_localVelocityZ = transformDirection.z;
 			
-			// if(Input.GetKey(KeyCode.W))
-			// {
-			// 	CancelInvoke("DecelerateCar");
-			// 	m_deceleratingCar = false;
-			// 	GoForward();
-			// }
-			// if(Input.GetKey(KeyCode.S))
-			// {
-			// 	CancelInvoke("DecelerateCar");
-			// 	m_deceleratingCar = false;
-			// 	GoReverse();
-			// }
-			// if(Input.GetKey(KeyCode.A))
-			// {
-			// 	TurnLeft();
-			// }
-			// if(Input.GetKey(KeyCode.D))
-			// {
-			// 	TurnRight();
-			// }
-			// if(Input.GetKey(KeyCode.Space))
-			// {
-			// 	CancelInvoke("DecelerateCar");
-			// 	m_deceleratingCar = false;
-			// 	Handbrake();
-			// }
-			// if(Input.GetKeyUp(KeyCode.Space))
-			// {
-			// 	RecoverTraction();
-			// }
-			// if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)))
-			// {
-			// 	ThrottleOff();
-			// }
-			// if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !m_deceleratingCar)
-			// {
-			// 	InvokeRepeating("DecelerateCar", 0f, 0.1f);
-			// 	m_deceleratingCar = true;
-			// }
-			// if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && m_steeringAxis != 0f)
-			// {
-			// 	ResetSteeringAngle();
-			// }
-			//
-			// AnimateWheelMeshes();
+			 if(Input.GetKey(KeyCode.W))
+			 {
+			 	CancelInvoke("DecelerateCar");
+			 	m_deceleratingCar = false;
+			 	GoForward();
+			 }
+			 if(Input.GetKey(KeyCode.S))
+			 {
+			 	CancelInvoke("DecelerateCar");
+			 	m_deceleratingCar = false;
+			 	GoReverse();
+			 }
+			 if(Input.GetKey(KeyCode.A))
+			 {
+			 	TurnLeft();
+			 }
+			 if(Input.GetKey(KeyCode.D))
+			 {
+			 	TurnRight();
+			 }
+			 if(Input.GetKey(KeyCode.Space))
+			 {
+			 	CancelInvoke("DecelerateCar");
+			 	m_deceleratingCar = false;
+			 	Handbrake();
+			 }
+			 if(Input.GetKeyUp(KeyCode.Space))
+			 {
+			 	RecoverTraction();
+			 }
+			 if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)))
+			 {
+			 	ThrottleOff();
+			 }
+			 if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !m_deceleratingCar)
+			 {
+			 	InvokeRepeating("DecelerateCar", 0f, 0.1f);
+			 	m_deceleratingCar = true;
+			 }
+			 if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && m_steeringAxis != 0f)
+			 {
+			 	ResetSteeringAngle();
+			 }
+			
+			 AnimateWheelMeshes();
 		}
 
 		private WheelFrictionCurve SetupFriction(WheelCollider wheelCollider, out float extremumSlip)

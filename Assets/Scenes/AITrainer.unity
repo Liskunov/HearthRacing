@@ -359,7 +359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752547102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e43685c50871d5148b2d2173ac6c048d, type: 3}
   m_Name: 
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752547102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
   m_Name: 
@@ -440,6 +440,47 @@ MonoBehaviour:
   integrationStored: 0
   velocity: 0
   derivativeInitialized: 0
+--- !u!114 &752547115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752547102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54ead0b783253a4997cbadbbbc0d76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxSpeed: 90
+  m_maxReverseSpeed: 45
+  m_accelerationMultiplier: 2
+  m_maxSteeringAngle: 30
+  m_steeringSpeed: 0.5
+  m_brakeForce: 350
+  m_decelerationMultiplier: 2
+  m_handbrakeDriftMultiplier: 5
+  m_bodyMassCenter: {x: 0, y: 0, z: 0}
+  m_tireMeshes:
+  - {fileID: 199829210}
+  - {fileID: 1417937014}
+  - {fileID: 260700699}
+  - {fileID: 538267410}
+  m_rimMeshes:
+  - {fileID: 1136893490}
+  - {fileID: 654292257}
+  - {fileID: 828627481}
+  - {fileID: 1632652468}
+  m_wheelColliders:
+  - {fileID: 1368969848}
+  - {fileID: 271059328}
+  - {fileID: 1749366662}
+  - {fileID: 2045075835}
+  m_useEffects: 0
+  m_particleSystems: []
+  m_tireSkids: []
+  m_carSpeed: 0
+  m_deceleratingCar: 0
 --- !u!1 &828627481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1894534848754740771, guid: 686ca212ec4ed414f837101f8787af56, type: 3}
@@ -525,6 +566,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5726045805490167044, guid: 686ca212ec4ed414f837101f8787af56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 752547114}
+    - targetCorrespondingSourceObject: {fileID: 5726045805490167044, guid: 686ca212ec4ed414f837101f8787af56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 752547115}
   m_SourcePrefab: {fileID: 100100000, guid: 686ca212ec4ed414f837101f8787af56, type: 3}
 --- !u!1 &1006782435
 GameObject:

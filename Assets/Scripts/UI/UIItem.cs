@@ -9,7 +9,7 @@ public class UIItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
    private Canvas _mainCanvas;
    private CanvasGroup _canvasGroup;
 
-   private void start()
+   private void Awake()
    {
       _rectTransform = GetComponent<RectTransform>();
       _mainCanvas = GetComponentInParent<Canvas>();
@@ -32,5 +32,6 @@ public class UIItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
    {
       transform.localPosition = Vector3.zero;
       _canvasGroup.blocksRaycasts = true;
+      
    }
 }

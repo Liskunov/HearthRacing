@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8344257556302262731}
   m_Layer: 5
   m_Name: CabrioletRImg
-  m_TagString: Untagged
+  m_TagString: CarImg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

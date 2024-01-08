@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2874352802232813193}
   m_Layer: 5
   m_Name: MonsterTruckImg
-  m_TagString: Untagged
+  m_TagString: CarImg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

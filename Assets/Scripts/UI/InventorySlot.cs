@@ -1,16 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-    [SerializeField] private bool m_allowDrop = true;
+    private enum ShopTags
+    {
+        CarImg,
+        TireImg,
+        EngineImg,
+        BrakeImg,
+        PendantImg,
+        TurbineImg
+    }
+
+    [SerializeField] private List<ShopTags> m_tags;
+
+    private List<string> m_stringTags = new List<string>();
+    
+    private void Start()
+    {
+        foreach (var tag in m_tags)
+        {
+            m_stringTags.Add(tag.ToString());
+        }
+    }
     
     public void OnDrop(PointerEventData eventData)
     {
-        if (!m_allowDrop) return;
         GameObject dropped = eventData.pointerDrag;
+
+        if (!m_stringTags.Any(str => dropped.CompareTag(str)))
+            return;
+            
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;
         

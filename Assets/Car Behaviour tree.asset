@@ -75,12 +75,33 @@ MonoBehaviour:
   - rid: 6753541453370622005
   - rid: 6753541453370622006
   - rid: 6753541453370622009
+  - rid: 6753541463349657600
+  - rid: 6753541463349657601
+  - rid: 6753541463349657602
+  - rid: 6753541463349657603
+  - rid: 6753541463349657604
+  - rid: 6753541463349657605
+  - rid: 6753541463349657606
+  - rid: 6753541463349657607
+  - rid: 6753541463349657608
+  - rid: 6753541463349657609
+  - rid: 6753541463349657610
+  - rid: 6753541463349657611
+  - rid: 6753541463349657612
+  - rid: 6753541463349657613
+  - rid: 6753541463349657614
+  - rid: 6753541463349657615
+  - rid: 6753541463349657616
+  - rid: 6753541463349657617
+  - rid: 6753541463349657618
   treeState: 0
   blackboard:
-    targetPoints: []
+    targetPoints:
+    - {fileID: 0}
+    TegN: 0
     target: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 1288, y: -343, z: 0}
-  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  viewPosition: {x: 704, y: 227, z: 0}
+  viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -90,9 +111,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: dab429a8-345e-4f41-9667-8e1bb2ee45e1
-        position: {x: -400.99963, y: -17.589518}
+        position: {x: -400.99997, y: -162.97867}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -104,14 +126,15 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: ede95af9a19b33041a67e0d1253d977a
-        position: {x: -400.99985, y: 117.85688}
+        position: {x: -400.99997, y: -13.068144}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         child:
-          rid: 6753541450446405632
+          rid: 6753541463349657616
         restartOnSuccess: 1
         restartOnFailure: 0
     - rid: 6753541450446405632
@@ -120,9 +143,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: c7b42d6289416c944bafbca794bf4e07
-        position: {x: -400.99976, y: 263.41052}
+        position: {x: -385.99997, y: 268.5565}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -131,15 +155,17 @@ MonoBehaviour:
         - rid: 6753541450446405638
         - rid: 6753541450446405641
         - rid: 6753541453370621956
+        - rid: 6753541463349657603
     - rid: 6753541450446405633
       type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: 519c460d4a01e6a4183191a49976ca4c
-        position: {x: -1533, y: 976}
+        position: {x: -1848.9999, y: 1146}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -153,6 +179,7 @@ MonoBehaviour:
         position: {x: -1453.9753, y: 610}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -165,36 +192,32 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: b27cd8ed48ccea841b92ad1bf8ad7a79
-        position: {x: -965.9999, y: 610}
+        position: {x: -980, y: 543}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         children:
         - rid: 6753541453370621953
-        - rid: 6753541453370621970
-        - rid: 6753541453370621973
-        - rid: 6753541453370621974
-        - rid: 6753541453370621975
+        - rid: 6753541463349657600
     - rid: 6753541450446405641
       type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: 9a9c588062f6a0b4e88b4ac2ef481f82
-        position: {x: -514, y: 610}
+        position: {x: -536.3225, y: 521.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         children:
         - rid: 6753541453370621954
-        - rid: 6753541453370621982
-        - rid: 6753541453370621983
-        - rid: 6753541453370621984
-        - rid: 6753541453370621985
+        - rid: 6753541463349657601
     - rid: 6753541453370621952
       type: {class: MaxSpeedSearch, ns: , asm: Assembly-CSharp}
       data:
@@ -204,6 +227,7 @@ MonoBehaviour:
         position: {x: -1628, y: 730}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -214,9 +238,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 31d0870b77eb7a9489a123f004b5e520
-        position: {x: -1115.9999, y: 698}
+        position: {x: -1115.9999, y: 654.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -227,9 +252,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 8bb51370946dc974981e4371b8e8cbbb
-        position: {x: -649, y: 730}
+        position: {x: -650.99963, y: 630.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -240,9 +266,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 97b58dadcb33a1946a9f7a4ac7bfb549
-        position: {x: -72.056725, y: 697.9999}
+        position: {x: -117.99992, y: 589.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -253,27 +280,26 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 43cc1e8ac79dfc54d81860a61a465b6e
-        position: {x: 31.999859, y: 566.00006}
+        position: {x: -43.000027, y: 478}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         children:
         - rid: 6753541453370621955
-        - rid: 6753541453370621994
-        - rid: 6753541453370621997
-        - rid: 6753541453370622000
-        - rid: 6753541453370622003
+        - rid: 6753541463349657602
     - rid: 6753541453370621958
       type: {class: SteeringspeedCheck, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: d97c94cffef95694bac68134996bf446
-        position: {x: -1687, y: 976}
+        position: {x: -1928.1094, y: 962}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -284,24 +310,26 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 150b5f578c7891445a71dd7a0ad80aa6
-        position: {x: -1553, y: 854}
+        position: {x: -1794.1094, y: 845}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         children:
         - rid: 6753541453370621958
-        - rid: 6753541450446405633
+        - rid: 6753541463349657618
     - rid: 6753541453370621961
       type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: 0aeddf28503bca940b7e7fe9ae6c26ed
-        position: {x: -1355.9755, y: 941.99994}
+        position: {x: -1434, y: 961.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -314,9 +342,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 012cabb8d0f38f2439a9afb83e2408b7
-        position: {x: -1432.9753, y: 1061.9999}
+        position: {x: -1510.9999, y: 1081.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -327,9 +356,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 695f3babf7a21c746be9cf2f34d741d1
-        position: {x: -1265.9753, y: 1061.9999}
+        position: {x: -1344, y: 1081.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -340,9 +370,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 403e19f53e6f1994f9ca67a28feac0e7
-        position: {x: -1115.9755, y: 1061.9999}
+        position: {x: -1190.9998, y: 1081.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -355,9 +386,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: c6f3722aad0dd5e4c921370f37aaf96c
-        position: {x: -1194.9753, y: 1194}
+        position: {x: -1304, y: 1182}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -368,9 +400,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 16a9e116716cdf44ca1cd6f32077585f
-        position: {x: -1041, y: 1193.9998}
+        position: {x: -1150, y: 1182.0001}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -381,9 +414,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: dbd8c281d93831641af5d950ef0da37f
-        position: {x: -890.97546, y: 1194}
+        position: {x: -1000, y: 1182}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -396,9 +430,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 0be61a2f1f1c15543a447161874184c0
-        position: {x: -1012.9754, y: 1320.9999}
+        position: {x: -1116, y: 1308}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -409,9 +444,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: dafc3d5f85cd11b429bd1f485f6573bb
-        position: {x: -859, y: 1320.9998}
+        position: {x: -966, y: 1308}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -422,9 +458,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 6de7248c9587755418752ee1f949fb74
-        position: {x: -1023.99994, y: 776}
+        position: {x: -1102.9998, y: 756.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -437,9 +474,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 86720bd1eb875a346a64656de66ef3b4
-        position: {x: -1120, y: 878}
+        position: {x: -1328, y: 859}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -450,9 +488,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: d4b7d3030547a0047812219eec903633
-        position: {x: -949.00006, y: 878}
+        position: {x: -1178, y: 859}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -463,9 +502,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 7334d869983579540aaed8b65589f7df
-        position: {x: -798.99994, y: 878}
+        position: {x: -877.9998, y: 858.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -478,9 +518,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 2f7b4c5606c09524c809ec3db749cbeb
-        position: {x: -591, y: 982.99994}
+        position: {x: -669.9998, y: 963.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -493,9 +534,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: a427c77620b29044d9dc15869115adcb
-        position: {x: -364, y: 1086}
+        position: {x: -442.99973, y: 1067}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -508,9 +550,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 3d47847aecd21df4bbaabd8665c7624e
-        position: {x: -895.00006, y: 983.0001}
+        position: {x: -973.9998, y: 963.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -521,9 +564,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: edfc4df53e12ca64bb317ee208438b77
-        position: {x: -667.99994, y: 1086}
+        position: {x: -746.9997, y: 1067}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -534,9 +578,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 0a0c302d91b159241aa771df77791ed6
-        position: {x: -440.99997, y: 1194}
+        position: {x: -519.9999, y: 1175}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -547,9 +592,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: df2ad22d75d71524ebb464d5e8e02cf7
-        position: {x: -740.99994, y: 983.0001}
+        position: {x: -819.99976, y: 963.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -560,9 +606,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: f50782a259c2fe9479f76e50252fc833
-        position: {x: -514.00006, y: 1086}
+        position: {x: -592.99963, y: 1067}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -573,9 +620,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 2b795ebb6bd54e149b4dd32426826b75
-        position: {x: -287.00006, y: 1194}
+        position: {x: -365.9998, y: 1175}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -586,9 +634,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: b74cad4e3947e4343a31fcd4088f18e6
-        position: {x: -475.99994, y: 731.99994}
+        position: {x: -567.9995, y: 718}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -601,9 +650,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: d93ce27bca9eb714884ed8dd9d959552
-        position: {x: -272.0001, y: 832}
+        position: {x: -363.9996, y: 818.00006}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -616,9 +666,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 65f385f5605a74f44aa20b20becd94b1
-        position: {x: -45.000008, y: 927}
+        position: {x: -136.99951, y: 913}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -631,9 +682,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: afe3d6452a7f2d24394c5e4ad1bc1d90
-        position: {x: 181.99988, y: 1030}
+        position: {x: 90.000565, y: 1015.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -646,9 +698,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 8d9edde929c1ace439244adfc8b05842
-        position: {x: -576.0001, y: 831.9999}
+        position: {x: -667.9994, y: 818.00006}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -659,9 +712,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: cdcf72b5c0201eb429981f9c776e3594
-        position: {x: -421.99994, y: 831.9999}
+        position: {x: -513.9995, y: 818.00006}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -672,9 +726,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 2a8da51ab3a59714eb995801c3237807
-        position: {x: -349.00012, y: 926.9999}
+        position: {x: -440.9995, y: 913}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -685,9 +740,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 1e545fd86464a8d4d9ce489b9248ea46
-        position: {x: -195.00005, y: 926.9999}
+        position: {x: -286.99945, y: 913}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -698,9 +754,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: f5e3fd0eb4f75984db69008d3982cd26
-        position: {x: -122.000046, y: 1030}
+        position: {x: -213.99945, y: 1015.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -711,9 +768,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: a606804a729f33f45b8aee81e4d0fbed
-        position: {x: 32.000027, y: 1030}
+        position: {x: -59.999596, y: 1015.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -724,9 +782,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 9ad360ba6bfc4cd4fa02bbdf727c1e06
-        position: {x: 105.00002, y: 1150}
+        position: {x: 13.00042, y: 1136}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -737,9 +796,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: cae13331a31a0c84496685903ad09c42
-        position: {x: 258.9999, y: 1150}
+        position: {x: 167.00049, y: 1136}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -750,9 +810,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: c68871dd0348e244da0dffa00ad0d9f8
-        position: {x: 128.99985, y: 698}
+        position: {x: -42.999973, y: 699.00006}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -765,9 +826,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 7de380f19b17a614db790afa62c8f064
-        position: {x: 32.00006, y: 799.9999}
+        position: {x: -140.00009, y: 801.0001}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -778,9 +840,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: a819ec009b57ddc4fa2b2613f82a7c63
-        position: {x: 185.99992, y: 799.9999}
+        position: {x: 13.999973, y: 801.0001}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -791,9 +854,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 50de751d7f1fd2c43886846ef1b4fcd0
-        position: {x: 335.99997, y: 799.9999}
+        position: {x: 166.9999, y: 794}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -806,9 +870,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 6f80bd3031f3be34d98ebaf80cbfd029
-        position: {x: 255.00012, y: 894.9999}
+        position: {x: 86.00006, y: 888.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -819,9 +884,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: ccf996aee9f81df42b258cfb1a008704
-        position: {x: 410.9999, y: 894.9999}
+        position: {x: 241.99995, y: 888.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -832,9 +898,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: bfc1c872207f6984c88c7f77f508a03d
-        position: {x: 560.99994, y: 894.9999}
+        position: {x: 391.9999, y: 887.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -847,9 +914,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 41b1b82235b6dd04ebfa131d621db92d
-        position: {x: 635.99994, y: 997.99994}
+        position: {x: 467, y: 990.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -860,9 +928,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: ccc603e51708f7b438af4febfd5017ab
-        position: {x: 785.99994, y: 997.9999}
+        position: {x: 616.99994, y: 991}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -875,9 +944,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 649f22943ba67e7418a7a29664297759
-        position: {x: 681.01135, y: 1128.9998}
+        position: {x: 512, y: 1122}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -888,9 +958,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: d320bbbdd036b8f4080d4c004bf372e6
-        position: {x: 860.9999, y: 1128.9999}
+        position: {x: 692, y: 1122}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -901,9 +972,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 4079ea71fe9f8264493c67cbec277b78
-        position: {x: 485.9999, y: 997.99994}
+        position: {x: 317.00006, y: 990.9999}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -914,9 +986,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: cc9c20e988ca7684bbd7d18e5be074f5
-        position: {x: -1429, y: 730}
+        position: {x: -1478.0001, y: 729.99994}
         blackboard:
           targetPoints: []
+          TegN: 0
           target: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
@@ -925,3 +998,293 @@ MonoBehaviour:
         - rid: 6753541453370621961
         - rid: 6753541453370621964
         - rid: 6753541453370621967
+    - rid: 6753541463349657600
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 63460a693b34f584481a1a582d1d4bce
+        position: {x: -933.9998, y: 654.9999}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541453370621970
+        - rid: 6753541453370621973
+        - rid: 6753541453370621974
+        - rid: 6753541453370621975
+    - rid: 6753541463349657601
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 866be8d957600c84cbe4694796d24ea5
+        position: {x: -400.99957, y: 630}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541453370621982
+        - rid: 6753541453370621983
+        - rid: 6753541453370621984
+        - rid: 6753541453370621985
+    - rid: 6753541463349657602
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 3c4fddc4aad67eb4d85d94b09f38de19
+        position: {x: 32, y: 586.9999}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541453370621994
+        - rid: 6753541453370621997
+        - rid: 6753541453370622000
+        - rid: 6753541453370622003
+    - rid: 6753541463349657603
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 5b8b4d735b6aff840af097d8e5376a01
+        position: {x: 362, y: 434}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541463349657604
+        - rid: 6753541463349657605
+        - rid: 6753541463349657606
+        - rid: 6753541463349657607
+    - rid: 6753541463349657604
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 224596bd84d7d1e469e35abbe75f197d
+        position: {x: 375, y: 550}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541463349657608
+        - rid: 6753541463349657612
+    - rid: 6753541463349657605
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 1307cebaca129f0418e1f4586f42b2d8
+        position: {x: 582, y: 660}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541463349657609
+        - rid: 6753541463349657613
+    - rid: 6753541463349657606
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: ff24e0b6fd99f754e851434ddfe62567
+        position: {x: 781, y: 774}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541463349657610
+        - rid: 6753541463349657614
+    - rid: 6753541463349657607
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 199d02599e7a21341a7205e5c9544733
+        position: {x: 1008, y: 894}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541463349657611
+        - rid: 6753541463349657615
+    - rid: 6753541463349657608
+      type: {class: SteeringspeedCheck, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 9f246d60e7dab1c4db19504628573d00
+        position: {x: 278, y: 660}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        branchMinSteerSpeed: 0.2
+    - rid: 6753541463349657609
+      type: {class: SteeringspeedCheck, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 308794b3bdfe69542bcea8b7bc1d53c6
+        position: {x: 477, y: 774}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        branchMinSteerSpeed: 0.5
+    - rid: 6753541463349657610
+      type: {class: SteeringspeedCheck, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 713f6b5b35204f84c944d5363abec579
+        position: {x: 704, y: 894}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        branchMinSteerSpeed: 0.7
+    - rid: 6753541463349657611
+      type: {class: SteeringspeedCheck, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 89d691fa5a585a340b28f7ea32e7ae6e
+        position: {x: 931, y: 1004}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        branchMinSteerSpeed: 1.1
+    - rid: 6753541463349657612
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 035ed698fef8c0f47bf95f67fea27992
+        position: {x: 432, y: 660}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: '> 150 and < 0.2'
+    - rid: 6753541463349657613
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: c6c242e25ff85c7448dadeaf39c5a753
+        position: {x: 631, y: 774}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: '> 150 and < 0.5'
+    - rid: 6753541463349657614
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: cd601fb67d4ad9d4ab90e0ab6fe4c59a
+        position: {x: 858, y: 894}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: '> 150 and < 0.7'
+    - rid: 6753541463349657615
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 1c9595cba6681e843b8503f8dbd784f0
+        position: {x: 1085, y: 1004}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: Super top
+    - rid: 6753541463349657616
+      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 7f7af2338fe57ce4db32c6b3bcbd91d0
+        position: {x: -400.99997, y: 105.76148}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541450446405632
+    - rid: 6753541463349657617
+      type: {class: PIDConBT, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 4c5ea0f7abd04bb499b32653745d5446
+        position: {x: -567.2027, y: 281.59}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+    - rid: 6753541463349657618
+      type: {class: CarDrive, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: f7920599508f821429f1e5e87a20eb96
+        position: {x: -1774, y: 962}
+        blackboard:
+          targetPoints: []
+          TegN: 0
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        branchMinDist: 0

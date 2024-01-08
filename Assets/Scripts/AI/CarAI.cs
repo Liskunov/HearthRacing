@@ -48,7 +48,7 @@ namespace Cars
 		void FixedUpdate()
 		{
 			var targetPosition = Target;
-			targetPosition.y = transform.position.y;    //ignore difference in Y
+			targetPosition.y = transform.position.y;
 			var targetDir = (targetPosition - transform.position).normalized;
 			var forwardDir = transform.rotation * Vector3.forward;
 

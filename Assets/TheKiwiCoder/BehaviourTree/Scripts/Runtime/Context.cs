@@ -14,7 +14,7 @@ namespace TheKiwiCoder
 		public GameObject gameObject;
 		public Transform transform;
 		public Rigidbody body;
-
+		public Pid_Controller pidCon;
 		public AdvancedCarController carController;
 		// Add other game specific systems here
 
@@ -26,6 +26,7 @@ namespace TheKiwiCoder
 			context.transform = gameObject.transform;
 			context.body = gameObject.GetComponent<Rigidbody>();
 			context.carController = gameObject.GetComponent<AdvancedCarController>();
+			context.pidCon = gameObject.GetComponent<Pid_Controller>();
 
 			// Add whatever else you need here...
 

@@ -20,7 +20,7 @@ public class SteeringspeedCheck : ActionNode
 
     protected override State OnUpdate() 
     {
-        if (CarSteeringSpeed < branchMinSteerSpeed)
+        if (CarSteeringSpeed > branchMinSteerSpeed)
         {
             return State.Failure;
         }

@@ -11,7 +11,7 @@ namespace TheKiwiCoder
     [System.Serializable]
 	public class Blackboard
 	{
-		List<GameObject> targetPoints = new List<GameObject>();
+		public List<GameObject> targetPoints = new List<GameObject>();
 		public Vector3 target;
 	}
 }

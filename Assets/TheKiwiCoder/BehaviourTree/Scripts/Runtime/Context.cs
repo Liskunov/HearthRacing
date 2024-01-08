@@ -1,3 +1,4 @@
+using Cars;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,6 +14,8 @@ namespace TheKiwiCoder
 		public GameObject gameObject;
 		public Transform transform;
 		public Rigidbody body;
+
+		public AdvancedCarController carController;
 		// Add other game specific systems here
 
 		public static Context CreateFromGameObject(GameObject gameObject)
@@ -22,6 +25,7 @@ namespace TheKiwiCoder
 			context.gameObject = gameObject;
 			context.transform = gameObject.transform;
 			context.body = gameObject.GetComponent<Rigidbody>();
+			context.carController = gameObject.GetComponent<AdvancedCarController>();
 
 			// Add whatever else you need here...
 

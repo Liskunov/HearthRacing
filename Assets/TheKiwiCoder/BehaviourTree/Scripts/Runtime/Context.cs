@@ -12,6 +12,7 @@ namespace TheKiwiCoder
 	{
 		public GameObject gameObject;
 		public Transform transform;
+		public Rigidbody body;
 		// Add other game specific systems here
 
 		public static Context CreateFromGameObject(GameObject gameObject)
@@ -20,6 +21,7 @@ namespace TheKiwiCoder
 			Context context = new Context();
 			context.gameObject = gameObject;
 			context.transform = gameObject.transform;
+			context.body = gameObject.GetComponent<Rigidbody>();
 
 			// Add whatever else you need here...
 

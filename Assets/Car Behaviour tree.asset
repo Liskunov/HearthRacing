@@ -17,16 +17,24 @@ MonoBehaviour:
   nodes:
   - rid: 6753541447130284035
   - rid: 6753541447130284037
+  - rid: 6753541450446405632
+  - rid: 6753541450446405633
+  - rid: 6753541450446405634
+  - rid: 6753541450446405635
+  - rid: 6753541450446405637
+  - rid: 6753541450446405638
+  - rid: 6753541450446405639
+  - rid: 6753541450446405640
+  - rid: 6753541450446405641
+  - rid: 6753541450446405642
   treeState: 0
   blackboard:
     target: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 190, y: -1, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+  viewPosition: {x: 193, y: 54, z: 0}
+  viewScale: {x: 0.43232757, y: 0.43232757, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 6753541447130284035
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -52,6 +60,135 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: -2
+          rid: 6753541450446405632
         restartOnSuccess: 1
         restartOnFailure: 0
+    - rid: 6753541450446405632
+      type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: c7b42d6289416c944bafbca794bf4e07
+        position: {x: -0.0000038146973, y: 281.47913}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541450446405637
+        - rid: 6753541450446405638
+        - rid: 6753541450446405641
+    - rid: 6753541450446405633
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 519c460d4a01e6a4183191a49976ca4c
+        position: {x: -193.99997, y: 730}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: 1
+    - rid: 6753541450446405634
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: eb1dff8941045d040927daa430898687
+        position: {x: 150.00003, y: 698.00006}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: 2
+    - rid: 6753541450446405635
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 7dec40c6bb5aca94f842bb8bac918878
+        position: {x: 518.9877, y: 698.0001}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        message: 3
+    - rid: 6753541450446405637
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: e0bed8d85d7246f49b7404b7094727ed
+        position: {x: -269.22318, y: 543.7569}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541450446405639
+        - rid: 6753541450446405633
+    - rid: 6753541450446405638
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b27cd8ed48ccea841b92ad1bf8ad7a79
+        position: {x: 27.999987, y: 544}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541450446405640
+        - rid: 6753541450446405634
+    - rid: 6753541450446405639
+      type: {class: MassSearch, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 77b387aaf8fd38b438ee58acf841c400
+        position: {x: -419, y: 729.99994}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        MaxMass: 100
+    - rid: 6753541450446405640
+      type: {class: MassSearch, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 9de6d32eb82058e4aad3eb4ea2ca36a7
+        position: {x: 0.00019836426, y: 698.00006}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        MaxMass: 75
+    - rid: 6753541450446405641
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 9a9c588062f6a0b4e88b4ac2ef481f82
+        position: {x: 330.00006, y: 564.4956}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 6753541450446405642
+        - rid: 6753541450446405635
+    - rid: 6753541450446405642
+      type: {class: MassSearch, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 8480b738c4cc544499656e72e6b47664
+        position: {x: 329.99997, y: 698.00006}
+        blackboard:
+          target: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        MaxMass: 40

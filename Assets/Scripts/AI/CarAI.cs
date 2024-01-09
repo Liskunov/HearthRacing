@@ -15,6 +15,8 @@ namespace Cars
 		private Vector3 Target;
 		private Vector3 NextTarget;
 		private int I;
+		[SerializeField] private float stopDist;
+		[SerializeField] private float angleDist;
 		private void Awake()
 		{
 			m_carController = GetComponent<AdvancedCarController>();
@@ -35,9 +37,13 @@ namespace Cars
 			float disToPos = Vector3.Distance(transform.position, Target);
 			float angleDir = Vector3.SignedAngle(transform.forward, DirPoint, Vector3.up);
 
-			if (disToPos > 15f)
+			if (disToPos > stopDist)
 			{
 				m_carController.GoForward();
+			}
+			else if (stopDist > disToPos && disToPos > angleDist)
+			{
+				m_carController.Brakes();
 			}
 			else
 			{

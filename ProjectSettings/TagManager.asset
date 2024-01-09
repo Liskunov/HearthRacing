@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CarImg
+  - TireImg
+  - EngineImg
+  - BrakeImg
+  - PendantImg
+  - TurbineImg
   layers:
   - Default
   - TransparentFX

@@ -345,7 +345,7 @@ namespace Cars
 			}
 		}
 
-		private void Handbrake()
+		public void Handbrake()
 		{
 			CancelInvoke("RecoverTraction");
 

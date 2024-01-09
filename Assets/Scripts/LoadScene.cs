@@ -19,7 +19,7 @@ public class LoadScene : MonoBehaviour
 
     IEnumerator LoadAsync()
     {
-        AsyncOperation loadAsync = SceneManager.LoadSceneAsync("FirstTrack");
+        AsyncOperation loadAsync = SceneManager.LoadSceneAsync("Track2");
         loadAsync.allowSceneActivation = false;
 
         while (!loadAsync.isDone)

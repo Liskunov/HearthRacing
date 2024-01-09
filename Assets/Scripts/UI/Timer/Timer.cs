@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cars;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,6 +8,8 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timer;
+    [SerializeField] public GameObject[] startScript;
+    [SerializeField] public GameObject ui;
 
     public float lifeTime = 60f;
     private float gameTime;
@@ -29,6 +32,14 @@ public class Timer : MonoBehaviour
         if (gameTime <= 3)
         {
             timer.color = Color.red;
+        }
+
+        if (lifeTime <= 0)
+        {
+            for (int i = 0; i < startScript.Length; i++)
+            startScript[i].GetComponent<CarAI>().enabled = true;
+            ui.SetActive(false);
+            
         }
     }
 

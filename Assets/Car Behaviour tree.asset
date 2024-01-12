@@ -100,8 +100,8 @@ MonoBehaviour:
     - {fileID: 0}
     TegN: 0
     target: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 704, y: 227, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+  viewPosition: {x: 1130, y: -319, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
@@ -1280,7 +1280,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: f7920599508f821429f1e5e87a20eb96
-        position: {x: -1774, y: 962}
+        position: {x: -1774, y: 963.15}
         blackboard:
           targetPoints: []
           TegN: 0

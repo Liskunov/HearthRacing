@@ -12,9 +12,9 @@ namespace Cars
 
 		[SerializeField] List<GameObject> targetPoints = new List<GameObject>();
 		private int CountTarget;
-		private Vector3 Target;
+		public Vector3 Target;
 		private Vector3 NextTarget;
-		private int I;
+		public int I;
 		[SerializeField] private float stopDist;
 		[SerializeField] private float angleDist;
 		private void Awake()

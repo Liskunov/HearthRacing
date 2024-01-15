@@ -6,18 +6,31 @@ using UnityEngine;
 
 public class RandomImages : MonoBehaviour
 {
-    public Transform[] parentTransform;
+    public Transform[] carSlotTransform;
+    public Transform[] modSlotTransform;
     private void Start()
     {
-        string folderWithContent = "Assets/Prefabs/ImageCars";
+        string folderWithCarImg = "Assets/Prefabs/ImageCars";
 
 
-        for (int i = 0; i < parentTransform.Length; i++)
+        for (int i = 0; i < carSlotTransform.Length; i++)
         {
-            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithContent});
+            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithCarImg});
             var randomIndex = Random.Range(0, assetPaths.Length);
             var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
-            Instantiate(PrefabUtility.LoadPrefabContents(path), parentTransform[i]);
+            Instantiate(PrefabUtility.LoadPrefabContents(path), carSlotTransform[i]);
+        }
+        
+        
+        string folderWithModImg = "Assets/Prefabs/ImageMods";
+
+
+        for (int i = 0; i < modSlotTransform.Length; i++)
+        {
+            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithModImg});
+            var randomIndex = Random.Range(0, assetPaths.Length);
+            var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
+            Instantiate(PrefabUtility.LoadPrefabContents(path), modSlotTransform[i]);
         }
     }
 }

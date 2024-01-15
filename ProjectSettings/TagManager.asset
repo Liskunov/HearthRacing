@@ -6,6 +6,11 @@ TagManager:
   tags:
   - CarImg
   - CarSlotUI
+  - TireImg
+  - EngineImg
+  - BrakeImg
+  - PendantImg
+  - TurbineImg
   layers:
   - Default
   - TransparentFX

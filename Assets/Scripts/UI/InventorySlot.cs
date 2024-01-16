@@ -16,6 +16,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         PendantImg,
         TurbineImg
     }
+    
 
     [SerializeField] private List<ShopTags> m_tags;
 
@@ -28,7 +29,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             m_stringTags.Add(tag.ToString());
         }
     }
-    
+
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;

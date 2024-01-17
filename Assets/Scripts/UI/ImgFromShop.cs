@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ImgFromShop : MonoBehaviour
 {
-    [SerializeField] private Transform[] OutCarImg;
+    [SerializeField] private GameObject[] OutCarImg;
     [SerializeField] private Transform[] InCarImg;
 
     private void Copy()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   icon: {fileID: 0}
-  price: 80
+  price: 110
   maxSpeed: 100
   boost: 100
   braking: 100

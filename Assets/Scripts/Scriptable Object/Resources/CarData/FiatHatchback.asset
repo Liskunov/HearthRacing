@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a11db6d3bf9c2d41aa1cbdc5dbc54b5, type: 3}
   m_Name: FiatHatchback
   m_EditorClassIdentifier: 
-  Name: FiatHatchback
-  Icon: {fileID: 21300000, guid: 27c06af77d4f8f0468a0defd665a1c7c, type: 3}
-  price: 500
+  name: 
+  icon: {fileID: 21300000, guid: 27c06af77d4f8f0468a0defd665a1c7c, type: 3}
+  price: 140
   maxSpeed: 100
   boost: 100
   braking: 100

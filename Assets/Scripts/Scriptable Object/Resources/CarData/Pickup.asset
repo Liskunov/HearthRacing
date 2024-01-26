@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a11db6d3bf9c2d41aa1cbdc5dbc54b5, type: 3}
-  m_Name: Pickupich
+  m_Name: Pickup
   m_EditorClassIdentifier: 
-  Name: Pickupich
-  Icon: {fileID: 21300000, guid: 06b6a6ec933c01f4f8e7a4653710a86a, type: 3}
-  price: 500
+  name: 
+  icon: {fileID: 21300000, guid: fb24153af8095a54fa5d078d373d66c8, type: 3}
+  price: 75
   maxSpeed: 100
   boost: 100
   braking: 100

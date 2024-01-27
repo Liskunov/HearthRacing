@@ -13,7 +13,7 @@ public class CarInfo : ScriptableObject
    public int boost = 0;
    public int braking = 0;
 
-
+   
    public string Name
    {
       get

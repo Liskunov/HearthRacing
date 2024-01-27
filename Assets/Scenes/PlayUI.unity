@@ -460,7 +460,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 872917373}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: Sell
         m_Mode: 1
@@ -698,6 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 03000000
+  shop: {fileID: 0}
 --- !u!114 &118975100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!1 &187619200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,6 +1367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &277876598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1441,6 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 04000000
+  shop: {fileID: 0}
 --- !u!114 &312780321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,6 +1765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 0100000002000000030000000400000005000000
+  shop: {fileID: 0}
 --- !u!114 &360474113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,6 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &381576014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,6 +1957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &387182317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2445,6 +2452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 0}
 --- !u!114 &475748829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,6 +2605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &493235016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2995,6 +3004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &651249003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3107,6 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 1646565312}
 --- !u!114 &684488020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3194,16 +3205,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719494833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.375, y: 1.375, z: 1.375}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1319966719}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 770, y: 358}
+  m_AnchoredPosition: {x: 2436, y: 1135}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719494835
@@ -3428,6 +3439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &743716354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3580,7 +3592,6 @@ GameObject:
   - component: {fileID: 872917370}
   - component: {fileID: 872917372}
   - component: {fileID: 872917371}
-  - component: {fileID: 872917373}
   m_Layer: 5
   m_Name: CarSlot1
   m_TagString: Untagged
@@ -3620,6 +3631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 1646565312}
 --- !u!114 &872917370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,19 +3694,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872917367}
   m_CullTransparentMesh: 1
---- !u!114 &872917373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872917367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a959929e82ba4424a865d5827f1cba71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyText: {fileID: 719494835}
 --- !u!1 &911144451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,6 +3746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 1646565312}
 --- !u!114 &911144455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3899,6 +3899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 0100000002000000030000000400000005000000
+  shop: {fileID: 0}
 --- !u!114 &946853237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4081,6 +4082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 0100000002000000030000000400000005000000
+  shop: {fileID: 0}
 --- !u!114 &1160811020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4195,6 +4197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 0100000002000000030000000400000005000000
+  shop: {fileID: 0}
 --- !u!114 &1168443028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4346,6 +4349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 01000000
+  shop: {fileID: 0}
 --- !u!114 &1225210852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4503,7 +4507,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 872917373}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: GetPrice
         m_Mode: 1
@@ -4651,7 +4655,6 @@ RectTransform:
   m_Children:
   - {fileID: 1779107151}
   - {fileID: 12365829}
-  - {fileID: 719494834}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4777,6 +4780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 0100000002000000030000000400000005000000
+  shop: {fileID: 0}
 --- !u!114 &1321867989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,6 +5110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 0}
 --- !u!114 &1456320695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5282,6 +5287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!1 &1484329535
 GameObject:
   m_ObjectHideFlags: 0
@@ -5411,6 +5417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 05000000
+  shop: {fileID: 0}
 --- !u!114 &1488230185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5525,6 +5532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 0}
 --- !u!114 &1488731272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5875,6 +5883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!114 &1592698594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5899,6 +5908,51 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1 &1646565311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1646565313}
+  - component: {fileID: 1646565312}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1646565312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646565311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a959929e82ba4424a865d5827f1cba71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 719494835}
+--- !u!4 &1646565313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646565311}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1244.3269, y: 634.58575, z: 24.974533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1683772796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,6 +6005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 0}
 --- !u!114 &1683772799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6192,6 +6247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 0100000002000000030000000400000005000000
+  shop: {fileID: 0}
 --- !u!114 &1748148765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6268,6 +6324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 00000000
+  shop: {fileID: 0}
 --- !u!114 &1772388217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6460,6 +6517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 02000000
+  shop: {fileID: 0}
 --- !u!114 &1786739844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6890,6 +6948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
+  shop: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6898,3 +6957,5 @@ SceneRoots:
   - {fileID: 975377944}
   - {fileID: 138642437}
   - {fileID: 34046140}
+  - {fileID: 1646565313}
+  - {fileID: 719494834}

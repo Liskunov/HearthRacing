@@ -23,13 +23,24 @@ public class Shop : MonoBehaviour
         if (money >= price)
         {
             moneyText.text = (money - price).ToString();
-        } else
-            return;
+        }
     }
 
     public void GetPrice()
     {
         price = GetComponentInChildren<Car>().carInfo.price;
         Debug.Log(price);
+    }
+
+    public bool ChangeGold(int price)
+    {
+        int money = int.Parse(moneyText.text);
+        if (money >= price)
+        {
+            moneyText.text = (money - price).ToString();
+            return true;
+        }
+
+        return false;
     }
 }

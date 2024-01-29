@@ -771,7 +771,6 @@ GameObject:
   m_Component:
   - component: {fileID: 138642437}
   - component: {fileID: 138642438}
-  - component: {fileID: 138642439}
   m_Layer: 0
   m_Name: RandomSpawn
   m_TagString: Untagged
@@ -826,20 +825,6 @@ MonoBehaviour:
   - {fileID: 381576009}
   - {fileID: 651248998}
   - {fileID: 743716349}
---- !u!114 &138642439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138642435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6c4d4726aae01845804d52b0ab9fc4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints: []
-  cars: {fileID: 0}
 --- !u!1 &158966722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,14 +3192,14 @@ RectTransform:
   m_GameObject: {fileID: 719494833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.375, y: 1.375, z: 1.375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1319966719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2436, y: 1135}
+  m_AnchoredPosition: {x: 811.6365, y: 389.09094}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719494835
@@ -3631,7 +3616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tags: 
-  shop: {fileID: 1646565312}
+  shop: {fileID: 0}
 --- !u!114 &872917370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4507,18 +4492,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: GetPrice
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &1274168026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4653,6 +4626,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 719494834}
   - {fileID: 1779107151}
   - {fileID: 12365829}
   m_Father: {fileID: 0}
@@ -6958,4 +6932,3 @@ SceneRoots:
   - {fileID: 138642437}
   - {fileID: 34046140}
   - {fileID: 1646565313}
-  - {fileID: 719494834}

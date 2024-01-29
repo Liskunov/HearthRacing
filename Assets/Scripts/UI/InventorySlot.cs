@@ -36,14 +36,16 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     {
         GameObject dropped = eventData.pointerDrag;
         int droppedPrice = int.Parse(dropped.GetComponent<Car>().priceText.text);
-        
-      
+
+
 
         if (!m_stringTags.Any(str => dropped.CompareTag(str)))
             return;
-        if (!shop.ChangeGold(droppedPrice))
+        if (dropped.GetComponent<DraggableItem>().canBuy)
+            if (!shop.ChangeGold(droppedPrice))
             return;
-        
+
+        dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;
 

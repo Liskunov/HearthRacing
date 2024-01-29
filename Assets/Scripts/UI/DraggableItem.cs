@@ -11,6 +11,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public Image image;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public Transform parentBeforeDrag;
+    [SerializeField] public bool canBuy = true;
 
     public void OnBeginDrag(PointerEventData eventData)
     {

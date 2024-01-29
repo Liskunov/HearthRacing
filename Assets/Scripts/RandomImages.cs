@@ -6,40 +6,49 @@ using UnityEngine;
 
 public class RandomImages : MonoBehaviour
 {
-    public Transform[] carSlotTransform;
     public GameObject[] carSlotObj;
-    public Transform[] modSlotTransform;
     public GameObject[] modSlotObj;
     public void Spawn()
     {
 
         string folderWithCarImg = "Assets/Prefabs/ImageCars/Test";
 
-        for (int i = 0; i < carSlotTransform.Length; i++)
+        for (int i = 0; i < carSlotObj.Length; i++)
         {
-            carSlotObj[i].transform.DetachChildren();
+            RemoveChildren(carSlotObj[i]);
             string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithCarImg});
             var randomIndex = Random.Range(0, assetPaths.Length);
             var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
-            Instantiate(PrefabUtility.LoadPrefabContents(path), carSlotTransform[i]);
+            Instantiate(PrefabUtility.LoadPrefabContents(path), carSlotObj[i].transform);
         }
         
         
         string folderWithModImg = "Assets/Prefabs/ImageMods";
 
 
-        for (int i = 0; i < modSlotTransform.Length; i++)
+        for (int i = 0; i < modSlotObj.Length; i++)
         {
-            modSlotObj[i].transform.DetachChildren();
+            RemoveChildren(modSlotObj[i]);
             string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithModImg});
             var randomIndex = Random.Range(0, assetPaths.Length);
             var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
-            Instantiate(PrefabUtility.LoadPrefabContents(path), modSlotTransform[i]);
+            Instantiate(PrefabUtility.LoadPrefabContents(path), modSlotObj[i].transform);
         }
     }
 
     private void Start()
     {
         Spawn();
+    }
+
+    public static void RemoveChildren(GameObject parent)
+    {
+        Transform transform;
+        for(int i = 0;i < parent.transform.childCount; i++)
+        {
+            transform = parent.transform.GetChild(i);
+            GameObject.Destroy(transform.gameObject);
+        }
+
     }
 }

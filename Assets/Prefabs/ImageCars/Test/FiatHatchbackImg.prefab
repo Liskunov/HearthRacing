@@ -106,6 +106,7 @@ MonoBehaviour:
   image: {fileID: 372938265838870092}
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
+  canBuy: 1
 --- !u!114 &-5078564458764013677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab60b0593be820b47800098f5f2cdf94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carInfo: {fileID: 11400000, guid: 0c1e3e308f7e10548b6dcf9220288e17, type: 2}
+  itemSO: {fileID: 11400000, guid: 0c1e3e308f7e10548b6dcf9220288e17, type: 2}
   priceText: {fileID: 4162971351068285232}
 --- !u!1 &5938577496976290238
 GameObject:

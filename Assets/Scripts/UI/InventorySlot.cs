@@ -35,15 +35,17 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
-        int droppedPrice = int.Parse(dropped.GetComponent<Car>().priceText.text);
+        int droppedPrice = int.Parse(dropped.GetComponent<ItemImgInfo>().priceText.text);
 
 
 
         if (!m_stringTags.Any(str => dropped.CompareTag(str)))
             return;
+        if (dropped.GetComponent<DraggableItem>().canBuy && transform.childCount != 0)
+            return;
         if (dropped.GetComponent<DraggableItem>().canBuy)
             if (!shop.ChangeGold(droppedPrice))
-            return;
+                return;
 
         dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
@@ -53,7 +55,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         {
             var child = transform.GetChild(0);
             child.transform.SetParent(draggableItem.parentBeforeDrag);
-            
+
         }
     }
 }

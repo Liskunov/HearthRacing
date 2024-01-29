@@ -240,6 +240,7 @@ MonoBehaviour:
   image: {fileID: 372938265838870092}
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
+  canBuy: 1
 --- !u!114 &-3303115272310500443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,5 +253,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab60b0593be820b47800098f5f2cdf94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carInfo: {fileID: 11400000, guid: 898628fc44f2d054db60ab6c88250a4e, type: 2}
+  itemSO: {fileID: 11400000, guid: 898628fc44f2d054db60ab6c88250a4e, type: 2}
   priceText: {fileID: 7466986212045720143}

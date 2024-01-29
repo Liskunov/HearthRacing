@@ -4,14 +4,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Car : MonoBehaviour
+public class ItemImgInfo : MonoBehaviour
 {
-    [SerializeField] public CarInfo carInfo;
+    [SerializeField] public ItemSO itemSO;
     [SerializeField] public TextMeshProUGUI priceText;
 
     private void Start()
     {
-        priceText.text = carInfo.price.ToString();
+        priceText.text = itemSO.price.ToString();
     }
     
 }

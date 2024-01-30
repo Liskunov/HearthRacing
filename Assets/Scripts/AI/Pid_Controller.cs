@@ -5,19 +5,13 @@ using UnityEngine;
 
 public class Pid_Controller    : MonoBehaviour
 {
-    public enum DerivativeMeasurement 
-    {
-        Velocity,
-        ErrorRateOfChange
-    }
     public float proportionalGain;
     public float integralGain;
     public float derivativeGain;
 
-    public float outputMin = -1;
-    public float outputMax = 1;
+    public float outputMin = -0.1f;
+    public float outputMax = 0.1f;
     public float integralSaturation;
-    public DerivativeMeasurement derivativeMeasurement;
 
     public float valueLast;
     public float errorLast;
@@ -43,7 +37,6 @@ public class Pid_Controller    : MonoBehaviour
         float I = integralGain * integrationStored;
 
         //calculate both D terms
-        float errorRateOfChange = AngleDifference(error, errorLast) / dt;
         errorLast = error;
 
         float valueRateOfChange = AngleDifference(currentAngle, valueLast) / dt;
@@ -52,22 +45,9 @@ public class Pid_Controller    : MonoBehaviour
 
         //choose D term to use
         float deriveMeasure = 0;
+        
+        deriveMeasure = -valueRateOfChange;
 
-        if (derivativeInitialized) 
-        {
-            if (derivativeMeasurement == DerivativeMeasurement.Velocity) 
-            {
-                deriveMeasure = -valueRateOfChange;
-            } 
-            else 
-            {
-                deriveMeasure = errorRateOfChange;
-            }
-        } 
-        else 
-        {
-            derivativeInitialized = true;
-        }
 
         float D = derivativeGain * deriveMeasure;
 

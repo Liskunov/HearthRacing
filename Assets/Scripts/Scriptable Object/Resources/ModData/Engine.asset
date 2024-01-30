@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Engine
   icon: {fileID: 0}
   price: 20
+  rating: 0.5

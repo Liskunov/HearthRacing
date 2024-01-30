@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
     [SerializeField] private List<ShopTags> m_tags;
     [SerializeField] private Shop shop;
+    [SerializeField] public bool canTake = true;
 
     private List<string> m_stringTags = new List<string>();
     
@@ -38,7 +40,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         int droppedPrice = int.Parse(dropped.GetComponent<ItemImgInfo>().priceText.text);
 
 
-
         if (!m_stringTags.Any(str => dropped.CompareTag(str)))
             return;
         if (dropped.GetComponent<DraggableItem>().canBuy && transform.childCount != 0)
@@ -54,6 +55,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         if (transform.childCount != 0)
         {
             var child = transform.GetChild(0);
+            GetComponentInChildren<DraggableItem>().image.raycastTarget = true;
             child.transform.SetParent(draggableItem.parentBeforeDrag);
 
         }

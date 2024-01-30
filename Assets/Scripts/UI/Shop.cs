@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText;
-    private int price { get; set; }
+    //private int price { get; set; }
 
     public bool ChangeGold(int price)
     {

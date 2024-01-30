@@ -9,6 +9,7 @@ public class ItemSO : ScriptableObject
    public string name;
    public Sprite icon;
    public int price = 0;
+   public float rating = 0.1f;
 
    
    public string Name
@@ -33,6 +34,14 @@ public class ItemSO : ScriptableObject
       get
       {
          return price;
+      }
+   }
+   
+   public float Rating
+   {
+      get
+      {
+         return rating;
       }
    }
 

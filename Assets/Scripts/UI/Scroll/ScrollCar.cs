@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class ScrollCar : MonoBehaviour
 {
     public GameObject scrollbar;
+    [SerializeField] private GameObject[] modsInfo;
 
     private float scroll_pos = 0;
     float[] pos;
@@ -34,8 +35,9 @@ public class ScrollCar : MonoBehaviour
                 if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
                 {
                     scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp (scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
-                    //Debug.Log(pos[i]);
-                }
+                    modsInfo[i].SetActive(true);
+                } else
+                modsInfo[i].SetActive(false);
             }
         }
     }

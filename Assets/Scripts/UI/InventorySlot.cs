@@ -46,8 +46,9 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             return;
         if (dropped.GetComponent<DraggableItem>().canBuy)
             if (!shop.ChangeGold(droppedPrice))
-                return;
-
+                return;    
+        
+        
         dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;

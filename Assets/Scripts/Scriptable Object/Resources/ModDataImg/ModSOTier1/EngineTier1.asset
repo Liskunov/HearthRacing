@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a11db6d3bf9c2d41aa1cbdc5dbc54b5, type: 3}
-  m_Name: Fiat
+  m_Script: {fileID: 11500000, guid: 4fcf5f75bedc422428ca24d34ff74b87, type: 3}
+  m_Name: EngineTier1
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
-  price: 10
-  maxSpeed: 100
-  boost: 100
-  braking: 100
+  name: EngineTir1
+  icon: {fileID: 21300000, guid: eec7650b535f9504ebf9c1515110ec3b, type: 3}
+  price: 20
+  ratingMod: 0.1

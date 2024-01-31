@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7148760445900438603}
   - component: {fileID: 2773094838883196497}
   - component: {fileID: 619906214475177046}
-  - component: {fileID: 3851340626743337078}
+  - component: {fileID: -4348533651930594802}
   m_Layer: 5
   m_Name: Tire
   m_TagString: TireImg
@@ -107,7 +107,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
   canBuy: 1
---- !u!114 &3851340626743337078
+--- !u!114 &-4348533651930594802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,10 +116,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2158458684770024370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab60b0593be820b47800098f5f2cdf94, type: 3}
+  m_Script: {fileID: 11500000, guid: a0084ae5cdc002944917045bc555ea2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSO: {fileID: 11400000, guid: 42e0c6f193ad0b24ea0b946eaf1799fa, type: 2}
+  modSO: {fileID: 11400000, guid: be19c9a341cdf184891c0204e4078715, type: 2}
   priceText: {fileID: 6056853054598499912}
 --- !u!1 &9120660748180555663
 GameObject:

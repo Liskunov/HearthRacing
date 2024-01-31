@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab60b0593be820b47800098f5f2cdf94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSO: {fileID: 11400000, guid: 2181ad0812bcf64489ff5fc09b6060ad, type: 2}
+  carSO: {fileID: 11400000, guid: 2181ad0812bcf64489ff5fc09b6060ad, type: 2}
   priceText: {fileID: 762785959313131675}
 --- !u!1 &1449818732140847738
 GameObject:

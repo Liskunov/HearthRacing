@@ -23,6 +23,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     [SerializeField] private List<ShopTags> m_tags;
     [SerializeField] private Shop shop;
     [SerializeField] public bool canTake = true;
+    private int droppedPrice = 0;
 
     private List<string> m_stringTags = new List<string>();
     
@@ -37,7 +38,13 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
-        int droppedPrice = int.Parse(dropped.GetComponent<ItemImgInfo>().priceText.text);
+        
+        
+        if(dropped.CompareTag("CarImg"))
+        {
+            droppedPrice = int.Parse(dropped.GetComponent<CarImgInfo>().priceText.text);
+        } 
+        else droppedPrice = int.Parse(dropped.GetComponent<ModImgInfo>().priceText.text);
 
 
         if (!m_stringTags.Any(str => dropped.CompareTag(str)))

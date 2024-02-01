@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Helper : MonoBehaviour
+public static class Helper
 {
     public static Vector2 GetClosestPointOnLine(Vector2 a, Vector2 b, Vector2 p)
     {

@@ -622,6 +622,7 @@ MonoBehaviour:
   m_tags: 03000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &47832280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,6 +984,7 @@ MonoBehaviour:
   m_tags: 03000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &118975100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,6 +1252,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!1 &160037945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,6 +1997,7 @@ MonoBehaviour:
   m_tags: 03000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &225680421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2289,6 +2293,7 @@ MonoBehaviour:
   m_tags: 05000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &258605439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2500,6 +2505,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &277876598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,6 +2731,7 @@ MonoBehaviour:
   m_tags: 04000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &312780321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2998,6 +3005,7 @@ MonoBehaviour:
   m_tags: 02000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &325619322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3238,6 +3246,7 @@ MonoBehaviour:
   m_tags: 0100000002000000030000000400000005000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &360474113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3340,6 +3349,7 @@ MonoBehaviour:
   m_tags: 05000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &363915036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,6 +3480,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &381576014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3548,6 +3559,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &387182317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3819,8 +3831,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038147, y: -37}
-  m_SizeDelta: {x: 684.19, y: 301.2548}
+  m_AnchoredPosition: {x: 0.0000083234, y: -38.171}
+  m_SizeDelta: {x: 70.3112, y: 76.3422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &436080686
 GameObject:
@@ -4185,6 +4197,7 @@ MonoBehaviour:
   m_tags: 00000000
   shop: {fileID: 1646565312}
   canTake: 0
+  obj: {fileID: 0}
 --- !u!114 &475748829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4339,6 +4352,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &493235016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5186,6 +5200,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &651249003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5541,6 +5556,7 @@ MonoBehaviour:
   m_tags: 00000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &684488020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,6 +5937,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &743716354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6427,6 +6444,7 @@ MonoBehaviour:
   m_tags: 01000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &843513680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6519,6 +6537,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &872917370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6734,6 +6753,7 @@ MonoBehaviour:
   m_tags: 01000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &885061662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6863,6 +6883,7 @@ MonoBehaviour:
   m_tags: 00000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &911144455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7110,6 +7131,7 @@ MonoBehaviour:
   m_tags: 0100000002000000030000000400000005000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &946853237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7594,6 +7616,7 @@ MonoBehaviour:
   m_tags: 02000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1032235802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8273,6 +8296,7 @@ MonoBehaviour:
   m_tags: 0100000002000000030000000400000005000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1160811020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8389,6 +8413,7 @@ MonoBehaviour:
   m_tags: 0100000002000000030000000400000005000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1168443028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8840,6 +8865,7 @@ MonoBehaviour:
   m_tags: 01000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1225210852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8980,6 +9006,7 @@ MonoBehaviour:
   m_tags: 04000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1228965237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9171,6 +9198,7 @@ MonoBehaviour:
   m_tags: 04000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1261876081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9732,6 +9760,7 @@ MonoBehaviour:
   m_tags: 0100000002000000030000000400000005000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1321867989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10197,6 +10226,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!1 &1484329535
 GameObject:
   m_ObjectHideFlags: 0
@@ -10328,6 +10358,7 @@ MonoBehaviour:
   m_tags: 05000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1488230185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10444,6 +10475,7 @@ MonoBehaviour:
   m_tags: 00000000
   shop: {fileID: 1646565312}
   canTake: 0
+  obj: {fileID: 0}
 --- !u!114 &1488731272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10967,6 +10999,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1592698594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11222,6 +11255,7 @@ GameObject:
   - component: {fileID: 1683772800}
   - component: {fileID: 1683772799}
   - component: {fileID: 1683772798}
+  - component: {fileID: 1683772802}
   m_Layer: 5
   m_Name: HandSlot1
   m_TagString: Untagged
@@ -11263,6 +11297,7 @@ MonoBehaviour:
   m_tags: 00000000
   shop: {fileID: 1646565312}
   canTake: 0
+  obj: {fileID: 0}
 --- !u!114 &1683772799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11325,6 +11360,24 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1683772802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683772796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a49e03966020d4ea203f2435bedf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modsSlots:
+  - {fileID: 1225210849}
+  - {fileID: 1786739841}
+  - {fileID: 118975097}
+  - {fileID: 312780318}
+  - {fileID: 1488230182}
 --- !u!1 &1717856891
 GameObject:
   m_ObjectHideFlags: 0
@@ -11595,6 +11648,7 @@ MonoBehaviour:
   m_tags: 0100000002000000030000000400000005000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1748148765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11973,6 +12027,7 @@ MonoBehaviour:
   m_tags: 02000000
   shop: {fileID: 1646565312}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!114 &1786739844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13396,6 +13451,7 @@ MonoBehaviour:
   m_tags: 
   shop: {fileID: 0}
   canTake: 1
+  obj: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

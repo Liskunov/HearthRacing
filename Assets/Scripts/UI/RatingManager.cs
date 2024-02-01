@@ -13,7 +13,7 @@ public class RatingManager : MonoBehaviour
 
 
 
-    public void Update()
+    public void TakeRating()
     {
       
         

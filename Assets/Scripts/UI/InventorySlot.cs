@@ -25,6 +25,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     [SerializeField] private List<ShopTags> m_tags;
     [SerializeField] private Shop shop;
     [SerializeField] public bool canTake = true;
+
+    public GameObject obj;
+    
+
     private int droppedPrice = 0;
 
     private List<string> m_stringTags = new List<string>();
@@ -40,12 +44,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
-        
-        
-        if(dropped.CompareTag("CarImg"))
+
+
+        if (dropped.CompareTag("CarImg"))
         {
             droppedPrice = int.Parse(dropped.GetComponent<CarImgInfo>().priceText.text);
-        } 
+        }
         else droppedPrice = int.Parse(dropped.GetComponent<ModImgInfo>().priceText.text);
 
 
@@ -55,20 +59,47 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             return;
         if (dropped.GetComponent<DraggableItem>().canBuy)
             if (!shop.ChangeGold(droppedPrice))
-                return;    
-        
-        
+                return;
+
+
         dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;
-
+        
+        
         if (transform.childCount != 0)
         {
+            Upd();
+            Debug.Log("1");
+
             var child = transform.GetChild(0);
             GetComponentInChildren<DraggableItem>().image.raycastTarget = true;
             child.transform.SetParent(draggableItem.parentBeforeDrag);
+
+
+            Invoke(nameof(DebugInf), 0.01f);
             draggableItem.parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
-            GetComponent<MoveCarMod>().TakeMods();
+
+            Invoke(nameof(Upd), 0.02f);
+            Debug.Log("2");
+
+        }
+        else
+        {
+                Invoke(nameof(Upd), 0.01f);
+                Debug.Log("3");
         }
     }
+
+    public void DebugInf()
+    {
+        GetComponent<MoveCarMod>().TakeMods();
+    }
+
+    public void Upd()
+    {
+        obj = GameObject.Find("ModInfo1");
+        obj.GetComponent<RatingManager>().TakeRating();
+    }
+
 }

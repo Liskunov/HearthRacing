@@ -26,7 +26,9 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     [SerializeField] private Shop shop;
     [SerializeField] public bool canTake = true;
 
-    public GameObject obj;
+    [HideInInspector] public GameObject obj1;
+    //[HideInInspector] public GameObject obj2;
+    //[HideInInspector] public GameObject obj3;
     
 
     private int droppedPrice = 0;
@@ -70,36 +72,42 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         if (transform.childCount != 0)
         {
             Upd();
-            Debug.Log("1");
 
             var child = transform.GetChild(0);
             GetComponentInChildren<DraggableItem>().image.raycastTarget = true;
             child.transform.SetParent(draggableItem.parentBeforeDrag);
 
 
-            Invoke(nameof(DebugInf), 0.01f);
+            Invoke(nameof(TakeInfo), 0.01f);
             draggableItem.parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
 
             Invoke(nameof(Upd), 0.02f);
-            Debug.Log("2");
 
-        }
-        else
-        {
-                Invoke(nameof(Upd), 0.01f);
-                Debug.Log("3");
-        }
+        } else Invoke(nameof(Upd), 0.01f);
     }
 
-    public void DebugInf()
+    public void TakeInfo()
     {
         GetComponent<MoveCarMod>().TakeMods();
     }
 
     public void Upd()
     {
-        obj = GameObject.Find("ModInfo1");
-        obj.GetComponent<RatingManager>().TakeRating();
+        if (GameObject.Find("ModInfo1"))
+        {
+            obj1 = GameObject.Find("ModInfo1");
+            obj1.GetComponent<RatingManager>().TakeRating();
+        } else
+        if (GameObject.Find("ModInfo2"))
+        {
+            obj1 = GameObject.Find("ModInfo2");
+            obj1.GetComponent<RatingManager>().TakeRating();
+        } else
+        if (GameObject.Find("ModInfo3"))
+        {
+            obj1 = GameObject.Find("ModInfo3");
+            obj1.GetComponent<RatingManager>().TakeRating();
+        }
     }
 
 }

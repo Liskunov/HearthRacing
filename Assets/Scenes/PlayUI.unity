@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -746.25, y: -123}
+  m_AnchoredPosition: {x: -750, y: -143.71}
   m_SizeDelta: {x: 226.3273, y: 107.3819}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50131326
@@ -742,7 +742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 50131327}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507042560}
+        m_TargetAssemblyTypeName: RatingManager, Assembly-CSharp
+        m_MethodName: TakeRating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &50131327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3807,8 +3819,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.0000038147, y: -37}
+  m_SizeDelta: {x: 684.19, y: 301.2548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &436080686
 GameObject:
@@ -3821,6 +3833,7 @@ GameObject:
   - component: {fileID: 436080687}
   - component: {fileID: 436080689}
   - component: {fileID: 436080688}
+  - component: {fileID: 436080690}
   m_Layer: 5
   m_Name: ModCarSlot4
   m_TagString: Untagged
@@ -3885,6 +3898,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436080686}
   m_CullTransparentMesh: 1
+--- !u!114 &436080690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436080686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &436876595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,8 +4517,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 215.14, y: 104.109985}
-  m_SizeDelta: {x: 330, y: 120}
+  m_AnchoredPosition: {x: 215.14001, y: 18.093002}
+  m_SizeDelta: {x: 330, y: 50.2543}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510807151
 MonoBehaviour:
@@ -4496,15 +4533,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 10
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 2
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 20, y: 20}
-  m_Spacing: {x: 0, y: 5}
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 15, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &532220645
@@ -5462,6 +5499,7 @@ GameObject:
   - component: {fileID: 684488021}
   - component: {fileID: 684488020}
   - component: {fileID: 684488022}
+  - component: {fileID: 684488023}
   m_Layer: 5
   m_Name: CarSlot1
   m_TagString: CarSlotUI
@@ -5565,6 +5603,24 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &684488023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684488016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a49e03966020d4ea203f2435bedf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modsSlots:
+  - {fileID: 1976225338}
+  - {fileID: 1928776405}
+  - {fileID: 198378854}
+  - {fileID: 1194296809}
+  - {fileID: 1052193152}
 --- !u!1 &719494833
 GameObject:
   m_ObjectHideFlags: 0
@@ -5770,7 +5826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 21}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &743716349
@@ -6765,6 +6821,7 @@ GameObject:
   - component: {fileID: 911144456}
   - component: {fileID: 911144455}
   - component: {fileID: 911144457}
+  - component: {fileID: 911144458}
   m_Layer: 5
   m_Name: CarSlot2
   m_TagString: CarSlotUI
@@ -6868,6 +6925,24 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &911144458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911144451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a49e03966020d4ea203f2435bedf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modsSlots:
+  - {fileID: 2011450847}
+  - {fileID: 2084313323}
+  - {fileID: 979809845}
+  - {fileID: 436080686}
+  - {fileID: 1570425130}
 --- !u!1 &939442500
 GameObject:
   m_ObjectHideFlags: 0
@@ -7316,6 +7391,7 @@ GameObject:
   - component: {fileID: 979809846}
   - component: {fileID: 979809848}
   - component: {fileID: 979809847}
+  - component: {fileID: 979809849}
   m_Layer: 5
   m_Name: ModCarSlot3
   m_TagString: Untagged
@@ -7380,6 +7456,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979809845}
   m_CullTransparentMesh: 1
+--- !u!114 &979809849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979809845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1000073875
 GameObject:
   m_ObjectHideFlags: 0
@@ -9694,8 +9794,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -114.859985, y: 104.109985}
-  m_SizeDelta: {x: 330, y: 120}
+  m_AnchoredPosition: {x: -114.859985, y: 18.093002}
+  m_SizeDelta: {x: 330, y: 50.254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324420521
 MonoBehaviour:
@@ -9710,15 +9810,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 10
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 2
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 20, y: 20}
-  m_Spacing: {x: 0, y: 5}
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 15, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1354060268
@@ -10650,6 +10750,7 @@ GameObject:
   - component: {fileID: 1570425131}
   - component: {fileID: 1570425133}
   - component: {fileID: 1570425132}
+  - component: {fileID: 1570425134}
   m_Layer: 5
   m_Name: ModCarSlot5
   m_TagString: Untagged
@@ -10714,6 +10815,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570425130}
   m_CullTransparentMesh: 1
+--- !u!114 &1570425134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570425130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1590862006
 GameObject:
   m_ObjectHideFlags: 0
@@ -12094,8 +12219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 335.7334, y: -223.15143}
-  m_SizeDelta: {x: 675.6831, y: 439.71915}
+  m_AnchoredPosition: {x: 335.7334, y: -242.91}
+  m_SizeDelta: {x: 675.6831, y: 479.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892446705
 MonoBehaviour:
@@ -12482,6 +12607,7 @@ GameObject:
   - component: {fileID: 2011450848}
   - component: {fileID: 2011450850}
   - component: {fileID: 2011450849}
+  - component: {fileID: 2011450851}
   m_Layer: 5
   m_Name: ModCarSlot1
   m_TagString: Untagged
@@ -12546,6 +12672,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011450847}
   m_CullTransparentMesh: 1
+--- !u!114 &2011450851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011450847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &2018896272
 GameObject:
   m_ObjectHideFlags: 0
@@ -12930,6 +13080,7 @@ GameObject:
   - component: {fileID: 2084313324}
   - component: {fileID: 2084313326}
   - component: {fileID: 2084313325}
+  - component: {fileID: 2084313327}
   m_Layer: 5
   m_Name: ModCarSlot2
   m_TagString: Untagged
@@ -12994,6 +13145,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084313323}
   m_CullTransparentMesh: 1
+--- !u!114 &2084313327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084313323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &2096459535
 GameObject:
   m_ObjectHideFlags: 0

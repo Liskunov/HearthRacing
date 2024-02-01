@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using Cinemachine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -65,7 +67,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             var child = transform.GetChild(0);
             GetComponentInChildren<DraggableItem>().image.raycastTarget = true;
             child.transform.SetParent(draggableItem.parentBeforeDrag);
-
+            draggableItem.parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
+            GetComponent<MoveCarMod>().TakeMods();
         }
     }
 }

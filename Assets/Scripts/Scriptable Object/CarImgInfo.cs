@@ -9,6 +9,7 @@ public class CarImgInfo : MonoBehaviour
     [SerializeField] public CarSO carSO;
     [SerializeField] public TextMeshProUGUI priceText;
     public List<float> modsRating = new List<float>();
+    public List<string> modsNames = new List<string>();
 
     private void Start()
     {
@@ -18,6 +19,12 @@ public class CarImgInfo : MonoBehaviour
         modsRating.Add(carSO.ratingBrake);
         modsRating.Add(carSO.ratingPendant);
         modsRating.Add(carSO.ratingTurbine);
+        
+        modsNames.Add("none");
+        modsNames.Add("none");
+        modsNames.Add("none");
+        modsNames.Add("none");
+        modsNames.Add("none");
     }
     
 }

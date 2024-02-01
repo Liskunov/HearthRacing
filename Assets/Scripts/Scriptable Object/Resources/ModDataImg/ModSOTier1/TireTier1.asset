@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcf5f75bedc422428ca24d34ff74b87, type: 3}
   m_Name: TireTier1
   m_EditorClassIdentifier: 
-  name: TireTir1
+  name: TireTier1
   icon: {fileID: 21300000, guid: 3acc385b6a1c0514185fa82d8be1e2ea, type: 3}
   price: 15
   ratingMod: 0.2

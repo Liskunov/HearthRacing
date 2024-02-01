@@ -11,7 +11,9 @@ public class RatingManager : MonoBehaviour
     [SerializeField] public GameObject CarSlot;
     private float carslider = 0;
 
-        public void Update()
+
+
+    public void Update()
     {
       
         
@@ -25,15 +27,23 @@ public class RatingManager : MonoBehaviour
                     gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
                 }
 
-
-
+                
 
                 if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
                 {
-                    float f = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().rating;
-                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = f + carslider;
+                    float modRating = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().rating;
+                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = modRating + carslider;
+
+                    CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().modSO.name;
                 }
-                else gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
+                else
+                {
+                    if (CarSlot.transform.childCount != 0)
+                        CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = "none";
+                    
+                    
+                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
+                }
             }
     }
 }

@@ -7,9 +7,9 @@ public class PidController : MonoBehaviour
     private float error_old = 0f;
     private float error_sum = 0f;
     
-    public float P = 70; //70
-    public float I = 0.01f; //0.01
-    public float D = 50; //50
+    public float P = 1; //70
+    public float I = 1; //0.01
+    public float D = 1; //50
     
     public float GetNewValue(float error)
     {

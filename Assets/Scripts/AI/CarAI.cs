@@ -33,9 +33,8 @@ namespace Cars
 		private void Update()
 		{
 			Vector3 DirPoint = (Target - transform.position).normalized;
-			float dot = Vector3.Dot(transform.forward, DirPoint);
 			float disToPos = Vector3.Distance(transform.position, Target);
-			float angleDir = Vector3.SignedAngle(transform.forward, DirPoint, Vector3.up);
+			
 
 			if (disToPos > stopDist)
 			{

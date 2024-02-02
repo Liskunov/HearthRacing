@@ -6,23 +6,23 @@ namespace Cars
 	public class AdvancedCarController : MonoBehaviour
 	{
 		[Range(20, 190)] [SerializeField] private int m_maxSpeed = 90;
-		[Range(10, 120)] [SerializeField] private int m_maxReverseSpeed = 45;
-		[Range(1, 10)] [SerializeField] private int m_accelerationMultiplier = 2;
-		[Range(10, 45)] [SerializeField] private int m_maxSteeringAngle = 30;
-		[Range(0.1f, 1f)] [SerializeField] private float m_steeringSpeed = 0.5f;
+		[Range(10, 120)]  private int m_maxReverseSpeed = 45;
+		[Range(1, 12)] [SerializeField] private int m_accelerationMultiplier = 2;
+		[Range(10, 45)]  private int m_maxSteeringAngle = 35;
+		[Range(0.1f, 1f)]  private float m_steeringSpeed = 1f;
 		[Range(100, 600)] [SerializeField] private int m_brakeForce = 350;
-		[Range(1, 10)] [SerializeField] private int m_decelerationMultiplier = 2;
-		[Range(1, 10)] [SerializeField] private int m_handbrakeDriftMultiplier = 5;
+		[Range(1, 10)]  private int m_decelerationMultiplier = 2;
+		[Range(1, 10)]  private int m_handbrakeDriftMultiplier = 5;
 		[SerializeField] private Vector3 m_bodyMassCenter;
 
 		[SerializeField] private GameObject[] m_tireMeshes;
 		[SerializeField] private GameObject[] m_rimMeshes;
 		[SerializeField] private WheelCollider[] m_wheelColliders;
 
-		[SerializeField] private bool m_useEffects;
+		private bool m_useEffects;
 
-		[SerializeField] private ParticleSystem[] m_particleSystems;
-		[SerializeField] private TrailRenderer[] m_tireSkids;
+		private ParticleSystem[] m_particleSystems;
+		private TrailRenderer[] m_tireSkids;
 
 		private int m_wheelsCount;
 		private int m_particlesCount;
@@ -37,7 +37,7 @@ namespace Cars
 		private float m_driftingAxis;
 		private float m_localVelocityZ;
 		private float m_localVelocityX;
-		public bool m_deceleratingCar;
+		private bool m_deceleratingCar;
 
 		private WheelFrictionCurve[] m_wheelFrictionCurves;
 		private float[] m_extremumSlips;
@@ -45,8 +45,8 @@ namespace Cars
 		void Start()
 		{
 			m_wheelsCount = m_tireMeshes.Length;
-			m_particlesCount = m_particleSystems.Length;
-			m_tireSkidsCount = m_tireSkids.Length;
+			//m_particlesCount = m_particleSystems.Length;
+			//m_tireSkidsCount = m_tireSkids.Length;
 			m_extremumSlips = new float[m_wheelsCount];
 			m_wheelFrictionCurves = new WheelFrictionCurve[m_wheelsCount];
 
@@ -168,6 +168,18 @@ namespace Cars
 			}
 
 			var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
+			m_wheelColliders[0].steerAngle =
+				Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
+			m_wheelColliders[1].steerAngle =
+				Mathf.MoveTowards(m_wheelColliders[1].steerAngle, steeringAngle, m_steeringSpeed);
+		}
+		
+		public void TurnSideAI(float steeringAngle)
+		{
+			m_steeringAxis += Time.deltaTime * 10f * m_steeringSpeed;
+			
+
+			//var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
 			m_wheelColliders[0].steerAngle =
 				Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
 			m_wheelColliders[1].steerAngle =

@@ -5,9 +5,10 @@ using UnityEngine;
 public class Play : MonoBehaviour
 {
 
-    public void MySwitchScenes ()
+    public void Start ()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        Object.DontDestroyOnLoad(gameObject);
+        //gameObject.SetActive(false);
     }
         
 }

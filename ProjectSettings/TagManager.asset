@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CarImg
+  - CarSlotUI
   - TireImg
   - EngineImg
   - BrakeImg
@@ -14,7 +15,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Car
+  - 
   - Water
   - UI
   - 

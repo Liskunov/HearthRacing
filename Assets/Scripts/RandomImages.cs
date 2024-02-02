@@ -6,18 +6,49 @@ using UnityEngine;
 
 public class RandomImages : MonoBehaviour
 {
-    public Transform[] parentTransform;
-    private void Start()
+    public GameObject[] carSlotObj;
+    public GameObject[] modSlotObj;
+    public void Spawn()
     {
-        string folderWithContent = "Assets/Prefabs/ImageCars";
 
+        string folderWithCarImg = "Assets/Prefabs/ImageCars/Test";
 
-        for (int i = 0; i < parentTransform.Length; i++)
+        for (int i = 0; i < carSlotObj.Length; i++)
         {
-            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithContent});
+            RemoveChildren(carSlotObj[i]);
+            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithCarImg});
             var randomIndex = Random.Range(0, assetPaths.Length);
             var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
-            Instantiate(PrefabUtility.LoadPrefabContents(path), parentTransform[i]);
+            Instantiate(PrefabUtility.LoadPrefabContents(path), carSlotObj[i].transform);
         }
+        
+        
+        string folderWithModImg = "Assets/Prefabs/ImageMods";
+
+
+        for (int i = 0; i < modSlotObj.Length; i++)
+        {
+            RemoveChildren(modSlotObj[i]);
+            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithModImg});
+            var randomIndex = Random.Range(0, assetPaths.Length);
+            var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
+            Instantiate(PrefabUtility.LoadPrefabContents(path), modSlotObj[i].transform);
+        }
+    }
+
+    private void Start()
+    {
+        Spawn();
+    }
+
+    public static void RemoveChildren(GameObject parent)
+    {
+        Transform transform;
+        for(int i = 0;i < parent.transform.childCount; i++)
+        {
+            transform = parent.transform.GetChild(i);
+            GameObject.Destroy(transform.gameObject);
+        }
+
     }
 }

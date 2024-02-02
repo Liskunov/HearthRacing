@@ -35,7 +35,7 @@ namespace Cars
 			float disToPos = Vector3.Distance(transform.position, Target);
 			float angleDir = Vector3.SignedAngle(transform.forward, DirPoint, Vector3.up);
 
-			if (disToPos > 5f)
+			if (disToPos > 15f)
 			{
 				m_carController.GoForward();
 			}
@@ -43,21 +43,7 @@ namespace Cars
 			{
 				SwapTarget();
 			}
-			//	
-			//	if (angleDir > 1f)
-			//	{
-			//		m_carController.TurnRight();
-			//	}
-			//	if (angleDir < -1f)
-			//	{
-			//		m_carController.TurnLeft();
-			//	}
-			//
-			//	if (1f > angleDir && angleDir > -1f)
-			//	{
-			//		m_carController.GoForward();
-			//	}
-			//m_carController.AnimateWheelMeshes();
+			m_carController.AnimateWheelMeshes();
 		}
 		void FixedUpdate()
 		{

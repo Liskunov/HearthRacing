@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 6360196899032842669}
   - component: {fileID: 6937112878112493964}
   - component: {fileID: 2291229866931574808}
+  - component: {fileID: 7102529300460070230}
   m_Layer: 0
   m_Name: Fiat
   m_TagString: Untagged
@@ -450,9 +451,21 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 2478005776804944013, guid: 8604cf8d0075f2e45885761b046bc820, type: 3}
+--- !u!114 &7102529300460070230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204318901696821545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dba43edfa9eb4e49abf9d62439d7b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4825507407637216024
 GameObject:
   m_ObjectHideFlags: 0

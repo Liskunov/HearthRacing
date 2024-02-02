@@ -81,7 +81,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             Invoke(nameof(TakeInfo), 0.01f);
             draggableItem.parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
 
-            Invoke(nameof(Upd), 0.02f);
+            Invoke(nameof(Upd), 0.05f);
 
         } else Invoke(nameof(Upd), 0.01f);
     }

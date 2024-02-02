@@ -4,9 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CarInfo", menuName = "CarSO")]
-public class CarSO : ScriptableObject
+public class CarImgSO : ScriptableObject
 {
-   public string name;
+   public string nameCar;
    public Sprite icon;
    public int price = 0;
    public float ratingTire = 0.1f;
@@ -16,11 +16,11 @@ public class CarSO : ScriptableObject
    public float ratingTurbine = 0.1f;
 
    
-   public string Name
+   public string NameCar
    {
       get
       {
-         return name;
+         return nameCar;
       }
    }
 

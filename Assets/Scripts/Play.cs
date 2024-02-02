@@ -8,6 +8,7 @@ public class Play : MonoBehaviour
     public void Start ()
     {
         Object.DontDestroyOnLoad(gameObject);
+        //gameObject.SetActive(false);
     }
         
 }

@@ -119,8 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab60b0593be820b47800098f5f2cdf94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSO: {fileID: 11400000, guid: 0c1e3e308f7e10548b6dcf9220288e17, type: 2}
+  carImgSO: {fileID: 11400000, guid: 0c1e3e308f7e10548b6dcf9220288e17, type: 2}
   priceText: {fileID: 4162971351068285232}
+  modsRating: []
+  modsNames: []
+  specifications: []
 --- !u!1 &5938577496976290238
 GameObject:
   m_ObjectHideFlags: 0

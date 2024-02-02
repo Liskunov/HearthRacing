@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a11db6d3bf9c2d41aa1cbdc5dbc54b5, type: 3}
   m_Name: FiatHatchback
   m_EditorClassIdentifier: 
-  name: 
+  nameCar: FiatHatchback
   icon: {fileID: 21300000, guid: 27c06af77d4f8f0468a0defd665a1c7c, type: 3}
   price: 60
-  maxSpeed: 100
-  boost: 100
-  braking: 100
+  ratingTire: 0.1
+  ratingEngine: 0.1
+  ratingBrake: 0.1
+  ratingPendant: 0.1
+  ratingTurbine: 0.1

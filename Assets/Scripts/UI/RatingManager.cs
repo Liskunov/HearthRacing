@@ -32,7 +32,8 @@ public class RatingManager : MonoBehaviour
                 if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
                 {
                     float modRating = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().rating;
-                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = modRating + carslider;
+                    CarSlot.GetComponentInChildren<CarImgInfo>().specifications[i] = modRating + carslider;
+                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = CarSlot.GetComponentInChildren<CarImgInfo>().specifications[i];
 
                     CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().modSO.name;
                 }
@@ -43,6 +44,7 @@ public class RatingManager : MonoBehaviour
                     
                     
                     gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
+                    CarSlot.GetComponentInChildren<CarImgInfo>().specifications[i] = CarSlot.GetComponentInChildren<CarImgInfo>().modsRating[i];
                 }
             }
     }

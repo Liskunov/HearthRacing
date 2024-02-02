@@ -380,8 +380,9 @@ GameObject:
   - component: {fileID: 6120737336473330303}
   - component: {fileID: 1274855341946535689}
   - component: {fileID: 6560151906737375966}
+  - component: {fileID: -5392897598410984260}
   m_Layer: 0
-  m_Name: FiatHatch
+  m_Name: FiatHatchback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,9 +451,21 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -5004815677443653502, guid: 6a90d789748f6c746949cf1278dd57f7, type: 3}
+--- !u!114 &-5392897598410984260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300107678331524548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dba43edfa9eb4e49abf9d62439d7b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7867594421209681596
 GameObject:
   m_ObjectHideFlags: 0

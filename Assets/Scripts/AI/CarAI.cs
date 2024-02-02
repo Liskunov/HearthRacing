@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Cars
@@ -10,7 +11,7 @@ namespace Cars
 		private AdvancedCarController m_carController;
 		[SerializeField] private Pid_Controller m_pidController;
 
-		[SerializeField] List<GameObject> targetPoints = new List<GameObject>();
+		[SerializeField] List<Transform> targetPoints = new List<Transform>();
 		private int CountTarget;
 		public Vector3 Target;
 		private Vector3 NextTarget;
@@ -19,6 +20,11 @@ namespace Cars
 		[SerializeField] private float angleDist;
 		private void Awake()
 		{
+			var points = GameObject.Find("Points").transform;
+			for (int i = 0; i < points.childCount; i++)
+			{
+				targetPoints[i] = points.GetChild(i);
+			}
 			m_carController = GetComponent<AdvancedCarController>();
 			CountTarget = targetPoints.Count;
 		}
@@ -26,7 +32,7 @@ namespace Cars
 		private void Start()
 		{
 			I = 0;
-			Target = targetPoints[I].transform.position;
+			Target = targetPoints[I].position;
 			//NextTarget = targetPoints[I++].transform.position;
 		}
 
@@ -73,7 +79,7 @@ namespace Cars
 			else
 			{
 				I++;
-				Target = targetPoints[I].transform.position;
+				Target = targetPoints[I].position;
 				//NextTarget = targetPoints[I++].transform.position;
 			}
 		}

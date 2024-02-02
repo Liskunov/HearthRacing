@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8176702513893804633}
   - component: {fileID: 3746996161648241963}
   - component: {fileID: 3410519713415406573}
+  - component: {fileID: -4956352690022887310}
   m_Layer: 3
   m_Name: FiatHatchback
   m_TagString: Untagged
@@ -29,15 +30,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2540649321440681439}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.8537676, z: -0, w: 0.5206543}
-  m_LocalPosition: {x: 16.516222, y: 9.865, z: 174.69836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7373332192660228476}
   - {fileID: 1032597580812637700}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -117.248, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &3548965110680004325
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100,13 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxSpeed: 50
-  m_maxReverseSpeed: 45
   m_accelerationMultiplier: 4
-  m_maxSteeringAngle: 35
-  m_steeringSpeed: 1
   m_brakeForce: 200
-  m_decelerationMultiplier: 2
-  m_handbrakeDriftMultiplier: 5
   m_bodyMassCenter: {x: 0, y: -0.3, z: 0}
   m_tireMeshes:
   - {fileID: 7135595343713951840}
@@ -123,11 +119,7 @@ MonoBehaviour:
   - {fileID: 4723814779252370454}
   - {fileID: 2789540668347575182}
   - {fileID: 5732968097198169947}
-  m_useEffects: 0
-  m_particleSystems: []
-  m_tireSkids: []
   m_carSpeed: 0
-  m_deceleratingCar: 0
 --- !u!114 &3746996161648241963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +127,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2540649321440681439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
   m_Name: 
@@ -186,6 +178,19 @@ MonoBehaviour:
   integrationStored: 0
   velocity: 0
   derivativeInitialized: 0
+--- !u!114 &-4956352690022887310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2540649321440681439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dba43edfa9eb4e49abf9d62439d7b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specificationsInt: []
 --- !u!1 &2714238695170423517
 GameObject:
   m_ObjectHideFlags: 0

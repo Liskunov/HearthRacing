@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8488246285193102979}
   - component: {fileID: 5347834878266177677}
   - component: {fileID: 5430259763461635405}
+  - component: {fileID: -8043729882546985399}
   m_Layer: 3
   m_Name: FiatBetter
   m_TagString: Untagged
@@ -112,15 +113,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627000063996363541}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.8300428, z: -0, w: 0.55769974}
-  m_LocalPosition: {x: 7.42, y: 10.3, z: 170.72}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1606658620138022993}
   - {fileID: 5479703377649129633}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -112.206, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7235278840989153910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627000063996363541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
   m_Name: 
@@ -260,6 +261,19 @@ MonoBehaviour:
   integrationStored: 0
   velocity: 0
   derivativeInitialized: 0
+--- !u!114 &-8043729882546985399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627000063996363541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dba43edfa9eb4e49abf9d62439d7b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specificationsInt: []
 --- !u!1 &2262565566847784852
 GameObject:
   m_ObjectHideFlags: 0

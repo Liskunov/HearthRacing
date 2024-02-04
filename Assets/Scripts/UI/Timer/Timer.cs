@@ -10,7 +10,7 @@ using Unity.VisualScripting;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timer;
-    [SerializeField] public GameObject[] carPoints;
+    
     [SerializeField] public GameObject[] UI;
 
     public float lifeTime = 60f;
@@ -50,13 +50,7 @@ public class Timer : MonoBehaviour
                 var spawnPoint = GameObject.Find("SpawnPoint" + i);
                 if(spawnPoint.transform.childCount != 0)
                 spawnPoint.GetComponentInChildren<CarAI>().enabled = true;
-
-                if (GameObject.Find("CameraStart"))
-                {
-                    GameObject.Find("CameraStart").SetActive(false);
-                    GameObject.Find("CameraCar").GetComponent<CinemachineVirtualCamera>().Follow = spawnPoint.transform.GetChild(i);
-                    GameObject.Find("CameraCar").GetComponent<CinemachineVirtualCamera>().LookAt = spawnPoint.transform.GetChild(i);
-                }
+                
             }
         }
     }

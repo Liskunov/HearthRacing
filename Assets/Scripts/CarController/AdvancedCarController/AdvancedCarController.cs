@@ -5,12 +5,12 @@ namespace Cars
 {
 	public class AdvancedCarController : MonoBehaviour
 	{
-		[Range(20, 190)] [SerializeField] private int m_maxSpeed = 90;
+		[Range(20, 190)] [SerializeField] public int m_maxSpeed = 90;
 		[Range(10, 120)]  private int m_maxReverseSpeed = 45;
-		[Range(1, 12)] [SerializeField] private int m_accelerationMultiplier = 2;
+		[Range(1, 12)] [SerializeField] public int m_accelerationMultiplier = 2;
 		[Range(10, 45)]  private int m_maxSteeringAngle = 35;
 		[Range(0.1f, 1f)]  private float m_steeringSpeed = 1f;
-		[Range(100, 600)] [SerializeField] private int m_brakeForce = 350;
+		[Range(100, 600)] [SerializeField] public int m_brakeForce = 350;
 		[Range(1, 10)]  private int m_decelerationMultiplier = 2;
 		[Range(1, 10)]  private int m_handbrakeDriftMultiplier = 5;
 		[SerializeField] private Vector3 m_bodyMassCenter;

@@ -32,20 +32,25 @@ public class RatingManager : MonoBehaviour
                 if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
                 {
                     float modRating = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().rating;
-                    CarSlot.GetComponentInChildren<CarImgInfo>().specifications[i] = modRating + carslider;
-                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = CarSlot.GetComponentInChildren<CarImgInfo>().specifications[i];
+                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = modRating + carslider;
+                    
+                    for (int j = 0; j < CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg.Count; j++)
+                    {
+                        if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
+                            CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg[j] += gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
+                    }
 
                     CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().modSO.name;
                 }
                 else
                 {
                     if (CarSlot.transform.childCount != 0)
-                        CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = "none";
+                        CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = "";
                     
                     
                     gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
-                    CarSlot.GetComponentInChildren<CarImgInfo>().specifications[i] = CarSlot.GetComponentInChildren<CarImgInfo>().modsRating[i];
                 }
             }
+
     }
 }

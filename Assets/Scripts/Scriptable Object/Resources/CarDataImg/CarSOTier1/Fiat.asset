@@ -20,3 +20,6 @@ MonoBehaviour:
   ratingBrake: 0.3
   ratingPendant: 0.4
   ratingTurbine: 0.5
+  MaxSpeed: 55
+  AccelerationMultiplier: 1
+  BrakeForce: 200

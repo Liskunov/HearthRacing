@@ -122,7 +122,12 @@ MonoBehaviour:
   carImgSO: {fileID: 11400000, guid: 0c1e3e308f7e10548b6dcf9220288e17, type: 2}
   priceText: {fileID: 4162971351068285232}
   modsRating: []
-  modsNames: []
+  modsNames:
+  - 
+  - 
+  - 
+  - 
+  - 
   specifications: []
 --- !u!1 &5938577496976290238
 GameObject:

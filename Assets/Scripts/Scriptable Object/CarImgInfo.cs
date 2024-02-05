@@ -10,7 +10,7 @@ public class CarImgInfo : MonoBehaviour
     [SerializeField] public TextMeshProUGUI priceText;
     public List<float> modsRating = new List<float>();
     public List<string> modsNames = new List<string>();
-    public List<float> specifications = new List<float>();
+    public List<int> specificationsCarImg = new List<int>();
 
     private void Start()
     {
@@ -23,18 +23,10 @@ public class CarImgInfo : MonoBehaviour
         modsRating.Add(carImgSO.ratingPendant);
         modsRating.Add(carImgSO.ratingTurbine);
         
-        modsNames.Add("none");
-        modsNames.Add("none");
-        modsNames.Add("none");
-        modsNames.Add("none");
-        modsNames.Add("none");
-        
-        specifications.Add(carImgSO.ratingTire);
-        specifications.Add(carImgSO.ratingEngine);
-        specifications.Add(carImgSO.ratingBrake);
-        specifications.Add(carImgSO.ratingPendant);
-        specifications.Add(carImgSO.ratingTurbine);
-        
+        specificationsCarImg.Add(carImgSO.MaxSpeed);
+        specificationsCarImg.Add(carImgSO.AccelerationMultiplier);
+        specificationsCarImg.Add(carImgSO.BrakeForce);
+
     }
     
 }

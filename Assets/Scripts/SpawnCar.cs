@@ -26,11 +26,12 @@ public class SpawnCar : MonoBehaviour
                 Instantiate(PrefabUtility.LoadPrefabContents("Assets/Prefabs/CarReady/" + nameCar + ".prefab"), spawnPoint.transform);
                 
                 
-                for (int j = 0; j < spawnPoint.GetComponentInChildren<CarInfo>().specificationsInt.Count; j++)
+                for (int j = 0; j < spawnPoint.GetComponentInChildren<CarInfo>().specifications.Count; j++)
                 {
-                    spawnPoint.GetComponentInChildren<CarInfo>().specificationsInt[j] = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specifications[j];
-                    Debug.Log(spawnPoint.GetComponentInChildren<CarInfo>().specificationsInt[j]);
+                    spawnPoint.GetComponentInChildren<CarInfo>().specifications[j] = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg[j];
                 }
+                
+                spawnPoint.GetComponentInChildren<CarInfo>().GetMod();
             }
             
         }

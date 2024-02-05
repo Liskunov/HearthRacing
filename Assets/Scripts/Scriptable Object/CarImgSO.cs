@@ -14,8 +14,13 @@ public class CarImgSO : ScriptableObject
    public float ratingBrake = 0.1f;
    public float ratingPendant = 0.1f;
    public float ratingTurbine = 0.1f;
-
    
+   [Range(20, 190)] public int MaxSpeed = 1;
+   [Range(1, 12)] public int AccelerationMultiplier = 1;
+   [Range(100, 600)] public int BrakeForce = 1;
+  
+
+
    public string NameCar
    {
       get

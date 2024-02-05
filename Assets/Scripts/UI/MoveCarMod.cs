@@ -19,7 +19,7 @@ public class MoveCarMod : MonoBehaviour
          }
          
          
-         if (GetComponentInChildren<CarImgInfo>().modsNames[i] != "none")
+         if (GetComponentInChildren<CarImgInfo>().modsNames[i] != "")
          {
             string name = GetComponentInChildren<CarImgInfo>().modsNames[i];
 

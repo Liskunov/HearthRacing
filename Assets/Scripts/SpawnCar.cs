@@ -17,21 +17,25 @@ public class SpawnCar : MonoBehaviour
             if (spawnPoint.transform.childCount != 0)
             {
                 Transform transform = spawnPoint.transform.GetChild(0);
-                GameObject.Destroy(transform.gameObject);
+                Destroy(transform.gameObject);
             } 
             
             if (ratingManagers[i].CarSlot.transform.childCount != 0)
             {
-                var nameCar = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().carImgSO.nameCar;
-                Instantiate(Resources.Load("CarReady/" + nameCar), spawnPoint.transform);
-                
-                
-                for (int j = 0; j < ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg.Count; j++)
+                var carImgInfo = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>();
+
+                var nameCar = carImgInfo.carImgSO.nameCar;
+                var car = Instantiate(Resources.Load("CarReady/" + nameCar), spawnPoint.transform);
+                var carInfo = car.GetComponent<CarInfo>();
+
+
+
+                for (int j = 0; j < carImgInfo.specificationsCarImg.Count; j++)
                 {
-                    spawnPoint.GetComponentInChildren<CarInfo>().specificationsC[j] = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg[j];
+                    carInfo.specificationsC[j] = carImgInfo.specificationsCarImg[j];
                 }
-                
-                spawnPoint.GetComponentInChildren<CarInfo>().LoadMod();
+
+                carInfo.LoadMod();
             }
         }
     }

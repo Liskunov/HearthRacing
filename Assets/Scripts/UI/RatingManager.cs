@@ -11,14 +11,23 @@ public class RatingManager : MonoBehaviour
     [SerializeField] public GameObject CarSlot;
     private float carslider = 0;
 
+    public List<ModItem> modItems { private set; get; }
 
+    private void Awake()
+    {
+        GetComponentsInChildren(true, modItems);
+    }
 
     public void TakeRating()
     {
-      
-        
-        
-        
+        foreach (var item in modItems)
+        {
+            
+        }
+
+
+
+
         for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 if (CarSlot.transform.childCount != 0)
@@ -27,8 +36,8 @@ public class RatingManager : MonoBehaviour
                     gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
                 }
 
-                
 
+            
                 if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
                 {
                     float modRating = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().rating;

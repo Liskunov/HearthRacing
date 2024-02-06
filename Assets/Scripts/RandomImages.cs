@@ -10,29 +10,25 @@ public class RandomImages : MonoBehaviour
     public GameObject[] modSlotObj;
     public void Spawn()
     {
-
-        string folderWithCarImg = "Assets/Prefabs/ImageCars/Test";
+        
 
         for (int i = 0; i < carSlotObj.Length; i++)
         {
             RemoveChildren(carSlotObj[i]);
-            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithCarImg});
-            var randomIndex = Random.Range(0, assetPaths.Length);
-            var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
-            Instantiate(PrefabUtility.LoadPrefabContents(path), carSlotObj[i].transform);
+            var CarsImg = Resources.LoadAll("ImageCars/Test");
+            var index = Random.Range(0, CarsImg.Length);
+            Instantiate((CarsImg[index]), carSlotObj[i].transform);
         }
         
         
-        string folderWithModImg = "Assets/Prefabs/ImageMods";
 
 
         for (int i = 0; i < modSlotObj.Length; i++)
         {
             RemoveChildren(modSlotObj[i]);
-            string[] assetPaths = AssetDatabase.FindAssets("", new[] {folderWithModImg});
-            var randomIndex = Random.Range(0, assetPaths.Length);
-            var path = AssetDatabase.GUIDToAssetPath(assetPaths[randomIndex]);
-            Instantiate(PrefabUtility.LoadPrefabContents(path), modSlotObj[i].transform);
+            var ModsImg = Resources.LoadAll("ImageMods");
+            var index = Random.Range(0, ModsImg.Length);
+            Instantiate((ModsImg[index]), modSlotObj[i].transform);
         }
     }
 

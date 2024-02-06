@@ -27,9 +27,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     [SerializeField] public bool canTake = true;
 
     [HideInInspector] public GameObject obj1;
-    //[HideInInspector] public GameObject obj2;
-    //[HideInInspector] public GameObject obj3;
-    
+
 
     private int droppedPrice = 0;
 

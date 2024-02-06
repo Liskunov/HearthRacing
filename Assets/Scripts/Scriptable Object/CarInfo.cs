@@ -6,15 +6,14 @@ using UnityEngine;
 public class CarInfo : MonoBehaviour
 {
     
-    public List<int> specifications = new List<int>();
+    public List<int> specificationsC = new List<int>();
+    
 
-    public void GetMod()
+
+    public void LoadMod()
     {
-        Debug.Log(specifications[0]);
-        Debug.Log(specifications[1]);
-        Debug.Log(specifications[2]);
-        gameObject.GetComponent<AdvancedCarController>().m_maxSpeed = specifications[0];
-        gameObject.GetComponent<AdvancedCarController>().m_accelerationMultiplier = specifications[1];
-        gameObject.GetComponent<AdvancedCarController>().m_brakeForce = specifications[2];
+        gameObject.GetComponent<AdvancedCarController>().m_maxSpeed = specificationsC[0];
+        gameObject.GetComponent<AdvancedCarController>().m_accelerationMultiplier = specificationsC[1];
+        gameObject.GetComponent<AdvancedCarController>().m_brakeForce = specificationsC[2];
     }
 }

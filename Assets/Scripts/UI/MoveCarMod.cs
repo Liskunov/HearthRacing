@@ -23,7 +23,7 @@ public class MoveCarMod : MonoBehaviour
          {
             string name = GetComponentInChildren<CarImgInfo>().modsNames[i];
 
-            Instantiate(PrefabUtility.LoadPrefabContents("Assets/Prefabs/ImageMods/" + name + ".prefab"), modsSlots[i].transform);
+            Instantiate(Resources.Load("ImageMods/" + name), modsSlots[i].transform);
          }
       }
    }

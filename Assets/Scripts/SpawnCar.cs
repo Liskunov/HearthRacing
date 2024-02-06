@@ -23,17 +23,16 @@ public class SpawnCar : MonoBehaviour
             if (ratingManagers[i].CarSlot.transform.childCount != 0)
             {
                 var nameCar = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().carImgSO.nameCar;
-                Instantiate(PrefabUtility.LoadPrefabContents("Assets/Prefabs/CarReady/" + nameCar + ".prefab"), spawnPoint.transform);
+                Instantiate(Resources.Load("CarReady/" + nameCar), spawnPoint.transform);
                 
                 
-                for (int j = 0; j < spawnPoint.GetComponentInChildren<CarInfo>().specifications.Count; j++)
+                for (int j = 0; j < ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg.Count; j++)
                 {
-                    spawnPoint.GetComponentInChildren<CarInfo>().specifications[j] = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg[j];
+                    spawnPoint.GetComponentInChildren<CarInfo>().specificationsC[j] = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg[j];
                 }
                 
-                spawnPoint.GetComponentInChildren<CarInfo>().GetMod();
+                spawnPoint.GetComponentInChildren<CarInfo>().LoadMod();
             }
-            
         }
     }
 }

@@ -13,9 +13,11 @@ namespace Cars
 
 		[SerializeField] List<Transform> targetPoints = new List<Transform>();
 		private int CountTarget;
-		public Vector3 Target;
-		private Vector3 NextTarget;
+		private Vector3 target;
+		private Vector3 pastTarget;
 		public int I;
+		public float betweenTargets;
+		public float disToPos;
 		[SerializeField] private float stopDist;
 		[SerializeField] private float angleDist;
 		private void Awake()
@@ -32,14 +34,14 @@ namespace Cars
 		private void Start()
 		{
 			I = 0;
-			Target = targetPoints[I].position;
-			//NextTarget = targetPoints[I++].transform.position;
+			target = targetPoints[I].position;
+			pastTarget = transform.position;
+			betweenTargets = Vector3.Distance(pastTarget, target);
 		}
 
 		private void Update()
 		{
-			Vector3 DirPoint = (Target - transform.position).normalized;
-			float disToPos = Vector3.Distance(transform.position, Target);
+			float disToPos = Vector3.Distance(transform.position, target);
 			
 
 			if (disToPos > stopDist)
@@ -58,9 +60,8 @@ namespace Cars
 		}
 		void FixedUpdate()
 		{
-			var targetPosition = Target;
-			targetPosition.y = transform.position.y;
-			var targetDir = (targetPosition - transform.position).normalized;
+			target.y = transform.position.y;
+			var targetDir = (target - transform.position).normalized;
 			var forwardDir = transform.rotation * Vector3.forward;
 
 			var currentAngle = Vector3.SignedAngle(Vector3.forward, forwardDir, Vector3.up);
@@ -79,14 +80,10 @@ namespace Cars
 			else
 			{
 				I++;
-				Target = targetPoints[I].position;
-				//NextTarget = targetPoints[I++].transform.position;
+				target = targetPoints[I].position;
+				pastTarget = targetPoints[I--].transform.position;
+				betweenTargets = Vector3.Distance(pastTarget, target);
 			}
 		}
-		private void DecelCar()
-		{
-			m_carController.InvokeRepeating("DecelerateCar", 0f, 0.1f);
-		}
-		
 	}
 }

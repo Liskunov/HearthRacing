@@ -7,12 +7,19 @@ using UnityEngine;
 public class SpawnCar : MonoBehaviour
 {
     [SerializeField] public RatingManager[] ratingManagers;
+    public GameObject spawnPoints;
+
+    public void Start()
+    {
+        spawnPoints = GameObject.Find("SpawnPoints");
+    }
+
 
     public void SpawnCarInPoint()
     {
         for (int i = 0; i < ratingManagers.Length; i++)
         {
-            var spawnPoint = GameObject.Find("SpawnPoint" + i);
+            var spawnPoint = spawnPoints.transform.GetChild(i);
             
             if (spawnPoint.transform.childCount != 0)
             {

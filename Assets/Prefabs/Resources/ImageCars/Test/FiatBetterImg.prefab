@@ -128,7 +128,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  specifications: []
+  specificationsCarImg: 
 --- !u!1 &1449818732140847738
 GameObject:
   m_ObjectHideFlags: 0

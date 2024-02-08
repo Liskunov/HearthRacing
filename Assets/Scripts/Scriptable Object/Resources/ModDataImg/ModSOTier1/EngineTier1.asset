@@ -17,5 +17,5 @@ MonoBehaviour:
   price: 20
   ratingMod: 0.1
   MaxSpeed: 0
-  AccelerationMultiplier: 1
+  AccelerationMultiplier: 8
   BrakeForce: 0

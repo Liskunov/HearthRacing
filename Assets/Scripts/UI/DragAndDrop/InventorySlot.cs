@@ -25,8 +25,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     [SerializeField] private List<ShopTags> m_tags;
     [SerializeField] private Shop shop;
     [SerializeField] public bool canTake = true;
-
-    [HideInInspector] public GameObject obj1;
+    [HideInInspector] public bool swap = false;
+    
 
 
     private int droppedPrice = 0;
@@ -45,13 +45,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     {
         GameObject dropped = eventData.pointerDrag;
 
-
-        if (dropped.CompareTag("CarImg"))
+        if (!dropped.CompareTag("Untagged"))
         {
-            droppedPrice = int.Parse(dropped.GetComponent<CarImgInfo>().priceText.text);
+            if (dropped.CompareTag("CarImg"))
+            {
+                droppedPrice = int.Parse(dropped.GetComponent<CarImgInfo>().priceText.text);
+            }
+            else droppedPrice = int.Parse(dropped.GetComponent<ModImgInfo>().priceText.text);
         }
-        else droppedPrice = int.Parse(dropped.GetComponent<ModImgInfo>().priceText.text);
-
 
         if (!m_stringTags.Any(str => dropped.CompareTag(str)))
             return;
@@ -65,47 +66,23 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;
-        
-        
+
+
+        if (transform.childCount != 0 && transform.GetChild(0).tag != "CarImg")
+        {
+            var child = transform.GetChild(0);
+            GetComponentInChildren<DraggableItem>().image.raycastTarget = true;
+            child.transform.SetParent(draggableItem.parentBeforeDrag);
+        }
+        else 
         if (transform.childCount != 0)
         {
-            Upd();
-
             var child = transform.GetChild(0);
             GetComponentInChildren<DraggableItem>().image.raycastTarget = true;
             child.transform.SetParent(draggableItem.parentBeforeDrag);
 
+            swap = true;
 
-            Invoke(nameof(TakeInfo), 0.01f);
-            draggableItem.parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
-
-            Invoke(nameof(Upd), 0.05f);
-
-        } else Invoke(nameof(Upd), 0.01f);
-    }
-
-    public void TakeInfo()
-    {
-        GetComponent<MoveCarMod>().TakeMods();
-    }
-
-    public void Upd()
-    {
-        if (GameObject.Find("ModInfo1"))
-        {
-            obj1 = GameObject.Find("ModInfo1");
-            obj1.GetComponent<RatingManager>().TakeRating();
-        } else
-        if (GameObject.Find("ModInfo2"))
-        {
-            obj1 = GameObject.Find("ModInfo2");
-            obj1.GetComponent<RatingManager>().TakeRating();
-        } else
-        if (GameObject.Find("ModInfo3"))
-        {
-            obj1 = GameObject.Find("ModInfo3");
-            obj1.GetComponent<RatingManager>().TakeRating();
         }
     }
-
 }

@@ -34,6 +34,29 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (!GetComponentInParent<InventorySlot>().canTake)
             image.raycastTarget = false;
 
+        
+        
+        
+        if (GetComponentInParent<InventorySlot>().swap)
+        {
+            parentAfterDrag.GetComponent<MoveCarMod>().TakeMods();
+            parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
+            GetComponentInParent<InventorySlot>().swap = false;
+        }
+        Invoke(nameof(TakeInfoMod), Time.deltaTime);
+
     }
-    
+
+    public void TakeInfoMod()
+    {
+        for (int i = 1; i < 4; i++)
+        {
+            var f = GameObject.Find("ModInfo" + i);
+
+            if (f)
+                f.GetComponent<RatingManager>().TakeRating();
+        }
+    }
+
 }
+

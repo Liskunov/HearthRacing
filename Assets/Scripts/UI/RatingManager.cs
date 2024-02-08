@@ -9,57 +9,34 @@ using UnityEngine.EventSystems;
 public class RatingManager : MonoBehaviour
 {
     [SerializeField] public GameObject CarSlot;
-    private float carslider = 0;
-
-    public List<ModItem> modItems { private set; get; }
+    public ModItem[] modItems { private set; get; }
 
     private void Awake()
     {
-        GetComponentsInChildren(true, modItems);
+        modItems = GetComponentsInChildren<ModItem>();
     }
 
     public void TakeRating()
     {
-        foreach (var item in modItems)
+        var carImg = CarSlot.GetComponentInChildren<CarImgInfo>();
+
+        for (int i = 0; i < modItems.Length; i++)
         {
-            
-        }
-
-
-
-
-        for (int i = 0; i < gameObject.transform.childCount; i++)
+            if (!modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>())
             {
-                if (CarSlot.transform.childCount != 0)
-                {
-                    carslider = CarSlot.GetComponentInChildren<CarImgInfo>().modsRating[i];
-                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
-                }
+                modItems[i].slider.value = carImg.modsRating[i];
+                carImg.modsNames[i] = "";
 
-
-            
-                if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
+            }
+            else
+            {
+                modItems[i].slider.value = modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().rating + carImg.modsRating[i];
+                carImg.modsNames[i] = modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().name;
+                for (int j = 0; j < carImg.specificationsCarImg.Count; j++)
                 {
-                    float modRating = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().rating;
-                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = modRating + carslider;
-                    
-                    for (int j = 0; j < CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg.Count; j++)
-                    {
-                        if (gameObject.transform.GetChild(i).GetChild(0).childCount != 0)
-                            CarSlot.GetComponentInChildren<CarImgInfo>().specificationsCarImg[j] += gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
-                    }
-
-                    CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = gameObject.transform.GetChild(i).GetChild(0).GetComponentInChildren<ModImgInfo>().modSO.name;
-                }
-                else
-                {
-                    if (CarSlot.transform.childCount != 0)
-                        CarSlot.GetComponentInChildren<CarImgInfo>().modsNames[i] = "";
-                    
-                    
-                    gameObject.transform.GetChild(i).GetChild(1).GetComponent<Slider>().value = carslider;
+                    carImg.specificationsCarImg[i] += modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
                 }
             }
-
+        }
     }
 }

@@ -256,3 +256,4 @@ MonoBehaviour:
   modSO: {fileID: 11400000, guid: ae843faffeb39b74d9babbfe23dab5d4, type: 2}
   priceText: {fileID: 1906255538491299374}
   rating: 0
+  specificationsModImg: 

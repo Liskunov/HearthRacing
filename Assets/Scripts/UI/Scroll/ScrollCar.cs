@@ -35,8 +35,10 @@ public class ScrollCar : MonoBehaviour
                 {
                     scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp (scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
                     modsInfo[i].SetActive(true);
+                    modsInfo[i].GetComponent<RatingManager>().TakeRating();
                 } else
                 modsInfo[i].SetActive(false);
+                
             }
         }
     }

@@ -22,6 +22,7 @@ public class RatingManager : MonoBehaviour
 
         for (int i = 0; i < modItems.Length; i++)
         {
+
             if (!modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>())
             {
                 if (carImg)
@@ -39,7 +40,7 @@ public class RatingManager : MonoBehaviour
                 carImg.priceModsInCar[i] = modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().modSO.price;
                 for (int j = 0; j < carImg.specificationsCarImg.Count; j++)
                 {
-                     carImg.specificationsCarImg[i] += modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
+                     carImg.specificationsCarImg[j] += modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
                 }
             }
         }

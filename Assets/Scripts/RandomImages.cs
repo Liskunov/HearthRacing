@@ -10,6 +10,8 @@ public class RandomImages : MonoBehaviour
 {
     public GameObject[] carSlotObj;
     public GameObject[] modSlotObj;
+    public TextMeshProUGUI moneyText;
+    public int rerollCost;
     public void Spawn()
     {
         
@@ -39,13 +41,23 @@ public class RandomImages : MonoBehaviour
         Spawn();
     }
 
+    public void RerollButton()
+    {
+        int money = int.Parse(moneyText.text);
+        if (money >= rerollCost)
+        {
+            moneyText.text = (money - rerollCost).ToString();
+            Spawn();
+        }
+    }
+
     public static void RemoveChildren(GameObject parent)
     {
         Transform transform;
         for(int i = 0;i < parent.transform.childCount; i++)
         {
             transform = parent.transform.GetChild(i);
-            GameObject.Destroy(transform.gameObject);
+            Destroy(transform.gameObject);
         }
 
     }

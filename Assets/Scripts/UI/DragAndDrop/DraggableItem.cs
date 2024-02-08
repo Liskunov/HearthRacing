@@ -32,18 +32,26 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+        
+        
+        if (!canBuy)
+            sellZone.GetComponent<Image>().raycastTarget = true;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+
+
+        if (!canBuy)
+        {
+            var f = (Vector3.Distance(transform.position, sellZone.transform.position)) / 1000f;
+            if (f > 1)
+                sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0.25f);
+            else
+                sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 1.25f - f);
+        }
         
-        
-        var f =(Vector3.Distance(transform.position, sellZone.transform.position))/1000f;
-        if (f > 1)
-            sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0.25f);
-        else
-            sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 1.25f-f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -54,8 +62,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             image.raycastTarget = false;
         
         
-        sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0);
-
         
         
         
@@ -64,12 +70,16 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             parentAfterDrag.GetComponent<MoveCarMod>().TakeMods();
             parentBeforeDrag.GetComponent<MoveCarMod>().TakeMods();
             GetComponentInParent<InventorySlot>().swap = false;
-        }
-        Invoke(nameof(TakeInfoMod), Time.deltaTime);
-        
-        
+        } TakeInfoMod();
+
+
         if (GetComponentInParent<SellCar>())
             GetComponentInParent<SellCar>().SellCars();
+        
+        
+        
+        sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        sellZone.GetComponent<Image>().raycastTarget = false;
 
     }
 

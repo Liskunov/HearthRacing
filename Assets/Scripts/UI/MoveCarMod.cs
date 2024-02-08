@@ -8,17 +8,20 @@ using UnityEngine;
 public class MoveCarMod : MonoBehaviour
 {
    [SerializeField] public GameObject[] modsSlots;
+   private int f;
    
    
    public void TakeMods()
-   { 
-
+   {
+      f = GetComponentInChildren<CarImgInfo>().modsNames.Count;
+      
+      
       for (int i = 0; i < GetComponentInChildren<CarImgInfo>().modsNames.Count; i++)
       {
          if (modsSlots[i].transform.childCount != 0)
          {
             Transform transform = modsSlots[i].transform.GetChild(0);
-            GameObject.Destroy(transform.gameObject);
+            DestroyImmediate(transform.gameObject); 
          }
          
          
@@ -30,6 +33,19 @@ public class MoveCarMod : MonoBehaviour
             var mod= Instantiate((Resources.Load("ImageMods/" + name)), modsSlots[i].transform);
             mod.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             mod.GetComponent<DraggableItem>().canBuy = false;
+         }
+      }
+   }
+
+   public void Delete()
+   {
+
+      for (int i = 0; i < f; i++)
+      {
+         if (modsSlots[i].transform.childCount != 0)
+         {
+            Transform transform = modsSlots[i].transform.GetChild(0);
+            DestroyImmediate(transform.gameObject);
          }
       }
    }

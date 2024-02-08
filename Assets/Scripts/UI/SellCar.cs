@@ -7,7 +7,7 @@ using UnityEngine;
 public class SellCar : MonoBehaviour
 {
    [SerializeField] private TextMeshProUGUI moneyText;
-   [SerializeField] private TextMeshProUGUI sellPriceText;
+   [SerializeField] public TextMeshProUGUI sellPriceText;
    [SerializeField] private float sellRatio;
 
    public void SellCars()
@@ -26,10 +26,12 @@ public class SellCar : MonoBehaviour
          }
          sellPrice += sellObject.GetComponent<CarImgInfo>().carImgSO.price;
          
+         sellObject.GetComponent<DraggableItem>().parentBeforeDrag.GetComponentInChildren<MoveCarMod>().Delete();
+         
       }
 
       
-      GameObject.Destroy(sellObject);
+      Destroy(sellObject);
       moneyText.text = ((int)(int.Parse(moneyText.text) + sellPrice*sellRatio)).ToString();
       
    }

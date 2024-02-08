@@ -70,6 +70,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;
+        
+        
 
 
         if (transform.childCount != 0 && transform.GetChild(0).tag != "CarImg")

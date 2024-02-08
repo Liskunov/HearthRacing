@@ -241,6 +241,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
   canBuy: 1
+  sellZone: {fileID: 0}
 --- !u!114 &4038907945810969464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,4 +263,5 @@ MonoBehaviour:
   - 
   - 
   - 
-  specifications: []
+  specificationsCarImg: 
+  priceModsInCar: 0000000000000000000000000000000000000000

@@ -63,6 +63,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 return;
 
 
+        
+        dropped.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+        
+        
         dropped.GetComponent<DraggableItem>().canBuy = false;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
         draggableItem.parentAfterDrag = transform;

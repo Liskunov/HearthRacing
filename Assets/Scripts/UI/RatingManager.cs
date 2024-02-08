@@ -24,17 +24,22 @@ public class RatingManager : MonoBehaviour
         {
             if (!modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>())
             {
-                modItems[i].slider.value = carImg.modsRating[i];
-                carImg.modsNames[i] = "";
+                if (carImg)
+                {
+                    modItems[i].slider.value = carImg.modsRating[i];
+                    carImg.modsNames[i] = "";
+                    carImg.priceModsInCar[i] = 0;
+                }
 
             }
             else
             {
                 modItems[i].slider.value = modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().rating + carImg.modsRating[i];
                 carImg.modsNames[i] = modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().name;
+                carImg.priceModsInCar[i] = modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().modSO.price;
                 for (int j = 0; j < carImg.specificationsCarImg.Count; j++)
                 {
-                    carImg.specificationsCarImg[i] += modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
+                     carImg.specificationsCarImg[i] += modItems[i].inventorySlot.GetComponentInChildren<ModImgInfo>().specificationsModImg[j];
                 }
             }
         }

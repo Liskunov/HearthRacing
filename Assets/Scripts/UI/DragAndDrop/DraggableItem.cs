@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,6 +13,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public Transform parentBeforeDrag;
     [SerializeField] public bool canBuy = true;
+    public GameObject sellZone;
+
+
+    public void Start()
+    {
+        sellZone = GameObject.Find("SellZone");
+    }
+
+
+
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -25,6 +37,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+        
+        
+        var f =(Vector3.Distance(transform.position, sellZone.transform.position))/1000f;
+        if (f > 1)
+            sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0.25f);
+        else
+            sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 1.25f-f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -33,6 +52,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
         if (!GetComponentInParent<InventorySlot>().canTake)
             image.raycastTarget = false;
+        
+        
+        sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0);
 
         
         
@@ -44,6 +66,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             GetComponentInParent<InventorySlot>().swap = false;
         }
         Invoke(nameof(TakeInfoMod), Time.deltaTime);
+        
+        
+        if (GetComponentInParent<SellCar>())
+            GetComponentInParent<SellCar>().SellCars();
 
     }
 

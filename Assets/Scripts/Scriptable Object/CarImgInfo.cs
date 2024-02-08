@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class CarImgInfo : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class CarImgInfo : MonoBehaviour
     public List<float> modsRating = new List<float>();
     public List<string> modsNames = new List<string>();
     public List<int> specificationsCarImg = new List<int>();
+    public List<int> priceModsInCar = new List<int>();
 
     private void Start()
     {
         priceText.text = carImgSO.price.ToString();
+        
         
         
         modsRating.Add(carImgSO.ratingTire);

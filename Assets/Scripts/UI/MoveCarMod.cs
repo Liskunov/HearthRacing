@@ -26,11 +26,10 @@ public class MoveCarMod : MonoBehaviour
          {
             string name = GetComponentInChildren<CarImgInfo>().modsNames[i];
             name = name.Substring(0, name.Length - 7);
-
-            var mod = Resources.Load("ImageMods/" + name);
+            
+            var mod= Instantiate((Resources.Load("ImageMods/" + name)), modsSlots[i].transform);
             mod.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             mod.GetComponent<DraggableItem>().canBuy = false;
-            Instantiate((mod), modsSlots[i].transform);
          }
       }
    }

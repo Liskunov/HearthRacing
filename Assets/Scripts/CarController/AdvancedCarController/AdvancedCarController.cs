@@ -491,6 +491,5 @@ namespace Cars
 		}
 
 		public int maxSpeed => m_maxSpeed;
-		public float steeringSpeed => m_steeringSpeed;
 	}
 }

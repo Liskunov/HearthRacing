@@ -19,10 +19,10 @@ namespace Cars
 		public int pastI;
 		public float betweenTargets;
 		public float disToPos;
-		[SerializeField] private float stopDist;
-		[SerializeField] private float stopDistLow;
-		[SerializeField] private float angleDist;
-		[SerializeField] private float angleDistLow;
+		public float stopDist;
+		//[SerializeField] private float stopDistLow;
+		public float turnDist;
+		//[SerializeField] private float angleDistLow;
 		private void Awake()
 		{
 			var points = GameObject.Find("Points").transform;
@@ -41,6 +41,8 @@ namespace Cars
 			target = targetPoints[I].position;
 			pastTarget = transform.position;
 			betweenTargets = Vector3.Distance(pastTarget, target);
+			stopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
+			turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
 		}
 
 		private void FUpdate()
@@ -52,7 +54,7 @@ namespace Cars
 			{
 				m_carController.GoForward();
 			}
-			else if (stopDist > disToPos && disToPos > angleDist)
+			else if (stopDist > disToPos && disToPos > turnDist)
 			{
 				m_carController.Brakes();
 			}
@@ -85,6 +87,9 @@ namespace Cars
 				pastI = I - 1;
 				pastTarget = targetPoints[pastI].transform.position;
 				betweenTargets = Vector3.Distance(pastTarget, target);
+				stopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
+				turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
+
 			}
 			else
 			{

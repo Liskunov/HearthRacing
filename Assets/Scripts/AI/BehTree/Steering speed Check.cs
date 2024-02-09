@@ -11,7 +11,6 @@ public class SteeringspeedCheck : ActionNode
     
     protected override void OnStart()
     {
-        CarSteeringSpeed = context.carController.steeringSpeed;
     }
 
     protected override void OnStop() 

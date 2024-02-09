@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2273630003202705902}
   m_Layer: 3
   m_Name: Fiat
-  m_TagString: Untagged
+  m_TagString: CarPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   - {fileID: 471012853032368768}
   - {fileID: 1566457737784380705}
   m_carSpeed: 0
+  carSpeedInAI: 0
 --- !u!114 &2804648276130874200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,28 +134,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pidController: {fileID: 1332538969916993469}
-  targetPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Target: {x: 0, y: 0, z: 0}
+  targetPoints: []
   I: 0
+  pastI: 0
+  betweenTargets: 0
+  disToPos: 0
   stopDist: 19
+  stopDistLow: 0
   angleDist: 11
+  angleDistLow: 0
 --- !u!114 &1332538969916993469
 MonoBehaviour:
   m_ObjectHideFlags: 0

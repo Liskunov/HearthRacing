@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 3277025848535136755}
   m_Layer: 3
   m_Name: Pickup
-  m_TagString: Untagged
+  m_TagString: CarPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,6 +286,7 @@ MonoBehaviour:
   - {fileID: 6916513508002236441}
   - {fileID: 7495699512222222753}
   m_carSpeed: 200
+  carSpeedInAI: 0
 --- !u!114 &4790065771118540406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,28 +300,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pidController: {fileID: 7625207397927776711}
-  targetPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Target: {x: 0, y: 0, z: 0}
+  targetPoints: []
   I: 0
+  pastI: 0
+  betweenTargets: 0
+  disToPos: 0
   stopDist: 18
+  stopDistLow: 0
   angleDist: 10
+  angleDistLow: 0
 --- !u!114 &7625207397927776711
 MonoBehaviour:
   m_ObjectHideFlags: 0

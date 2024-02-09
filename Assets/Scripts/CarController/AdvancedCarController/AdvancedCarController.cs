@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -28,6 +29,7 @@ namespace Cars
 		private int m_particlesCount;
 		private int m_tireSkidsCount;
 		public float m_carSpeed;
+		public float carSpeedInAI;
 		private bool m_isDrifting;
 		private bool m_isTractionLocked;
 
@@ -131,6 +133,11 @@ namespace Cars
 			// }
 			//
 			// AnimateWheelMeshes();
+		}
+
+		private void FixedUpdate()
+		{
+			carSpeedInAI = m_carRigidbody.velocity.magnitude;
 		}
 
 		private WheelFrictionCurve SetupFriction(WheelCollider wheelCollider, out float extremumSlip)

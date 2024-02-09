@@ -104,3 +104,5 @@ MonoBehaviour:
   image: {fileID: 372938265838870092}
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
+  canBuy: 1
+  sellZone: {fileID: 0}

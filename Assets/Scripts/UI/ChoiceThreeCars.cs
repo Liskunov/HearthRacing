@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class ChoiceThreeCars : MonoBehaviour
 {
-    public GameObject[] carSlotTake;
     public GameObject[] carSlotSpawn;
     public GameObject ui;
     public int index = 0;
@@ -21,24 +20,24 @@ public class ChoiceThreeCars : MonoBehaviour
             for (int i = 0; i < indexCar.Count; i++)
             {
                 var name = indexCar[i];
-                var mod = Instantiate((Resources.Load("ImageCars/Test/" + name + "Img")), carSlotSpawn[i].transform);
+                var mod = Instantiate((Resources.Load("ImageCars/CarsTier1/" + name + "Img")), carSlotSpawn[i].transform);
                 mod.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
                 mod.GetComponent<DraggableItem>().canBuy = false;
                 mod.GetComponent<Image>().raycastTarget = false;
             }
             
             ui.SetActive(true);
-            //carSlotSpawn[0].GetComponentInChildren<DraggableItem>().TakeInfoMod();
             gameObject.SetActive(false);
         }
+        
 
 
-        for (int i = 0; i < carSlotTake.Length; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            var CarsImg = Resources.LoadAll("ImageCars/Test");
+            var CarsImg = Resources.LoadAll("ImageCars/CarsTier1");
             var index = Random.Range(0, CarsImg.Length);
             var mod = (CarsImg[index]).GetComponent<CarImgInfo>().carImgSO.icon;
-            carSlotTake[i].GetComponent<Image>().sprite = mod;
+            transform.GetChild(i).GetComponent<Image>().sprite = mod;
         }
     }
 
@@ -51,5 +50,5 @@ public class ChoiceThreeCars : MonoBehaviour
     {
         SpawnCars();
     }
-    
+
 }

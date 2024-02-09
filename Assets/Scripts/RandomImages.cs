@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RandomImages : MonoBehaviour
 {
@@ -19,9 +20,10 @@ public class RandomImages : MonoBehaviour
         for (int i = 0; i < carSlotObj.Length; i++)
         {
             RemoveChildren(carSlotObj[i]);
-            var CarsImg = Resources.LoadAll("ImageCars/Test");
+            var CarsImg = Resources.LoadAll("ImageCars/CarsTier" + StaticInfo.lvlTav);
             var index = Random.Range(0, CarsImg.Length);
             Instantiate((CarsImg[index]), carSlotObj[i].transform);
+            
         }
         
         
@@ -30,7 +32,7 @@ public class RandomImages : MonoBehaviour
         for (int i = 0; i < modSlotObj.Length; i++)
         {
             RemoveChildren(modSlotObj[i]);
-            var ModsImg = Resources.LoadAll("ImageMods");
+            var ModsImg = Resources.LoadAll("ImageMods/ModsTier" + StaticInfo.lvlTav);
             var index = Random.Range(0, ModsImg.Length);
             Instantiate((ModsImg[index]), modSlotObj[i].transform);
         }

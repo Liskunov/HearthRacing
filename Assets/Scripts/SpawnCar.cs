@@ -32,7 +32,7 @@ public class SpawnCar : MonoBehaviour
                 var carImgInfo = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>();
 
                 var nameCar = carImgInfo.carImgSO.nameCar;
-                var car = Instantiate(Resources.Load("CarReady/" + nameCar), spawnPoint.transform);
+                var car = Instantiate(Resources.Load("Cars/CarTier1/" + nameCar), spawnPoint.transform);
                 var carInfo = car.GetComponent<CarInfo>();
 
 

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 619906214475177046}
   - component: {fileID: -4348533651930594802}
   m_Layer: 5
-  m_Name: TireTier1
-  m_TagString: TireImg
+  m_Name: PendantTier1
+  m_TagString: PendantImg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3acc385b6a1c0514185fa82d8be1e2ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c3bb59eb01fc4545ace0be827b7d95f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -107,6 +107,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
   canBuy: 1
+  sellZone: {fileID: 0}
 --- !u!114 &-4348533651930594802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,9 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0084ae5cdc002944917045bc555ea2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modSO: {fileID: 11400000, guid: be19c9a341cdf184891c0204e4078715, type: 2}
+  modSO: {fileID: 11400000, guid: 8510f2034c543f1448d95548bbef339b, type: 2}
   priceText: {fileID: 6056853054598499912}
   rating: 0
+  specificationsModImg: 
 --- !u!1 &9120660748180555663
 GameObject:
   m_ObjectHideFlags: 0

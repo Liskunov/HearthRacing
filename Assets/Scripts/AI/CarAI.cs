@@ -16,16 +16,20 @@ namespace Cars
 		private Vector3 target;
 		private Vector3 pastTarget;
 		public int I;
+		public int pastI;
 		public float betweenTargets;
 		public float disToPos;
 		[SerializeField] private float stopDist;
+		[SerializeField] private float stopDistLow;
 		[SerializeField] private float angleDist;
+		[SerializeField] private float angleDistLow;
 		private void Awake()
 		{
 			var points = GameObject.Find("Points").transform;
 			for (int i = 0; i < points.childCount; i++)
 			{
-				targetPoints[i] = points.GetChild(i);
+				targetPoints.Add(points.GetChild(i));
+				//targetPoints[i] = points.GetChild(i);
 			}
 			m_carController = GetComponent<AdvancedCarController>();
 			CountTarget = targetPoints.Count;
@@ -39,7 +43,7 @@ namespace Cars
 			betweenTargets = Vector3.Distance(pastTarget, target);
 		}
 
-		private void Update()
+		private void FUpdate()
 		{
 			float disToPos = Vector3.Distance(transform.position, target);
 			
@@ -60,6 +64,7 @@ namespace Cars
 		}
 		void FixedUpdate()
 		{
+			FUpdate();
 			target.y = transform.position.y;
 			var targetDir = (target - transform.position).normalized;
 			var forwardDir = transform.rotation * Vector3.forward;
@@ -73,16 +78,17 @@ namespace Cars
 
             public void SwapTarget()
 		{
-			if (I == CountTarget)
-			{
-				m_carController.InvokeRepeating("Brakes", 0f, 0.1f);
-			}
-			else
+			if (I < CountTarget)
 			{
 				I++;
 				target = targetPoints[I].position;
-				pastTarget = targetPoints[I--].transform.position;
+				pastI = I - 1;
+				pastTarget = targetPoints[pastI].transform.position;
 				betweenTargets = Vector3.Distance(pastTarget, target);
+			}
+			else
+			{
+				m_carController.InvokeRepeating("Brakes", 0f, 0.1f);
 			}
 		}
 	}

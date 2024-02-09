@@ -7,32 +7,43 @@ using UnityEngine;
 public class SpawnCar : MonoBehaviour
 {
     [SerializeField] public RatingManager[] ratingManagers;
+    public GameObject spawnPoints;
+
+    public void Start()
+    {
+        spawnPoints = GameObject.Find("SpawnPoints");
+    }
+
 
     public void SpawnCarInPoint()
     {
         for (int i = 0; i < ratingManagers.Length; i++)
         {
-            var spawnPoint = GameObject.Find("SpawnPoint" + i);
+            var spawnPoint = spawnPoints.transform.GetChild(i);
             
             if (spawnPoint.transform.childCount != 0)
             {
                 Transform transform = spawnPoint.transform.GetChild(0);
-                GameObject.Destroy(transform.gameObject);
+                Destroy(transform.gameObject);
             } 
             
             if (ratingManagers[i].CarSlot.transform.childCount != 0)
             {
-                var nameCar = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().carImgSO.nameCar;
-                Instantiate(PrefabUtility.LoadPrefabContents("Assets/Prefabs/CarReady/" + nameCar + ".prefab"), spawnPoint.transform);
-                
-                
-                for (int j = 0; j < spawnPoint.GetComponentInChildren<CarInfo>().specificationsInt.Count; j++)
+                var carImgInfo = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>();
+
+                var nameCar = carImgInfo.carImgSO.nameCar;
+                var car = Instantiate(Resources.Load("Cars/CarTier1/" + nameCar), spawnPoint.transform);
+                var carInfo = car.GetComponent<CarInfo>();
+
+
+
+                for (int j = 0; j < carImgInfo.specificationsCarImg.Count; j++)
                 {
-                    spawnPoint.GetComponentInChildren<CarInfo>().specificationsInt[j] = ratingManagers[i].CarSlot.GetComponentInChildren<CarImgInfo>().specifications[j];
-                    Debug.Log(spawnPoint.GetComponentInChildren<CarInfo>().specificationsInt[j]);
+                    carInfo.specificationsC[j] = carImgInfo.specificationsCarImg[j];
                 }
+
+                carInfo.LoadMod();
             }
-            
         }
     }
 }

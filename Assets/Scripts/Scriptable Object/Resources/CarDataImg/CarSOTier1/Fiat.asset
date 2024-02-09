@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Fiat
   m_EditorClassIdentifier: 
   nameCar: Fiat
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e92fe15615f4dad46b3cc79886084a17, type: 3}
   price: 10
   ratingTire: 0.1
   ratingEngine: 0.2
   ratingBrake: 0.3
   ratingPendant: 0.4
   ratingTurbine: 0.5
+  MaxSpeed: 55
+  AccelerationMultiplier: 3
+  BrakeForce: 200

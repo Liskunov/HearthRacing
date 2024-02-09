@@ -16,3 +16,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 56765f38f4bcd26459bae1913060d6fe, type: 3}
   price: 30
   ratingMod: 0.3
+  MaxSpeed: 40
+  AccelerationMultiplier: 2
+  BrakeForce: 95

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class CarImgInfo : MonoBehaviour
 {
@@ -10,11 +11,13 @@ public class CarImgInfo : MonoBehaviour
     [SerializeField] public TextMeshProUGUI priceText;
     public List<float> modsRating = new List<float>();
     public List<string> modsNames = new List<string>();
-    public List<float> specifications = new List<float>();
+    public List<int> specificationsCarImg = new List<int>();
+    public List<int> priceModsInCar = new List<int>();
 
     private void Start()
     {
         priceText.text = carImgSO.price.ToString();
+        
         
         
         modsRating.Add(carImgSO.ratingTire);
@@ -23,18 +26,10 @@ public class CarImgInfo : MonoBehaviour
         modsRating.Add(carImgSO.ratingPendant);
         modsRating.Add(carImgSO.ratingTurbine);
         
-        modsNames.Add("none");
-        modsNames.Add("none");
-        modsNames.Add("none");
-        modsNames.Add("none");
-        modsNames.Add("none");
-        
-        specifications.Add(carImgSO.ratingTire);
-        specifications.Add(carImgSO.ratingEngine);
-        specifications.Add(carImgSO.ratingBrake);
-        specifications.Add(carImgSO.ratingPendant);
-        specifications.Add(carImgSO.ratingTurbine);
-        
+        specificationsCarImg.Add(carImgSO.MaxSpeed);
+        specificationsCarImg.Add(carImgSO.AccelerationMultiplier);
+        specificationsCarImg.Add(carImgSO.BrakeForce);
+
     }
     
 }

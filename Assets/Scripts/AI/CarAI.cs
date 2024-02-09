@@ -18,6 +18,8 @@ namespace Cars
 		public int I;
 		public int pastI;
 		public float betweenTargets;
+		private float beforestopDist;
+		private float stopMultiplayer;
 		public float disToPos;
 		public float stopDist;
 		//[SerializeField] private float stopDistLow;
@@ -41,8 +43,10 @@ namespace Cars
 			target = targetPoints[I].position;
 			pastTarget = transform.position;
 			betweenTargets = Vector3.Distance(pastTarget, target);
-			stopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
+			beforestopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
 			turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
+			stopMultiplayer = Dependence.SetMultiplayerFromAcceleration(m_carController.m_accelerationMultiplier);
+			stopDist = beforestopDist * stopMultiplayer;
 		}
 
 		private void FUpdate()
@@ -87,9 +91,10 @@ namespace Cars
 				pastI = I - 1;
 				pastTarget = targetPoints[pastI].transform.position;
 				betweenTargets = Vector3.Distance(pastTarget, target);
-				stopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
+				beforestopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
 				turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
-
+				stopDist = beforestopDist * stopMultiplayer;
+				
 			}
 			else
 			{

@@ -160,13 +160,13 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 80)
 			{
-				disToTurn = 90f;
+				disToTurn = 20f;
 				return disToTurn;
 			}
 
 			if (maxSpeed >= 70)
 			{
-				disToTurn = 20f;
+				disToTurn = 19f;
 				return disToTurn;
 			}
 
@@ -182,5 +182,46 @@ public class Dependence : MonoBehaviour
 			}
 		}
 		return disToTurn;
+	}
+
+	public static float SetMultiplayerFromAcceleration(float turbo)
+	{
+		if (turbo > 10)
+		{
+			turbo = 1.5f;
+			return turbo;
+		}
+		if (turbo > 9)
+		{
+			turbo = 1.5f;
+			return turbo;
+		}
+		if (turbo > 8)
+		{
+			turbo = 1.2f;
+			return turbo;
+		}
+		if (turbo > 7)
+		{
+			turbo = 1.15f;
+			return turbo;
+		}
+		if (turbo > 6)
+		{
+			turbo = 1.1f;
+			return turbo;
+		}
+		if (turbo > 5)
+		{
+			turbo = 1.05f;
+			return turbo;
+		}
+		if (turbo > 4)
+		{
+			turbo = 1f;
+			return turbo;
+		}
+
+		return 1f;
 	}
 }

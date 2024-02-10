@@ -77,7 +77,7 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 70)
 			{
-				disToStop = 30f;
+				disToStop = 35f;
 				return disToStop;
 			}
 
@@ -166,7 +166,7 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 70)
 			{
-				disToTurn = 19f;
+				disToTurn = 22f;
 				return disToTurn;
 			}
 
@@ -181,7 +181,7 @@ public class Dependence : MonoBehaviour
 				return disToTurn;
 			}
 		}
-		return disToTurn;
+		return 13;
 	}
 
 	public static float SetMultiplayerFromAcceleration(float turbo)

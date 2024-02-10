@@ -32,7 +32,7 @@ public class TimerNextMap : MonoBehaviour
         if (_timeLeft < 0)
         {
             _timeLeft = 0;
-            Debug.Log("LoadMap");/////Ссылка на загрузку карты
+            StaticInfo.mapsManager.GetComponent<LoadNextMap>().LoadNextScene();
         }
 
 

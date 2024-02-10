@@ -9,55 +9,53 @@ using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timer;
-    public SpawnCar spawnCar;
+
+    [SerializeField] public float time;
     
+    [SerializeField] private TextMeshProUGUI timerText;
+    public SpawnCar spawnCar;
     [SerializeField] public GameObject[] UI;
-
-    public float lifeTime = 60f;
-    private float gameTime;
-
-    private void FixedUpdate()
+ 
+    private float _timeLeft = 0f;
+ 
+    public IEnumerator StartTimer()
     {
-        timer.text = "Time:" + lifeTime + " sec";
-        gameTime += 1 * Time.fixedDeltaTime;
-        if (gameTime >= 1)
+        while (_timeLeft > 0)
         {
-            lifeTime -= 1;
-            gameTime = 0;
+            _timeLeft -= Time.deltaTime;
+            UpdateTimeText();
+            yield return null;
         }
-
-        if (lifeTime <= 5)
+    }
+ 
+    private void Start()
+    {
+        _timeLeft = time;
+        StaticInfo.time = time;
+        StartCoroutine(StartTimer());
+    }
+ 
+    private void UpdateTimeText()
+    {
+        if (_timeLeft < 0)
         {
-            timer.color = Color.yellow;
-        } else timer.color = Color.green;
-
-        if (lifeTime <= 3)
-        {
-            timer.color = Color.red;
-        }
-
-        if((gameTime <= 0.04f) && lifeTime == 0)
-        spawnCar.SpawnCarInPoint();
-        
-        
-        if (lifeTime == 0)
-        {
-
+            _timeLeft = 0;
+            spawnCar.SpawnCarInPoint();
             for (int i = 0; i < UI.Length; i++)
             {
                 UI[i].SetActive(false);
             }
-            
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < StaticInfo.spawnPoints.Count; i++)
             {
-                var spawnPoint = GameObject.Find("SpawnPoint" + i);
-                if(spawnPoint.transform.childCount != 0)
+                var spawnPoint = StaticInfo.spawnPoints[i];
                 spawnPoint.GetComponentInChildren<CarAI>().enabled = true;
 
             }
         }
-    }
 
+
+        float seconds = Mathf.FloorToInt(_timeLeft % 60);
+        timerText.text = seconds.ToString();
+    }
 }

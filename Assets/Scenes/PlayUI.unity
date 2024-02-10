@@ -2678,7 +2678,6 @@ MonoBehaviour:
   - {fileID: 507042560}
   - {fileID: 42060075}
   - {fileID: 217821559}
-  spawnPoints: {fileID: 0}
 --- !u!1 &306543980
 GameObject:
   m_ObjectHideFlags: 0
@@ -9352,6 +9351,52 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1148247904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148247905}
+  - component: {fileID: 1148247906}
+  m_Layer: 0
+  m_Name: MapsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1148247905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148247904}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -876.1513, y: -441.39124, z: -172.26437}
+  m_LocalScale: {x: 0.7272727, y: 0.7272727, z: 0.7272727}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1319966719}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148247906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148247904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274e54968cbe2f24b9746fb80058f00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 1779107150}
+  timer: {fileID: 1319966721}
 --- !u!1 &1160811015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10827,6 +10872,7 @@ RectTransform:
   - {fileID: 305345435}
   - {fileID: 1740101763}
   - {fileID: 1135124811}
+  - {fileID: 1148247905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10860,12 +10906,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d733566c56e3d04c8c5430d9100124c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 2052236130}
+  time: 20
+  timerText: {fileID: 2052236130}
   spawnCar: {fileID: 305345436}
   UI:
   - {fileID: 12365826}
   - {fileID: 1779107150}
-  lifeTime: 10
 --- !u!114 &1319966722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11093,7 +11139,7 @@ RectTransform:
   m_Father: {fileID: 36289621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13324,7 +13370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1779107151
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14853,7 +14899,7 @@ GameObject:
   - component: {fileID: 2052236131}
   - component: {fileID: 2052236130}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: TimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

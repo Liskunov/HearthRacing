@@ -262,6 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificationsC: 000000000000000000000000
+  carName: FiatBetter
+  carImage: {fileID: 21300000, guid: 4fbcc4543326efd419e45adbd498973b, type: 3}
 --- !u!1 &2262565566847784852
 GameObject:
   m_ObjectHideFlags: 0

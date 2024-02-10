@@ -10,16 +10,17 @@ using Unity.VisualScripting;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timer;
+    public SpawnCar spawnCar;
     
     [SerializeField] public GameObject[] UI;
 
     public float lifeTime = 60f;
     private float gameTime;
 
-    private void Update()
+    private void FixedUpdate()
     {
         timer.text = "Time:" + lifeTime + " sec";
-        gameTime += 1 * Time.deltaTime;
+        gameTime += 1 * Time.fixedDeltaTime;
         if (gameTime >= 1)
         {
             lifeTime -= 1;
@@ -36,13 +37,17 @@ public class Timer : MonoBehaviour
             timer.color = Color.red;
         }
 
+        if((gameTime <= 0.04f) && lifeTime == 0)
+        spawnCar.SpawnCarInPoint();
+        
+        
         if (lifeTime == 0)
         {
+
             for (int i = 0; i < UI.Length; i++)
             {
                 UI[i].SetActive(false);
             }
-            
             
 
             for (int i = 0; i < 3; i++)
@@ -50,7 +55,7 @@ public class Timer : MonoBehaviour
                 var spawnPoint = GameObject.Find("SpawnPoint" + i);
                 if(spawnPoint.transform.childCount != 0)
                 spawnPoint.GetComponentInChildren<CarAI>().enabled = true;
-                
+
             }
         }
     }

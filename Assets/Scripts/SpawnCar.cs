@@ -40,6 +40,8 @@ public class SpawnCar : MonoBehaviour
                 for (int j = 0; j < carImgInfo.specificationsCarImg.Count; j++)
                 {
                     carInfo.specificationsC[j] = carImgInfo.specificationsCarImg[j];
+                    carInfo.carName = carImgInfo.carImgSO.nameCar;
+                    carInfo.carImage = carImgInfo.carImgSO.Icon;
                 }
 
                 carInfo.LoadMod();

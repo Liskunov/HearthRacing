@@ -7,6 +7,8 @@ public class CarInfo : MonoBehaviour
 {
     
     public List<int> specificationsC = new List<int>();
+    public string carName;
+    public Sprite carImage;
     
 
 

@@ -51,7 +51,7 @@ namespace Cars
 
 		private void FUpdate()
 		{
-			float disToPos = Vector3.Distance(transform.position, target);
+			disToPos = Vector3.Distance(transform.position, target);
 			
 
 			if (disToPos > stopDist)

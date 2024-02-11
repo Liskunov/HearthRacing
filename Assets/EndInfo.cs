@@ -17,7 +17,7 @@ public class EndInfo : MonoBehaviour
          var finishPointsSliders = endPanel.GetComponentsInChildren<Slider>();
          var points = playerPoints - enemyPoints;
 
-         finishPointsSliders[0].value = (float) StaticInfo.playerHP / 100;
+         finishPointsSliders[0].value = (float) StaticInfo.playerHPs / 100;
          finishPointsSliders[1].value = (float) StaticInfo.enemyHP / 100;
          
          
@@ -35,13 +35,6 @@ public class EndInfo : MonoBehaviour
          
              finishPointsSliders[0].GetComponentInChildren<TextMeshProUGUI>().text = playerPoints.ToString();
              finishPointsSliders[1].GetComponentInChildren<TextMeshProUGUI>().text = enemyPoints.ToString();
-
-             if (points > 0)
-                 StaticInfo.enemyHP -= points;
-             else StaticInfo.playerHP -= points;
-
-             finishPointsSliders[0].value = (float) StaticInfo.playerHP / 100;
-             finishPointsSliders[1].value = (float) StaticInfo.enemyHP / 100;
     }
 
 

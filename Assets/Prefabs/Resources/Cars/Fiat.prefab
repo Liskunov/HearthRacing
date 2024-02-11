@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2273630003202705902}
   m_Layer: 3
   m_Name: Fiat
-  m_TagString: TurbineImg
+  m_TagString: CarPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

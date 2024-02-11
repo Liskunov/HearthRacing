@@ -129,6 +129,10 @@ GameObject:
   - component: {fileID: 2988109296496223793}
   - component: {fileID: 9083737565375362523}
   - component: {fileID: 5927929730289984078}
+  - component: {fileID: 1193599491313215949}
+  - component: {fileID: -672142440868035175}
+  - component: {fileID: 6393393573757987486}
+  - component: {fileID: -1300438568497929699}
   m_Layer: 0
   m_Name: Largus
   m_TagString: Untagged
@@ -161,7 +165,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3854828128194324615}
   serializedVersion: 4
-  m_Mass: 600
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -199,9 +203,102 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -8704158195689433164, guid: a229ac85c9784c6468d2ac04e8fd426e, type: 3}
+--- !u!114 &1193599491313215949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854828128194324615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43685c50871d5148b2d2173ac6c048d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxSpeed: 55
+  m_accelerationMultiplier: 3
+  m_brakeForce: 200
+  m_bodyMassCenter: {x: 0, y: 0, z: 0}
+  m_tireMeshes:
+  - {fileID: 8067888433478528733, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 5129048327486285378, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 2775923226686442333, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 2111449589037591146, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  m_rimMeshes:
+  - {fileID: 7845057094167906100, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 1014836677441813469, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 3573699784085160329, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 472901576807981996, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  m_wheelColliders:
+  - {fileID: 6653809325016969162, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 3207961904316922451, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 471012853032368768, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 1566457737784380705, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  m_carSpeed: 0
+  carSpeedInAI: 0
+--- !u!114 &-672142440868035175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854828128194324615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pidController: {fileID: 0}
+  targetPoints: []
+  I: 0
+  pastI: 0
+  betweenTargets: 0
+  disToPos: 0
+  stopDist: 0
+  stopDistLow: 0
+  angleDist: 0
+  angleDistLow: 0
+--- !u!114 &6393393573757987486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854828128194324615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d6fdb3e773b0c459f3445aa130d54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proportionalGain: 0
+  integralGain: 0
+  derivativeGain: 0
+  outputMin: -0.1
+  outputMax: 0.1
+  integralSaturation: 0
+  valueLast: 0
+  errorLast: 0
+  integrationStored: 0
+  velocity: 0
+  derivativeInitialized: 0
+--- !u!114 &-1300438568497929699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854828128194324615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dba43edfa9eb4e49abf9d62439d7b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specificationsC: 000000000000000000000000
+  carName: Largus
+  carImage: {fileID: 21300000, guid: 51b1cc93c8f219a41853a8ccbc04f8c0, type: 3}
 --- !u!1 &4400774521052076497
 GameObject:
   m_ObjectHideFlags: 0

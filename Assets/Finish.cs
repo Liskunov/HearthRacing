@@ -22,6 +22,7 @@ public class Finish : MonoBehaviour
       if (cars.Count == 6)
       {
           HealthPoints();
+          if (finishManager.GetComponent<HPController>().HPCalculation(playerPoints, enemyPoints))
           finishManager.GetComponent<EndInfo>().TakeInfo(cars, playerPoints, enemyPoints);
 
       }

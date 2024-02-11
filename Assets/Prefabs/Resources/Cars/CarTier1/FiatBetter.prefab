@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: -8043729882546985399}
   m_Layer: 3
   m_Name: FiatBetter
-  m_TagString: CarPlayer
+  m_TagString: TurbineImg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

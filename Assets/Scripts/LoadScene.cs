@@ -19,7 +19,7 @@ public class LoadScene : MonoBehaviour
 
     IEnumerator LoadAsync()
     {
-        AsyncOperation loadAsync = SceneManager.LoadSceneAsync("Track2");
+        AsyncOperation loadAsync = SceneManager.LoadSceneAsync("PlayUI", LoadSceneMode.Additive);
         loadAsync.allowSceneActivation = false;
 
         while (!loadAsync.isDone)
@@ -30,6 +30,7 @@ public class LoadScene : MonoBehaviour
             {
                yield return new WaitForSeconds(2.2f);
                loadAsync.allowSceneActivation = true;
+               SceneManager.LoadSceneAsync("Track2");
             }
 
             yield return null;

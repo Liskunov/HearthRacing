@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField] public float time;
     
     [SerializeField] private TextMeshProUGUI timerText;
-    public SpawnCar spawnCar;
+    public GameObject spwManager;
     [SerializeField] public GameObject[] UI;
  
     private float _timeLeft = 0f;
@@ -30,17 +30,23 @@ public class Timer : MonoBehaviour
  
     private void Start()
     {
-        _timeLeft = time;
+        LoadTimer();
         StaticInfo.time = time;
+    }
+
+    public void LoadTimer()
+    {
+        _timeLeft = time;
         StartCoroutine(StartTimer());
     }
- 
+
     private void UpdateTimeText()
     {
         if (_timeLeft < 0)
         {
             _timeLeft = 0;
-            spawnCar.SpawnCarInPoint();
+            spwManager.GetComponent<SpawnCar>().SpawnCarInPoint();
+            spwManager.GetComponent<SpawnCarEnemy>().SpawnEnemyCar();
             for (int i = 0; i < UI.Length; i++)
             {
                 UI[i].SetActive(false);
@@ -49,7 +55,9 @@ public class Timer : MonoBehaviour
             for (int i = 0; i < StaticInfo.spawnPoints.Count; i++)
             {
                 var spawnPoint = StaticInfo.spawnPoints[i];
+                var spawnEnemyPoint = StaticInfo.spawnPointsEnemy[i];
                 spawnPoint.GetComponentInChildren<CarAI>().enabled = true;
+                spawnEnemyPoint.GetComponentInChildren<CarAI>().enabled = true;
 
             }
         }

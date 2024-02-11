@@ -19,9 +19,11 @@ public class LoadNextMap : MonoBehaviour
         var index = Random.Range(0, scenes.Length);
         var sceneName = scenes[index].name;
         SceneManager.LoadScene("Track2");
+        StaticInfo.numberRound++;
         UI.SetActive(true);
         timer.time = StaticInfo.time;
-        timer.StartTimer();
+        timer.LoadTimer();
+        GetComponentInChildren<Shop>().GetMoney();
     }
 
 }

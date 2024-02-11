@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 696284578436210243}
   - component: {fileID: 7792930802808962500}
   - component: {fileID: 6838027787964596182}
+  - component: {fileID: -6916773152365318685}
+  - component: {fileID: 5839950379996249439}
+  - component: {fileID: -551902435561993065}
+  - component: {fileID: 5491342329145801930}
   m_Layer: 0
   m_Name: Hyundai
   m_TagString: Untagged
@@ -43,7 +47,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14559600762828807}
   serializedVersion: 4
-  m_Mass: 600
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -81,9 +85,102 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -4395181132864243877, guid: adf1f3e19b37bd741b7d49e961a4a372, type: 3}
+--- !u!114 &-6916773152365318685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14559600762828807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43685c50871d5148b2d2173ac6c048d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxSpeed: 55
+  m_accelerationMultiplier: 3
+  m_brakeForce: 200
+  m_bodyMassCenter: {x: 0, y: 0, z: 0}
+  m_tireMeshes:
+  - {fileID: 8067888433478528733, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 5129048327486285378, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 2775923226686442333, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 2111449589037591146, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  m_rimMeshes:
+  - {fileID: 7845057094167906100, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 1014836677441813469, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 3573699784085160329, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 472901576807981996, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  m_wheelColliders:
+  - {fileID: 6653809325016969162, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 3207961904316922451, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 471012853032368768, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  - {fileID: 1566457737784380705, guid: 511d2fc48b7accc4aa2516b497ec2e76, type: 3}
+  m_carSpeed: 0
+  carSpeedInAI: 0
+--- !u!114 &5839950379996249439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14559600762828807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pidController: {fileID: 0}
+  targetPoints: []
+  I: 0
+  pastI: 0
+  betweenTargets: 0
+  disToPos: 0
+  stopDist: 0
+  stopDistLow: 0
+  angleDist: 0
+  angleDistLow: 0
+--- !u!114 &-551902435561993065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14559600762828807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d6fdb3e773b0c459f3445aa130d54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proportionalGain: 0
+  integralGain: 0
+  derivativeGain: 0
+  outputMin: -0.1
+  outputMax: 0.1
+  integralSaturation: 0
+  valueLast: 0
+  errorLast: 0
+  integrationStored: 0
+  velocity: 0
+  derivativeInitialized: 0
+--- !u!114 &5491342329145801930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14559600762828807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dba43edfa9eb4e49abf9d62439d7b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specificationsC: 000000000000000000000000
+  carName: Hyundai
+  carImage: {fileID: 21300000, guid: 608b5910b7567d84b932fa8add7608de, type: 3}
 --- !u!1 &2728425457653915404
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,18 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] public int money;
+
+    public void Start()
+    {
+        GetMoney();
+    }
+
+
+    public void GetMoney()
+    {
+        moneyText.text = (money * StaticInfo.numberRound).ToString();
+    }
 
     public bool ChangeGold(int price)
     {

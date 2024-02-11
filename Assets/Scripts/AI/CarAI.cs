@@ -10,8 +10,9 @@ namespace Cars
 	{
 		private AdvancedCarController m_carController;
 		[SerializeField] private Pid_Controller m_pidController;
-
+		private float force = 2500;
 		[SerializeField] List<Transform> targetPoints = new List<Transform>();
+		private List<WheelCollider> wheels = new List<WheelCollider>();
 		private int CountTarget;
 		private Vector3 target;
 		private Vector3 pastTarget;
@@ -25,6 +26,7 @@ namespace Cars
 		//[SerializeField] private float stopDistLow;
 		public float turnDist;
 		//[SerializeField] private float angleDistLow;
+		private Rigidbody rb;
 		private void Awake()
 		{
 			var points = GameObject.Find("Points").transform;
@@ -35,6 +37,7 @@ namespace Cars
 			}
 			m_carController = GetComponent<AdvancedCarController>();
 			CountTarget = targetPoints.Count;
+			rb = GetComponent<Rigidbody>();
 		}
 
 		private void Start()
@@ -47,6 +50,10 @@ namespace Cars
 			turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
 			stopMultiplayer = Dependence.SetMultiplayerFromAcceleration(m_carController.m_accelerationMultiplier);
 			stopDist = beforestopDist * stopMultiplayer;
+			for (int i = 0; i < m_carController.m_wheelColliders.Length; i++)
+			{
+				wheels.Add(m_carController.m_wheelColliders[i]);
+			}
 		}
 
 		private void FUpdate()
@@ -67,6 +74,14 @@ namespace Cars
 				SwapTarget();
 			}
 			m_carController.AnimateWheelMeshes();
+			foreach(WheelCollider wheels in wheels)
+			{
+				if (!wheels.isGrounded)
+				{
+					rb.AddForceAtPosition(-wheels.transform.up * force, wheels.transform.position,
+						ForceMode.Force);
+				}
+			}
 		}
 		void FixedUpdate()
 		{
@@ -101,5 +116,6 @@ namespace Cars
 				m_carController.InvokeRepeating("Brakes", 0f, 0.1f);
 			}
 		}
+            
 	}
 }

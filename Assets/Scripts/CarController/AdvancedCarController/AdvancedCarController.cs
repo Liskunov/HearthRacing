@@ -18,7 +18,7 @@ namespace Cars
 
 		[SerializeField] private GameObject[] m_tireMeshes;
 		[SerializeField] private GameObject[] m_rimMeshes;
-		[SerializeField] private WheelCollider[] m_wheelColliders;
+		[SerializeField] public WheelCollider[] m_wheelColliders;
 
 		private bool m_useEffects;
 

@@ -47,7 +47,7 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 120)
 			{
-				disToStop = 90f;
+				disToStop = 20f;
 				return disToStop;
 			}
 
@@ -77,18 +77,24 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 70)
 			{
-				disToStop = 45f;
+				disToStop = 35f;
+				return disToStop;
+			}
+			
+			if (maxSpeed >= 65)
+			{
+				disToStop = 25f;
 				return disToStop;
 			}
 
 			if (maxSpeed >= 60)
 			{
-				disToStop = 25f;
+				disToStop = 20f;
 				return disToStop;
 			}
 			if (maxSpeed > 49)
 			{
-				disToStop = 20f;
+				disToStop = 15f;
 				return disToStop;
 			}
 		}
@@ -132,7 +138,7 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 120)
 			{
-				disToStop = 90f;
+				disToStop = 12f;
 				return disToStop;
 			}
 
@@ -165,15 +171,21 @@ public class Dependence : MonoBehaviour
 				disToStop = 25f;
 				return disToStop;
 			}
+			
+			if (maxSpeed >= 65)
+			{
+				disToStop = 22f;
+				return disToStop;
+			}
 
 			if (maxSpeed >= 60)
 			{
-				disToStop = 25f;
+				disToStop = 20f;
 				return disToStop;
 			}
 			if (maxSpeed > 49)
 			{
-				disToStop = 20f;
+				disToStop = 15f;
 				return disToStop;
 			}
 		}
@@ -181,7 +193,92 @@ public class Dependence : MonoBehaviour
 	}
 	public static float SetDistansToAngle(int maxSpeed , float betweenTargets, float disToTurn)
 	{
-		if (betweenTargets > 60)
+		if (betweenTargets >= 60)
+		{
+			if (maxSpeed >= 180)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 170)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 160)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 150)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 140)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 130)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 120)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 110)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 100)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 90)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 80)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 70)
+			{
+				disToTurn = 17f;
+				return disToTurn;
+			}
+
+			if (maxSpeed >= 60)
+			{
+				disToTurn = 15f;
+				return disToTurn;
+			}
+			if (maxSpeed > 49)
+			{
+				disToTurn = 10f;
+				return disToTurn;
+			}
+		}
+		else if (betweenTargets < 60)
 		{
 			if (maxSpeed >= 180)
 			{
@@ -245,19 +342,19 @@ public class Dependence : MonoBehaviour
 
 			if (maxSpeed >= 80)
 			{
-				disToTurn = 20f;
+				disToTurn = 15f;
 				return disToTurn;
 			}
 
 			if (maxSpeed >= 70)
 			{
-				disToTurn = 20f;
+				disToTurn = 15f;
 				return disToTurn;
 			}
 
 			if (maxSpeed >= 60)
 			{
-				disToTurn = 17f;
+				disToTurn = 15f;
 				return disToTurn;
 			}
 			if (maxSpeed > 49)

@@ -24,7 +24,7 @@ public class Finish : MonoBehaviour
           HealthPoints();
           if (finishManager.GetComponent<HPController>().HPCalculation(playerPoints, enemyPoints))
           finishManager.GetComponent<EndInfo>().TakeInfo(cars, playerPoints, enemyPoints);
-          StaticInfo.SwitchManager.GetComponent<CameraSwitch>().gameObject.SetActive(false);
+          StaticInfo.SwitchManager.GetComponent<CameraSwitch>().UI.SetActive(false);
 
       }
    }

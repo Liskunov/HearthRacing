@@ -210,7 +210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.9157, y: 163.7755}
+  m_AnchoredPosition: {x: -2.9156, y: 74.4}
   m_SizeDelta: {x: 404.6533, y: 95.6531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &12365826
@@ -11712,8 +11712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -749.25, y: 167.89}
-  m_SizeDelta: {x: -1498.5, y: -335.7742}
+  m_AnchoredPosition: {x: -749.25, y: 267.88974}
+  m_SizeDelta: {x: -1498.5, y: -610.7734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491440124
 MonoBehaviour:
@@ -11728,7 +11728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12278,7 +12278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 719494835}
-  money: 200
+  money: 100
 --- !u!4 &1646565313
 Transform:
   m_ObjectHideFlags: 0
@@ -12405,7 +12405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.915, y: 51.873}
+  m_AnchoredPosition: {x: -2.9173, y: -68.3}
   m_SizeDelta: {x: 404.65, y: 103.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1669456353

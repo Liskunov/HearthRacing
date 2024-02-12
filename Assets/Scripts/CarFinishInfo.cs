@@ -12,7 +12,7 @@ public class CarFinishInfo : MonoBehaviour
     
     public void SpawnCarInfo(string carName, string carTag)
     {
-        carInfo = Instantiate(Resources.Load("Image/FinishedCar"), finishUI.transform);
+        carInfo = Instantiate(Resources.Load("EndImage/FinishedCar"), finishUI.transform);
         carInfo.GetComponentInChildren<RawImage>().texture = Resources.Load<Texture>("ImageCarsMini/" + carName);
         carInfo.GetComponentInChildren<TextMeshProUGUI>().text = carName;
         if (carTag == "CarPlayer")

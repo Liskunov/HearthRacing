@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.931908, y: -42.196}
+  m_AnchoredPosition: {x: 64.6, y: 0.0000076294}
   m_SizeDelta: {x: 28.1361, y: 15.6088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2816705420350880555
@@ -241,6 +241,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   parentBeforeDrag: {fileID: 0}
   canBuy: 1
+  sellZone: {fileID: 0}
 --- !u!114 &-8784357936749086013
 MonoBehaviour:
   m_ObjectHideFlags: 0

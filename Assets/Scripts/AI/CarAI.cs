@@ -9,8 +9,8 @@ namespace Cars
 	public class CarAI : MonoBehaviour
 	{
 		private AdvancedCarController m_carController;
-		[SerializeField] private Pid_Controller m_pidController;
-		[SerializeField] List<Transform> targetPoints = new List<Transform>();
+		private Pid_Controller m_pidController;
+		List<Transform> targetPoints = new List<Transform>();
 		private int CountTarget;
 		private Vector3 target;
 		private Vector3 pastTarget;
@@ -34,6 +34,7 @@ namespace Cars
 				targetPoints.Add(points.GetChild(i));
 			}
 			m_carController = GetComponent<AdvancedCarController>();
+			m_pidController = GetComponent<Pid_Controller>();
 			CountTarget = targetPoints.Count;
 			acceler = m_carController.m_accelerationMultiplier;
 			brakeFors = m_carController.m_brakeForce;

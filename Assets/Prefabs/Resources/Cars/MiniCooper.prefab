@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5758855281757226734}
   - component: {fileID: 4589571134402237408}
   - component: {fileID: 1684104939066911829}
-  - component: {fileID: 5559816373804857407}
   m_Layer: 0
   m_Name: MiniCooper_Windows
   m_TagString: Untagged
@@ -84,28 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5559816373804857407
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357962425897251574}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8707689689360502560, guid: 5a4f86d32435a4c4ca96a487a3a32b8a, type: 3}
 --- !u!1 &3742080100808041123
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +178,6 @@ GameObject:
   - component: {fileID: 1254590283778577366}
   - component: {fileID: 7732367053455117703}
   - component: {fileID: 82020951537514284}
-  - component: {fileID: 9112678479844289305}
   m_Layer: 0
   m_Name: MiniCooper_Body
   m_TagString: Untagged
@@ -274,28 +250,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9112678479844289305
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959188094823355085}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4891473203204766503, guid: 5a4f86d32435a4c4ca96a487a3a32b8a, type: 3}
 --- !u!1 &6318592243385128610
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +261,6 @@ GameObject:
   - component: {fileID: 8401254077303605919}
   - component: {fileID: 8817465958447256690}
   - component: {fileID: 7830025108862356773}
-  - component: {fileID: 7340545857650410534}
   m_Layer: 0
   m_Name: MiniCooper_Headlights
   m_TagString: Untagged
@@ -380,28 +333,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7340545857650410534
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318592243385128610}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5268077676146283717, guid: 5a4f86d32435a4c4ca96a487a3a32b8a, type: 3}
 --- !u!1 &6326211275247901949
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +344,6 @@ GameObject:
   - component: {fileID: 5715036183554221435}
   - component: {fileID: 150026910607912348}
   - component: {fileID: 314745870858748709}
-  - component: {fileID: 9182218011289846605}
   m_Layer: 0
   m_Name: MiniCooper_Backlights
   m_TagString: Untagged
@@ -486,28 +416,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9182218011289846605
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6326211275247901949}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2085043230829556214, guid: 5a4f86d32435a4c4ca96a487a3a32b8a, type: 3}
 --- !u!1 &8031550760448357799
 GameObject:
   m_ObjectHideFlags: 0

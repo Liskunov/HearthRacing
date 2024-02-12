@@ -503,7 +503,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mercedes-Wheels_Stock
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7924185366488124250, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 8012628964516820623, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 4912426901168535413, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 2448980736980126974, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 8878876556395897996, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 3220228108030872366, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 5936315165344747959, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
+    - {fileID: 996085171136223796, guid: 52b75e7d65c45c74793f4649a47a5257, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

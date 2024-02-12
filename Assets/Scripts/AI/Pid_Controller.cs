@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class Pid_Controller    : MonoBehaviour
 {
-    public float proportionalGain;
-    public float integralGain;
-    public float derivativeGain;
+    private float proportionalGain = 1.5f;
+    private float integralGain = 1;
+    private float derivativeGain = 1;
 
-    public float outputMin = -0.1f;
-    public float outputMax = 0.1f;
-    public float integralSaturation;
+    private float outputMin = -0.1f;
+    private float outputMax = 0.1f;
+    private float integralSaturation = 1;
 
-    public float valueLast;
-    public float errorLast;
-    public float integrationStored;
-    public float velocity;  //only used for the info display
-    public bool derivativeInitialized;
+    private float valueLast;
+    private float errorLast;
+    private float integrationStored;
+    private float velocity;  //only used for the info display
+    private bool derivativeInitialized;
 
     float AngleDifference(float a, float b) 
     {

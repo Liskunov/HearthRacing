@@ -285,7 +285,9 @@ MonoBehaviour:
   - {fileID: 7899450194703851059}
   - {fileID: 6916513508002236441}
   - {fileID: 7495699512222222753}
+  m_wheelsCount: 0
   m_carSpeed: 200
+  carSpeedInAI: 0
 --- !u!114 &4790065771118540406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,28 +301,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pidController: {fileID: 7625207397927776711}
-  targetPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Target: {x: 0, y: 0, z: 0}
+  targetPoints: []
   I: 0
-  stopDist: 18
-  angleDist: 10
+  pastI: 0
+  disToPos: 0
+  stopDistFormula: 0
+  carSpeedMS: 0
+  carSpeedKMH: 0
+  multiplierFromBrake: 0
+  multiplierFromAcceler: 0
+  acceler: 0
+  brakeFors: 0
 --- !u!114 &7625207397927776711
 MonoBehaviour:
   m_ObjectHideFlags: 0

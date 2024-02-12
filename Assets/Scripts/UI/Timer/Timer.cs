@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField] public float time;
     
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private Slider timerSlider;
     public GameObject spwManager;
     [SerializeField] public GameObject[] UI;
 
@@ -23,6 +24,8 @@ public class Timer : MonoBehaviour
         while (_timeLeft > 0)
         {
             _timeLeft -= Time.deltaTime;
+            var normalizedValue = Mathf.Clamp(_timeLeft / time, 0.0f, 1.0f);
+            timerSlider.value = normalizedValue;
             UpdateTimeText();
             yield return null;
         }

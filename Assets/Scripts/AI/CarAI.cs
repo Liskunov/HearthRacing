@@ -11,37 +11,32 @@ namespace Cars
 		private AdvancedCarController m_carController;
 		[SerializeField] private Pid_Controller m_pidController;
 		[SerializeField] List<Transform> targetPoints = new List<Transform>();
-		private List<WheelCollider> wheels = new List<WheelCollider>();
 		private int CountTarget;
 		private Vector3 target;
 		private Vector3 pastTarget;
 		public int I;
 		public int pastI;
-		public float betweenTargets;
-		private float beforestopDist;
-		private float stopMultiplayer;
+		private float betweenTargets;
 		public float disToPos;
-		public float stopDist;
-		//[SerializeField] private float stopDistLow;
-		public float turnDist;
-		//[SerializeField] private float angleDistLow;
-		private Rigidbody rb;
 		public float stopDistFormula;
 		public float carSpeedMS;
 		public float carSpeedKMH;
 		public float multiplierFromBrake;
-		public float multiplierFromacceler;
+		public float multiplierFromAcceler;
+		public float acceler;
+		public int brakeFors;
+
 		private void Awake()
 		{
 			var points = GameObject.Find("Points").transform;
 			for (int i = 0; i < points.childCount; i++)
 			{
 				targetPoints.Add(points.GetChild(i));
-				//targetPoints[i] = points.GetChild(i);
 			}
 			m_carController = GetComponent<AdvancedCarController>();
 			CountTarget = targetPoints.Count;
-			rb = GetComponent<Rigidbody>();
+			acceler = m_carController.m_accelerationMultiplier;
+			brakeFors = m_carController.m_brakeForce;
 		}
 
 		private void Start()
@@ -50,32 +45,21 @@ namespace Cars
 			target = targetPoints[I].position;
 			pastTarget = transform.position;
 			betweenTargets = Vector3.Distance(pastTarget, target);
-			beforestopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
-			turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
-			stopMultiplayer = Dependence.SetMultiplayerFromAcceleration(m_carController.m_accelerationMultiplier);
-			stopDist = beforestopDist * stopMultiplayer;
+			multiplierFromAcceler = CalculateAccelerMult(acceler);
+			multiplierFromBrake = CalculateBrakeMult();
 		}
 
 		private void FUpdate()
 		{
 			disToPos = Vector3.Distance(transform.position, target);
 			carSpeedMS = m_carController.carSpeedInAI;
-
-		//	if (disToPos > stopDist)
-		//	{
-		//		m_carController.GoForward();
-		//	}
-		//	else if (stopDist > disToPos && disToPos > turnDist)
-		//	{
-		//		m_carController.Brakes();
-		//	}
+			
 			if (disToPos > stopDistFormula)
 			{ 
 				m_carController.GoForward();
 			}
 			else if (stopDistFormula > disToPos && disToPos > 10)
 			{
-				//rb.drag = 0.05f;
 				m_carController.Brakes();
 				for (int i = 0; i < m_carController.m_wheelsCount; i++)
 				{
@@ -84,8 +68,6 @@ namespace Cars
 			}
 			else
 			{
-			//	rb.drag = 0;
-
 				SwapTarget();
 			}
 			m_carController.AnimateWheelMeshes();
@@ -103,9 +85,49 @@ namespace Cars
 			float input = m_pidController.UpdateAngle(Time.fixedDeltaTime, currentAngle, targetAngle);
 				m_carController.TurnSide(input);
 				carSpeedKMH = carSpeedMS * 3.6f ;
-				stopDistFormula = ((float) (multiplierFromacceler * multiplierFromBrake * Math.Pow(carSpeedKMH, 2) / (254 * 0.7)));
+				stopDistFormula = ((float) (multiplierFromAcceler * multiplierFromBrake * Math.Pow(carSpeedKMH, 2) / (254 * 0.7)));
 		}
 
+		public float CalculateAccelerMult(float acceler)
+		{
+			float accelerMult = 1 + (0.05f * (acceler - 4));
+			return accelerMult;
+		}
+
+		public float CalculateBrakeMult()
+		{
+			switch (brakeFors)
+			{
+				case 200:
+					multiplierFromBrake = 1.5f; //1.4f;
+					break;
+				case 250:
+					multiplierFromBrake = 1.4f; //1.25f;
+					break;
+				case 300:
+					multiplierFromBrake = 1.35f; //1.35f;
+					break;
+				case 350:
+					multiplierFromBrake = 1.3f; //1.15f;
+					break;
+				case 400:
+					multiplierFromBrake = 1.25f; //1.2f;
+					break;
+				case 450:
+					multiplierFromBrake = 1.2f; //1.1f;
+					break;
+				case 500:
+					multiplierFromBrake = 1.1f; //1.05f;
+					break;
+				case 550:
+					multiplierFromBrake = 1f; //1f;
+					break;
+				case 600:
+					multiplierFromBrake = 0.9f; //0.95f;
+					break;
+			}
+			return multiplierFromBrake;
+		}
             public void SwapTarget()
 		{
 			if (I < CountTarget)
@@ -115,9 +137,6 @@ namespace Cars
 				pastI = I - 1;
 				pastTarget = targetPoints[pastI].transform.position;
 				betweenTargets = Vector3.Distance(pastTarget, target);
-				beforestopDist = Dependence.SetDistansToStop(m_carController.maxSpeed, betweenTargets, stopDist);
-				turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
-				stopDist = beforestopDist * stopMultiplayer;
 				
 			}
 			else

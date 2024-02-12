@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     public GameObject spwManager;
     [SerializeField] public GameObject[] UI;
- 
+
     private float _timeLeft = 0f;
  
     public IEnumerator StartTimer()
@@ -59,7 +59,10 @@ public class Timer : MonoBehaviour
                 spawnPoint.GetComponentInChildren<CarAI>().enabled = true;
                 spawnEnemyPoint.GetComponentInChildren<CarAI>().enabled = true;
 
+                StaticInfo.SwitchManager.GetComponent<CameraSwitch>().FirstCam();
+
             }
+
         }
 
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Cinemachine;
 using TMPro.EditorUtilities;
 using UnityEngine;
 
@@ -15,4 +16,5 @@ public static class StaticInfo
     public static float time;
     public static int numberRound = 1;
     public static GameObject playUI;
+    public static GameObject SwitchManager;
 }

@@ -10,7 +10,6 @@ namespace Cars
 	{
 		private AdvancedCarController m_carController;
 		[SerializeField] private Pid_Controller m_pidController;
-		private float force = 2500;
 		[SerializeField] List<Transform> targetPoints = new List<Transform>();
 		private List<WheelCollider> wheels = new List<WheelCollider>();
 		private int CountTarget;
@@ -27,6 +26,11 @@ namespace Cars
 		public float turnDist;
 		//[SerializeField] private float angleDistLow;
 		private Rigidbody rb;
+		public float stopDistFormula;
+		public float carSpeedMS;
+		public float carSpeedKMH;
+		public float multiplierFromBrake;
+		public float multiplierFromacceler;
 		private void Awake()
 		{
 			var points = GameObject.Find("Points").transform;
@@ -50,38 +54,41 @@ namespace Cars
 			turnDist = Dependence.SetDistansToAngle(m_carController.maxSpeed, betweenTargets, turnDist);
 			stopMultiplayer = Dependence.SetMultiplayerFromAcceleration(m_carController.m_accelerationMultiplier);
 			stopDist = beforestopDist * stopMultiplayer;
-			for (int i = 0; i < m_carController.m_wheelColliders.Length; i++)
-			{
-				wheels.Add(m_carController.m_wheelColliders[i]);
-			}
 		}
 
 		private void FUpdate()
 		{
 			disToPos = Vector3.Distance(transform.position, target);
-			
+			carSpeedMS = m_carController.carSpeedInAI;
 
-			if (disToPos > stopDist)
-			{
+		//	if (disToPos > stopDist)
+		//	{
+		//		m_carController.GoForward();
+		//	}
+		//	else if (stopDist > disToPos && disToPos > turnDist)
+		//	{
+		//		m_carController.Brakes();
+		//	}
+			if (disToPos > stopDistFormula)
+			{ 
 				m_carController.GoForward();
 			}
-			else if (stopDist > disToPos && disToPos > turnDist)
+			else if (stopDistFormula > disToPos && disToPos > 10)
 			{
+				//rb.drag = 0.05f;
 				m_carController.Brakes();
+				for (int i = 0; i < m_carController.m_wheelsCount; i++)
+				{
+					m_carController.m_wheelColliders[i].motorTorque = 0;
+				}
 			}
 			else
 			{
+			//	rb.drag = 0;
+
 				SwapTarget();
 			}
 			m_carController.AnimateWheelMeshes();
-			foreach(WheelCollider wheels in wheels)
-			{
-				if (!wheels.isGrounded)
-				{
-					rb.AddForceAtPosition(-wheels.transform.up * force, wheels.transform.position,
-						ForceMode.Force);
-				}
-			}
 		}
 		void FixedUpdate()
 		{
@@ -95,7 +102,9 @@ namespace Cars
 
 			float input = m_pidController.UpdateAngle(Time.fixedDeltaTime, currentAngle, targetAngle);
 				m_carController.TurnSide(input);
-        }
+				carSpeedKMH = carSpeedMS * 3.6f ;
+				stopDistFormula = ((float) (multiplierFromacceler * multiplierFromBrake * Math.Pow(carSpeedKMH, 2) / (254 * 0.7)));
+		}
 
             public void SwapTarget()
 		{

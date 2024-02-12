@@ -12,7 +12,7 @@ namespace Cars
 		[Range(10, 45)]  private int m_maxSteeringAngle = 35;
 		[Range(0.1f, 1f)]  private float m_steeringSpeed = 1f;
 		[Range(100, 600)] [SerializeField] public int m_brakeForce = 350;
-		[Range(1, 10)]  private int m_decelerationMultiplier = 2;
+		[Range(1, 12)]  private int m_decelerationMultiplier = 2;
 		[Range(1, 10)]  private int m_handbrakeDriftMultiplier = 5;
 		[SerializeField] private Vector3 m_bodyMassCenter;
 
@@ -25,7 +25,7 @@ namespace Cars
 		private ParticleSystem[] m_particleSystems;
 		private TrailRenderer[] m_tireSkids;
 
-		private int m_wheelsCount;
+		public int m_wheelsCount;
 		private int m_particlesCount;
 		private int m_tireSkidsCount;
 		public float m_carSpeed;
@@ -175,18 +175,6 @@ namespace Cars
 			}
 
 			var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
-			m_wheelColliders[0].steerAngle =
-				Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
-			m_wheelColliders[1].steerAngle =
-				Mathf.MoveTowards(m_wheelColliders[1].steerAngle, steeringAngle, m_steeringSpeed);
-		}
-		
-		public void TurnSideAI(float steeringAngle)
-		{
-			m_steeringAxis += Time.deltaTime * 10f * m_steeringSpeed;
-			
-
-			//var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
 			m_wheelColliders[0].steerAngle =
 				Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
 			m_wheelColliders[1].steerAngle =

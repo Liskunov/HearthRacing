@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 8513942811123543496}
   - component: {fileID: 5679709775865590742}
   - component: {fileID: 6769866958053481763}
-  - component: {fileID: 9179400678047327505}
   m_Layer: 0
   m_Name: PoliceCar_Windows
   m_TagString: Untagged
@@ -121,28 +120,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9179400678047327505
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2642209229065868466}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3446967907889638789, guid: 72127dfd2b4ece84fafa67f6eee23e99, type: 3}
 --- !u!1 &2933682035052168674
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +131,6 @@ GameObject:
   - component: {fileID: 3766597450118963225}
   - component: {fileID: 5111057232635724920}
   - component: {fileID: 4850361233040060805}
-  - component: {fileID: 1643800294517449635}
   m_Layer: 0
   m_Name: PoliceCar_rFlash
   m_TagString: Untagged
@@ -227,28 +203,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1643800294517449635
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2933682035052168674}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1822374616330469653, guid: 72127dfd2b4ece84fafa67f6eee23e99, type: 3}
 --- !u!1 &3298157660934993753
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +214,6 @@ GameObject:
   - component: {fileID: 201194480504958645}
   - component: {fileID: 1512669176513863004}
   - component: {fileID: 7209813871861749728}
-  - component: {fileID: 1693338853674716373}
   m_Layer: 0
   m_Name: PoliceCar_Headlights
   m_TagString: Untagged
@@ -333,28 +286,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1693338853674716373
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3298157660934993753}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5444728024238839691, guid: 72127dfd2b4ece84fafa67f6eee23e99, type: 3}
 --- !u!1 &4603098162833277584
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +297,6 @@ GameObject:
   - component: {fileID: 3902366062072520473}
   - component: {fileID: 6798856272424476466}
   - component: {fileID: 9033268967095588309}
-  - component: {fileID: 979032109003284101}
   m_Layer: 0
   m_Name: PoliceCar_lFlash
   m_TagString: Untagged
@@ -439,28 +369,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &979032109003284101
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4603098162833277584}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3079013407748750755, guid: 72127dfd2b4ece84fafa67f6eee23e99, type: 3}
 --- !u!1 &4925006739838343384
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +464,6 @@ GameObject:
   - component: {fileID: 6035944604318422465}
   - component: {fileID: 4550579412564342380}
   - component: {fileID: 9042876590139311565}
-  - component: {fileID: 7369793296473656517}
   m_Layer: 0
   m_Name: PoliceCar_Backlights
   m_TagString: Untagged
@@ -629,28 +536,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7369793296473656517
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7165941751560742173}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3579606443191575298, guid: 72127dfd2b4ece84fafa67f6eee23e99, type: 3}
 --- !u!1 &8570419758425907577
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +547,6 @@ GameObject:
   - component: {fileID: 8189621444289379}
   - component: {fileID: 5723123564542752346}
   - component: {fileID: 3600514234133756471}
-  - component: {fileID: 271891917661671965}
   m_Layer: 0
   m_Name: PoliceCar_Body
   m_TagString: Untagged
@@ -735,28 +619,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &271891917661671965
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8570419758425907577}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5783198957816225771, guid: 72127dfd2b4ece84fafa67f6eee23e99, type: 3}
 --- !u!1001 &9108562330522335193
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,26 +6,26 @@ namespace Cars
 {
 	public class AdvancedCarController : MonoBehaviour
 	{
-		[Range(20, 190)] [SerializeField] public int m_maxSpeed = 90;
+		[Range(50, 190)] [SerializeField] public int m_maxSpeed = 90;
 		[Range(10, 120)]  private int m_maxReverseSpeed = 45;
-		[Range(1, 12)] [SerializeField] public int m_accelerationMultiplier = 2;
+		[Range(4, 10)] [SerializeField] public int m_accelerationMultiplier = 2;
 		[Range(10, 45)]  private int m_maxSteeringAngle = 35;
 		[Range(0.1f, 1f)]  private float m_steeringSpeed = 1f;
-		[Range(100, 600)] [SerializeField] public int m_brakeForce = 350;
+		[Range(200, 600)] [SerializeField] public int m_brakeForce = 350;
 		[Range(1, 10)]  private int m_decelerationMultiplier = 2;
 		[Range(1, 10)]  private int m_handbrakeDriftMultiplier = 5;
 		[SerializeField] private Vector3 m_bodyMassCenter;
 
 		[SerializeField] private GameObject[] m_tireMeshes;
 		[SerializeField] private GameObject[] m_rimMeshes;
-		[SerializeField] private WheelCollider[] m_wheelColliders;
+		[SerializeField] public WheelCollider[] m_wheelColliders;
 
 		private bool m_useEffects;
 
 		private ParticleSystem[] m_particleSystems;
 		private TrailRenderer[] m_tireSkids;
 
-		private int m_wheelsCount;
+		public int m_wheelsCount;
 		private int m_particlesCount;
 		private int m_tireSkidsCount;
 		public float m_carSpeed;
@@ -175,18 +175,6 @@ namespace Cars
 			}
 
 			var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
-			m_wheelColliders[0].steerAngle =
-				Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
-			m_wheelColliders[1].steerAngle =
-				Mathf.MoveTowards(m_wheelColliders[1].steerAngle, steeringAngle, m_steeringSpeed);
-		}
-		
-		public void TurnSideAI(float steeringAngle)
-		{
-			m_steeringAxis += Time.deltaTime * 10f * m_steeringSpeed;
-			
-
-			//var steeringAngle = m_steeringAxis * m_maxSteeringAngle;
 			m_wheelColliders[0].steerAngle =
 				Mathf.MoveTowards(m_wheelColliders[0].steerAngle, steeringAngle, m_steeringSpeed);
 			m_wheelColliders[1].steerAngle =
@@ -491,6 +479,5 @@ namespace Cars
 		}
 
 		public int maxSpeed => m_maxSpeed;
-		public float steeringSpeed => m_steeringSpeed;
 	}
 }

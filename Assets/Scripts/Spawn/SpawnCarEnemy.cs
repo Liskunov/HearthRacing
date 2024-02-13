@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.UIElements;
+
 using UnityEngine;
 
 public class SpawnCarEnemy : MonoBehaviour

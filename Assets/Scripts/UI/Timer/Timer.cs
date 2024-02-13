@@ -1,11 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using Cars;
-using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {

@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Tavern : MonoBehaviour
 {

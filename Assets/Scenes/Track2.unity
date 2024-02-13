@@ -241,7 +241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &18212533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4089,7 +4089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 8, z: -10}
+  m_FollowOffset: {x: 0, y: 8, z: -20}
   m_XDamping: 3
   m_YDamping: 3
   m_ZDamping: 3
@@ -4219,7 +4219,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 580, y: 200}
+  m_CellSize: {x: 580, y: 180}
   m_Spacing: {x: 0, y: 60}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -4419,7 +4419,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 580, y: 200}
+  m_CellSize: {x: 580, y: 180}
   m_Spacing: {x: 0, y: 60}
   m_Constraint: 0
   m_ConstraintCount: 2

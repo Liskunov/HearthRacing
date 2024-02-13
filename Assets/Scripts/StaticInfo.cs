@@ -1,8 +1,5 @@
-using System.Collections;
+
 using System.Collections.Generic;
-using System.Drawing;
-using Cinemachine;
-using TMPro.EditorUtilities;
 using UnityEngine;
 
 public static class StaticInfo

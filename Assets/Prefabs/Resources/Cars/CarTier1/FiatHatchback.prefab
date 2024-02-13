@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3746996161648241963}
   - component: {fileID: 3410519713415406573}
   - component: {fileID: -4956352690022887310}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatchback
   m_TagString: TurbineImg
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -119,6 +119,7 @@ MonoBehaviour:
   - {fileID: 4723814779252370454}
   - {fileID: 2789540668347575182}
   - {fileID: 5732968097198169947}
+  m_wheelsCount: 0
   m_carSpeed: 0
   carSpeedInAI: 0
 --- !u!114 &3746996161648241963
@@ -133,16 +134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pidController: {fileID: 3410519713415406573}
-  targetPoints: []
   I: 0
   pastI: 0
-  betweenTargets: 0
   disToPos: 0
-  stopDist: 25
-  stopDistLow: 0
-  angleDist: 12
-  angleDistLow: 0
+  stopDistFormula: 0
+  carSpeedMS: 0
+  carSpeedKMH: 0
+  multiplierFromBrake: 0
+  multiplierFromAcceler: 0
+  acceler: 0
+  brakeFors: 0
 --- !u!114 &3410519713415406573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,17 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d6fdb3e773b0c459f3445aa130d54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proportionalGain: 1.5
-  integralGain: 0.03
-  derivativeGain: 1
-  outputMin: -0.1
-  outputMax: 0.1
-  integralSaturation: 0
-  valueLast: 0
-  errorLast: 0
-  integrationStored: 0
-  velocity: 0
-  derivativeInitialized: 0
 --- !u!114 &-4956352690022887310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7373332192660228476}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +219,7 @@ GameObject:
   - component: {fileID: 3040684217765161215}
   - component: {fileID: 2463011633719978051}
   - component: {fileID: 4536318394414000698}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatch_Headlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +302,7 @@ GameObject:
   - component: {fileID: 3208610276312716814}
   - component: {fileID: 8318376438154996321}
   - component: {fileID: 6238764708862598728}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatch_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +385,7 @@ GameObject:
   - component: {fileID: 5640941328616152297}
   - component: {fileID: 4148585006018982673}
   - component: {fileID: 4554310750890828132}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatch_Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +468,7 @@ GameObject:
   - component: {fileID: 2120062366574939344}
   - component: {fileID: 3772657441216893781}
   - component: {fileID: 1158876904274862009}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatch_Backlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +551,7 @@ GameObject:
   - component: {fileID: 5512212650735912296}
   - component: {fileID: 2134653269577454204}
   - component: {fileID: 937439210879175475}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatch_Tables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +634,7 @@ GameObject:
   - component: {fileID: 3724631070740120865}
   - component: {fileID: 1300068644968543020}
   - component: {fileID: 5845578368408706433}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: FiatHatch_Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,55 +720,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 250320901728235884, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 451750988707750689, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1123784897325807833, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1457828556331489984, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1794646989534811552, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2127351752708806140, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2904607938249280284, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2907042699941389127, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3562310502677265195, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4196556796297851880, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5940783372144777514, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6220121573476146910, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7096989178025588398, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7118572835274886845, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -822,15 +812,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224375824766703179, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8451641594605844972, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9159385861425218810, guid: 117850c757c1c4c4d8d435bc246d1b19, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

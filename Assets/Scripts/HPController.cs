@@ -36,7 +36,7 @@ public class HPController : MonoBehaviour
         {
             looseOrWinPanel.SetActive(true);
             looseOrWinPanel.GetComponent<Image>().color = Color.red;
-            looseOrWinPanel.GetComponentInChildren<TextMeshProUGUI>().text = "You loose";
+            looseOrWinPanel.GetComponentInChildren<TextMeshProUGUI>().text = "You lose";
             StartCoroutine(LoadMenu());
             return false;
         } else

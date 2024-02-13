@@ -15,10 +15,10 @@ public class LoadNextMap : MonoBehaviour
 
     public void LoadNextScene()
     {
-        var scenes = Resources.LoadAll("Scenes");
+        var scenes = Resources.LoadAll("Scenes/PlayScenes/");
         var index = Random.Range(0, scenes.Length);
         var sceneName = scenes[index].name;
-        SceneManager.LoadScene("Track2");
+        SceneManager.LoadScene(sceneName);
         StaticInfo.numberRound++;
         UI.SetActive(true);
         timer.time = StaticInfo.time;

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameCar: Largus
   icon: {fileID: 21300000, guid: 51b1cc93c8f219a41853a8ccbc04f8c0, type: 3}
-  price: 60
-  ratingTire: 0.1
-  ratingEngine: 0.1
-  ratingBrake: 0.1
-  ratingPendant: 0.1
-  ratingTurbine: 0.1
-  MaxSpeed: 1
-  AccelerationMultiplier: 1
-  BrakeForce: 1
+  price: 90
+  ratingTire: 0.2
+  ratingEngine: 0.3
+  ratingBrake: 0.2
+  ratingPendant: 0.3
+  ratingTurbine: 0.2
+  MaxSpeed: 70
+  AccelerationMultiplier: 6
+  BrakeForce: 300

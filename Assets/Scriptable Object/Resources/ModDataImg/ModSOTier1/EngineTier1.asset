@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: EngineTier1
   icon: {fileID: 21300000, guid: eec7650b535f9504ebf9c1515110ec3b, type: 3}
-  price: 20
+  price: 50
   ratingMod: 0.1
   MaxSpeed: 10
-  AccelerationMultiplier: 1
+  AccelerationMultiplier: 0
   BrakeForce: 0

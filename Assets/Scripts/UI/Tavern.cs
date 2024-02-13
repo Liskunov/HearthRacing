@@ -20,7 +20,7 @@ public class Tavern : MonoBehaviour
             moneyText.text = (money - costUpTav).ToString();
             StaticInfo.lvlTav++;
             tavLvlText.text = StaticInfo.lvlTav.ToString();
-            costUpTav += 20;
+            costUpTav += 200;
         }
     }
 }

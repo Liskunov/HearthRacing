@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameCar: FiatHatchback
   icon: {fileID: 21300000, guid: 27c06af77d4f8f0468a0defd665a1c7c, type: 3}
-  price: 60
-  ratingTire: 0.1
+  price: 65
+  ratingTire: 0.2
   ratingEngine: 0.1
   ratingBrake: 0.1
   ratingPendant: 0.1
-  ratingTurbine: 0.1
+  ratingTurbine: 0.2
   MaxSpeed: 50
-  AccelerationMultiplier: 3
+  AccelerationMultiplier: 4
   BrakeForce: 200

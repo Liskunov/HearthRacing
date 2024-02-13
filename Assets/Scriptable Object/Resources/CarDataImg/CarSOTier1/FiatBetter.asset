@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameCar: FiatBetter
   icon: {fileID: 21300000, guid: 4fbcc4543326efd419e45adbd498973b, type: 3}
-  price: 30
-  ratingTire: 0.1
-  ratingEngine: 0.1
+  price: 70
+  ratingTire: 0.2
+  ratingEngine: 0.2
   ratingBrake: 0.1
-  ratingPendant: 0.1
+  ratingPendant: 0.2
   ratingTurbine: 0.1
   MaxSpeed: 50
   AccelerationMultiplier: 4

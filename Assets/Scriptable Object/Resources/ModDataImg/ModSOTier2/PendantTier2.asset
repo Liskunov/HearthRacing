@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: PendantTier1
   icon: {fileID: 21300000, guid: 9c3bb59eb01fc4545ace0be827b7d95f, type: 3}
-  price: 20
-  ratingMod: 0.3
-  MaxSpeed: 0
+  price: 50
+  ratingMod: 0.2
+  MaxSpeed: 10
   AccelerationMultiplier: 0
   BrakeForce: 0

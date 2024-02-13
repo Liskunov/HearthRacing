@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TireTier1
   icon: {fileID: 21300000, guid: 3acc385b6a1c0514185fa82d8be1e2ea, type: 3}
-  price: 15
+  price: 35
   ratingMod: 0.2
-  MaxSpeed: 12
-  AccelerationMultiplier: 1
-  BrakeForce: 60
+  MaxSpeed: 10
+  AccelerationMultiplier: 0
+  BrakeForce: 0

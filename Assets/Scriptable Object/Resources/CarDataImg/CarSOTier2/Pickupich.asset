@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameCar: Pickupich
   icon: {fileID: 21300000, guid: 06b6a6ec933c01f4f8e7a4653710a86a, type: 3}
-  price: 80
-  ratingTire: 0.1
+  price: 75
+  ratingTire: 0.2
   ratingEngine: 0.1
-  ratingBrake: 0.1
+  ratingBrake: 0.3
   ratingPendant: 0.1
-  ratingTurbine: 0.1
-  MaxSpeed: 1
-  AccelerationMultiplier: 1
-  BrakeForce: 1
+  ratingTurbine: 0.2
+  MaxSpeed: 70
+  AccelerationMultiplier: 5
+  BrakeForce: 400

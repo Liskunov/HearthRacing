@@ -46,10 +46,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (!canBuy)
         {
             var f = (Vector3.Distance(transform.position, sellZone.transform.position)) / 1000f;
-            if (f > 1)
-                sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 0.25f);
+            if (f > 0.2f)
+                sellZone.GetComponent<Image>().color = new Color(255, 255, 255, 0.25f);
             else
-                sellZone.GetComponent<Image>().color = new Color(0, 0, 0, 1.25f - f);
+                sellZone.GetComponent<Image>().color = new Color(255, 255, 255, 1.25f - f);
         }
         
     }

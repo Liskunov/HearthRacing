@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameCar: MiniCooperLong
   icon: {fileID: 21300000, guid: 936e511ba6c74f14f8ec7a784a336d31, type: 3}
-  price: 70
-  ratingTire: 0.1
-  ratingEngine: 0.1
-  ratingBrake: 0.1
-  ratingPendant: 0.1
-  ratingTurbine: 0.1
-  MaxSpeed: 1
-  AccelerationMultiplier: 1
-  BrakeForce: 1
+  price: 100
+  ratingTire: 0.2
+  ratingEngine: 0.2
+  ratingBrake: 0.3
+  ratingPendant: 0.2
+  ratingTurbine: 0.2
+  MaxSpeed: 80
+  AccelerationMultiplier: 5
+  BrakeForce: 350

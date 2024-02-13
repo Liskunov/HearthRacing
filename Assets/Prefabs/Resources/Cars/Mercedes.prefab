@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 3902796767905004046}
   m_Layer: 6
   m_Name: Mercedes
-  m_TagString: Untagged
+  m_TagString: CarPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

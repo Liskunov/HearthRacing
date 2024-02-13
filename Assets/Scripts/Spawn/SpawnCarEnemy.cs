@@ -10,7 +10,7 @@ public class SpawnCarEnemy : MonoBehaviour
     {
         for (int i = 0; i < StaticInfo.spawnPointsEnemy.Count; i++)
         {
-            var allCars = Resources.LoadAll("Cars/CarTier1");
+            var allCars = Resources.LoadAll("Cars/CarTier" + StaticInfo.lvlTav);
             var index = Random.Range(0, allCars.Length);
             var car = Instantiate(allCars[index], StaticInfo.spawnPointsEnemy[i].transform);
         }

@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 5664498741141172232}
   m_Layer: 6
   m_Name: Pickupich
-  m_TagString: Untagged
+  m_TagString: CarPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

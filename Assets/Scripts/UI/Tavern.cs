@@ -15,7 +15,7 @@ public class Tavern : MonoBehaviour
     public void UpTav()
     {
         int money = int.Parse(moneyText.text);
-        if (money >= costUpTav && StaticInfo.lvlTav < 5)
+        if (money >= costUpTav && StaticInfo.lvlTav < 3)
         {
             moneyText.text = (money - costUpTav).ToString();
             StaticInfo.lvlTav++;

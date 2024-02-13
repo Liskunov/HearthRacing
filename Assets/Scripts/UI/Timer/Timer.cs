@@ -12,8 +12,8 @@ public class Timer : MonoBehaviour
 
     [SerializeField] public float time;
     
-    [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private Slider timerSlider;
+    [SerializeField] private TextMeshProUGUI[] timerText;
+    [SerializeField] private Slider[] timerSlider;
     public GameObject spwManager;
     [SerializeField] public GameObject[] UI;
 
@@ -25,7 +25,8 @@ public class Timer : MonoBehaviour
         {
             _timeLeft -= Time.deltaTime;
             var normalizedValue = Mathf.Clamp(_timeLeft / time, 0.0f, 1.0f);
-            timerSlider.value = normalizedValue;
+            foreach (var timer in timerSlider)
+                timer.value = normalizedValue;
             UpdateTimeText();
             yield return null;
         }
@@ -70,6 +71,7 @@ public class Timer : MonoBehaviour
 
 
         float seconds = Mathf.FloorToInt(_timeLeft % 60);
-        timerText.text = seconds.ToString();
+        foreach (var text in timerText)
+        text.text = seconds.ToString();
     }
 }

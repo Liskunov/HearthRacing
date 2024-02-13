@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MiniCooper
   m_EditorClassIdentifier: 
   nameCar: MiniCooper
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2eb70996c9a5f0a4b8e44772f990c0c2, type: 3}
   price: 150
   ratingTire: 0.2
   ratingEngine: 0.4

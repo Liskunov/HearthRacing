@@ -335,6 +335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificationsC: 000000000000000000000000
+  carName: Mercedes
+  carImage: {fileID: 21300000, guid: 2377ed50fabb9214bae3d0907eb92bf7, type: 3}
 --- !u!1 &7128634173069054952
 GameObject:
   m_ObjectHideFlags: 0

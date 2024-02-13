@@ -289,6 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificationsC: 000000000000000000000000
+  carName: PoliceCar
+  carImage: {fileID: 21300000, guid: e6cb0ff56cdb99e42b19f47968aa8672, type: 3}
 --- !u!1 &5377444653905816387
 GameObject:
   m_ObjectHideFlags: 0

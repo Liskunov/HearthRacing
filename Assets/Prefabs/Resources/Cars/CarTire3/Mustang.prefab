@@ -252,6 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificationsC: 000000000000000000000000
+  carName: Mustang
+  carImage: {fileID: 21300000, guid: e3accdbbd80e946488810a4b1a5e716a, type: 3}
 --- !u!1 &1793003870922800929
 GameObject:
   m_ObjectHideFlags: 0

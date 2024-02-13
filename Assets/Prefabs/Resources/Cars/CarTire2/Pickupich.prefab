@@ -704,6 +704,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificationsC: 000000000000000000000000
+  carName: Pickupich
+  carImage: {fileID: 21300000, guid: 06b6a6ec933c01f4f8e7a4653710a86a, type: 3}
 --- !u!1001 &6927359387370618511
 PrefabInstance:
   m_ObjectHideFlags: 0

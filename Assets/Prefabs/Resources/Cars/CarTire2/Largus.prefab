@@ -453,6 +453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificationsC: 000000000000000000000000
+  carName: Largus
+  carImage: {fileID: 21300000, guid: 51b1cc93c8f219a41853a8ccbc04f8c0, type: 3}
 --- !u!1 &7676856170172023070
 GameObject:
   m_ObjectHideFlags: 0

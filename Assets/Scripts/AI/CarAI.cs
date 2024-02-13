@@ -131,14 +131,12 @@ namespace Cars
 		}
             public void SwapTarget()
 		{
-			if (I < CountTarget)
+			if (++I < CountTarget)
 			{
-				I++;
 				target = targetPoints[I].position;
 				pastI = I - 1;
 				pastTarget = targetPoints[pastI].transform.position;
 				betweenTargets = Vector3.Distance(pastTarget, target);
-				
 			}
 			else
 			{

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1780601365445823978}
   - component: {fileID: 4274738576599261836}
   - component: {fileID: 785116528855532025}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Pickup_Backlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8275771328128487055}
   - component: {fileID: 5393734123640147426}
   - component: {fileID: 939010805309205506}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Pickup_Headlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4790065771118540406}
   - component: {fileID: 7625207397927776711}
   - component: {fileID: 3277025848535136755}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Pickup
   m_TagString: TurbineImg
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -285,6 +285,7 @@ MonoBehaviour:
   - {fileID: 7899450194703851059}
   - {fileID: 6916513508002236441}
   - {fileID: 7495699512222222753}
+  m_wheelsCount: 0
   m_carSpeed: 200
   carSpeedInAI: 0
 --- !u!114 &4790065771118540406
@@ -299,16 +300,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3853085f33dd2146818fa093ff27f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pidController: {fileID: 7625207397927776711}
-  targetPoints: []
   I: 0
   pastI: 0
-  betweenTargets: 0
   disToPos: 0
-  stopDist: 18
-  stopDistLow: 0
-  angleDist: 10
-  angleDistLow: 0
+  stopDistFormula: 0
+  carSpeedMS: 0
+  carSpeedKMH: 0
+  multiplierFromBrake: 0
+  multiplierFromAcceler: 0
+  acceler: 0
+  brakeFors: 0
 --- !u!114 &7625207397927776711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,17 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d6fdb3e773b0c459f3445aa130d54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proportionalGain: 1.5
-  integralGain: 0.03
-  derivativeGain: 1
-  outputMin: -0.1
-  outputMax: 0.1
-  integralSaturation: 0
-  valueLast: 0
-  errorLast: 0
-  integrationStored: 0
-  velocity: 0
-  derivativeInitialized: 0
 --- !u!114 &3277025848535136755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +348,7 @@ GameObject:
   - component: {fileID: 3248997787813443860}
   - component: {fileID: 8242978559775607350}
   - component: {fileID: 2957152810233124924}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Pickup_Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778857888923265864}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +466,7 @@ GameObject:
   - component: {fileID: 4118571395300987098}
   - component: {fileID: 7021567932802147797}
   - component: {fileID: 4176290328926779593}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Pickup_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 71017432885495362, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 605476098354233560, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Mass
@@ -566,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616467859863544621, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1768375224516581288, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,39 +600,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1920095692078888642, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1975693833738054760, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2011939606278253559, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2939600718925838250, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3362288583954770209, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3554678206678893672, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3560160280125287523, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3809096585738338614, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6416456970651136927, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6460275696787036884, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Mass
@@ -654,11 +644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6762774652737685302, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6923714206877660087, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7780983197370158334, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Mass
@@ -670,15 +660,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8054186495190294424, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8532208471933948170, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8698961487115400306, guid: 15436171579d48040a990ec8c8f5b0d0, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

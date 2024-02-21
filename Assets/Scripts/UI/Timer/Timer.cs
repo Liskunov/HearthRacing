@@ -48,6 +48,7 @@ public class Timer : MonoBehaviour
             _timeLeft = 0;
             spwManager.GetComponent<SpawnCar>().SpawnCarInPoint();
             spwManager.GetComponent<SpawnCarEnemy>().SpawnEnemyCar();
+            StaticInfo.miniMap.SetActive(true);
             for (int i = 0; i < UI.Length; i++)
             {
                 UI[i].SetActive(false);

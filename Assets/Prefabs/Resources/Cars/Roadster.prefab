@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 66877523992151738}
   - component: {fileID: 41219429282307712}
   - component: {fileID: 7659941204589028282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster_Backlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1952268805931022686}
   - component: {fileID: 7114004751719244991}
   - component: {fileID: 8062495087187445254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster
   m_TagString: CarPlayer
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 5941601290685070346}
   - component: {fileID: 4126780937263209419}
   - component: {fileID: 8576656036371633101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6748441304168410764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 6406872767544769003}
   - component: {fileID: 1710979148462225266}
   - component: {fileID: 6443217766713789982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster_Headlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 7675000746794271528}
   - component: {fileID: 1864182008525132364}
   - component: {fileID: 285665063068281913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster_Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 3893869613128324634}
   - component: {fileID: 4130941534627762952}
   - component: {fileID: 563188201105679275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster_Plates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 5787769376407714919}
   - component: {fileID: 8654736899416581837}
   - component: {fileID: 4326018133834355343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roadster_Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,6 +627,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1952268805931022686}
     m_Modifications:
+    - target: {fileID: 24797243781881347, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 751993622073239048, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1621372993160907181, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -667,9 +675,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716980387841472186, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063631939001621697, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198727623891100796, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413699054417604680, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994323118484070113, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808544292274180044, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290846486064546735, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647869105091615751, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972860116839257913, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085112925321418038, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140357118316127592, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6254408745322343313, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
       propertyPath: m_Name
       value: Roadster-Wheels_Stock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254408745322343313, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398263129372114291, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822924470610330268, guid: a3b0fbed02346044b94be880b37a1531, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,8 +5,9 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] public int money;
+    [SerializeField] public TextMeshProUGUI roundNumber;
 
-    public void Start()
+        public void Start()
     {
         GetMoney();
     }
@@ -15,6 +16,7 @@ public class Shop : MonoBehaviour
     public void GetMoney()
     {
         moneyText.text = (money * StaticInfo.numberRound).ToString();
+        roundNumber.text = "Round #" + (StaticInfo.numberRound);
     }
 
     public bool ChangeGold(int price)

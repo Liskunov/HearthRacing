@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5069785214201670067}
   - component: {fileID: 6931059294934963670}
   - component: {fileID: 1335308573861729949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolid_Backlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3860231371290317558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4716816491489878717}
   - component: {fileID: 8012150204294839836}
   - component: {fileID: 8572106724702771271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolid_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 6232451570468085895}
   - component: {fileID: 6127194247695190790}
   - component: {fileID: 9030309969198431710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 1850924754480440045}
   - component: {fileID: 1997874490272848627}
   - component: {fileID: 7941582718500155262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolid_Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 1128679116337246008}
   - component: {fileID: 2984787683753538356}
   - component: {fileID: 1364484444176986982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolid_Mirrors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,6 +463,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.8033
       objectReference: {fileID: 0}
+    - target: {fileID: 1968144307530985530, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101904324228384818, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2640412067766063130, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8033
@@ -470,6 +478,14 @@ PrefabInstance:
     - target: {fileID: 2688800960724159807, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
       propertyPath: m_Name
       value: Bolid-Wheels_Stock
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688800960724159807, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756961112618408409, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2884006638779810141, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,6 +526,54 @@ PrefabInstance:
     - target: {fileID: 2884006638779810141, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454103021085624992, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059827352634820498, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288281941734809668, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5314582790544993454, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586672069331835055, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894060212149463302, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037315140890606246, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450280323323736278, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496518769316799332, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497360188377787344, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243357253238143750, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422336074851842379, guid: 7535ec067b99d174183a2eab67685a76, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

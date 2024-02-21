@@ -14,4 +14,5 @@ public static class StaticInfo
     public static int numberRound = 1;
     public static GameObject playUI;
     public static GameObject SwitchManager;
+    public static GameObject miniMap;
 }

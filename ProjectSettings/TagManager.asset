@@ -12,11 +12,12 @@ TagManager:
   - PendantImg
   - TurbineImg
   - CarPlayer
+  - MiniMap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MiniMap
   - Water
   - UI
   - Car

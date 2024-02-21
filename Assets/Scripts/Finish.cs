@@ -10,6 +10,7 @@ public class Finish : MonoBehaviour
 {
    public List<GameObject> cars = new List<GameObject>();
    public CarFinishInfo finishManager;
+   public GameObject miniMap;
    int playerPoints = 0;
    int enemyPoints = 0;
 
@@ -25,6 +26,7 @@ public class Finish : MonoBehaviour
           if (finishManager.GetComponent<HPController>().HPCalculation(playerPoints, enemyPoints))
           finishManager.GetComponent<EndInfo>().TakeInfo(cars, playerPoints, enemyPoints);
           StaticInfo.SwitchManager.GetComponent<CameraSwitch>().UI.SetActive(false);
+          miniMap.SetActive(false);
 
       }
    }

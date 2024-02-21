@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5345217520923360813}
   - component: {fileID: 8511760857781387964}
   - component: {fileID: 5327472174606166687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck_Headlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677159662276928272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 4242872923278188584}
   - component: {fileID: 563808627965816585}
   - component: {fileID: 6528991797592612088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 2283134309924445776}
   - component: {fileID: 7082199519368060152}
   - component: {fileID: 3099194378697815492}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck
   m_TagString: CarPlayer
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 6547581317777116688}
   - component: {fileID: 7783420102375355839}
   - component: {fileID: 2675597183831858800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 3991137316176787781}
   - component: {fileID: 1192827140649825160}
   - component: {fileID: 2266322170913764761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck_Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 6443054970124827861}
   - component: {fileID: 4436728118166410716}
   - component: {fileID: 330202461014683922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck_Backlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 1088875807398173435}
   - component: {fileID: 8242259553242117173}
   - component: {fileID: 415018489009117201}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterTruck_Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,6 +627,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2283134309924445776}
     m_Modifications:
+    - target: {fileID: 623325950512148439, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 706572623564374352, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834255576874184057, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220271842102567606, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455631401747203077, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151634577989615366, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225249419066654768, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768881041396869329, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372168687799563424, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893762856640297885, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163694155204712781, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294774514963676917, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334240659679785451, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698557955887251766, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7885587077239163701, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -670,6 +726,14 @@ PrefabInstance:
     - target: {fileID: 8386132833471913460, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
       propertyPath: m_Name
       value: MonsterTruck-Wheels_Stock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386132833471913460, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221381512053386126, guid: 46693b8a9881e484795522cb484bbbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

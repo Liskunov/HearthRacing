@@ -30,7 +30,7 @@ public class LoadScene : MonoBehaviour
             {
                yield return new WaitForSeconds(2.2f);
                loadAsync.allowSceneActivation = true;
-               SceneManager.LoadSceneAsync("Track2");
+               SceneManager.LoadSceneAsync("Track3");
             }
 
             yield return null;

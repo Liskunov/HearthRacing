@@ -13,7 +13,6 @@ public class ArrowCar : MonoBehaviour
 
     private void LateUpdate()
     {
-        //transform.rotation.z = -90;
         transform.LookAt(m_cameraTransform);
     }
 }
